@@ -1,0 +1,10 @@
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\bin\Debug\Aluguel-PowerLook.exe.config
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\bin\Debug\Aluguel-PowerLook.exe
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\bin\Debug\Aluguel-PowerLook.pdb
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.csprojAssemblyReference.cache
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Form_cad_fornecedor.resources
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Form_principal.resources
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Properties.Resources.resources
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.csproj.GenerateResource.cache
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.exe
+C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.pdb
