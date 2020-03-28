@@ -36,14 +36,14 @@
             this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             this.relatórioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(822, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(896, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,25 +74,25 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             // 
             // fornecedorToolStripMenuItem
             // 
             this.fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
-            this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fornecedorToolStripMenuItem.Text = "Fornecedor";
             // 
             // vestidoToolStripMenuItem
             // 
             this.vestidoToolStripMenuItem.Name = "vestidoToolStripMenuItem";
-            this.vestidoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.vestidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vestidoToolStripMenuItem.Text = "Vestido";
             // 
             // funcionárioToolStripMenuItem
             // 
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
-            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
             // 
             // cToolStripMenuItem
@@ -107,11 +107,59 @@
             this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.relatórioToolStripMenuItem.Text = "Relatório";
             // 
+            // button8
+            // 
+            this.button8.Image = global::Aluguel_PowerLook.Properties.Resources.Busca;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(624, 91);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(189, 56);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "Busca";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Image = global::Aluguel_PowerLook.Properties.Resources.Relatorio;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(624, 168);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(189, 56);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Relatório";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Image = global::Aluguel_PowerLook.Properties.Resources.Devolução;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(348, 168);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(189, 56);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Devolução";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Image = global::Aluguel_PowerLook.Properties.Resources.Aluguel;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(348, 91);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(189, 56);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Aluguel";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // button4
             // 
             this.button4.Image = global::Aluguel_PowerLook.Properties.Resources.Fornecedor;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(37, 169);
+            this.button4.Location = new System.Drawing.Point(66, 168);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(189, 56);
             this.button4.TabIndex = 4;
@@ -123,7 +171,7 @@
             // 
             this.button3.Image = global::Aluguel_PowerLook.Properties.Resources.Vestido;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(37, 324);
+            this.button3.Location = new System.Drawing.Point(66, 322);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(189, 56);
             this.button3.TabIndex = 3;
@@ -135,7 +183,7 @@
             // 
             this.button2.Image = global::Aluguel_PowerLook.Properties.Resources.Funcionario;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(37, 245);
+            this.button2.Location = new System.Drawing.Point(66, 244);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(189, 56);
             this.button2.TabIndex = 2;
@@ -147,7 +195,7 @@
             // 
             this.button1.Image = global::Aluguel_PowerLook.Properties.Resources.Cliente;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(37, 92);
+            this.button1.Location = new System.Drawing.Point(66, 91);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(189, 56);
             this.button1.TabIndex = 1;
@@ -155,60 +203,12 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button5
-            // 
-            this.button5.Image = global::Aluguel_PowerLook.Properties.Resources.Aluguel;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(319, 92);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(189, 56);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Aluguel";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Image = global::Aluguel_PowerLook.Properties.Resources.Devolução;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(319, 169);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(189, 56);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Devolução";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Image = global::Aluguel_PowerLook.Properties.Resources.Relatorio;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(595, 169);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(189, 56);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Relatório";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Image = global::Aluguel_PowerLook.Properties.Resources.Busca;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(595, 92);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(189, 56);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Busca";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // Form_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(822, 474);
+            this.ClientSize = new System.Drawing.Size(896, 516);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);

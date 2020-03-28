@@ -16,7 +16,7 @@ namespace Aluguel_PowerLook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_cad_fornecedor());
+            Application.Run(new Form_principal());
         }
     }
 }

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Aluguel_PowerLook
 {
-    public partial class Form_cad_cliente : Form
+    public partial class Form1 : Form
     {
-        public Form_cad_cliente()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form_cad_cliente_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

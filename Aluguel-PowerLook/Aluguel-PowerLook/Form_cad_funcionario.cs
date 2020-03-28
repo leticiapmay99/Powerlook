@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Aluguel_PowerLook
 {
-    public partial class Form_cad_cliente : Form
+    public partial class Form_cad_funcionario : Form
     {
-        public Form_cad_cliente()
+        public Form_cad_funcionario()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form_cad_cliente_Load(object sender, EventArgs e)
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }
