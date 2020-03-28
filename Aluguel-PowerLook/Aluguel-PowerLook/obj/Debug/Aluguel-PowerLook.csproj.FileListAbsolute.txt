@@ -8,3 +8,15 @@ C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Alugue
 C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.csproj.GenerateResource.cache
 C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.exe
 C:\Users\leticia.may\Documents\GitHub\Aluguel-PowerLook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.pdb
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\bin\Debug\Aluguel-PowerLook.exe.config
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\bin\Debug\Aluguel-PowerLook.exe
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\bin\Debug\Aluguel-PowerLook.pdb
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.csprojAssemblyReference.cache
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Form_cad_cliente.resources
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Form_cad_fornecedor.resources
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Form_principal.resources
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Properties.Resources.resources
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.csproj.GenerateResource.cache
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.exe
+D:\Documentos\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.pdb

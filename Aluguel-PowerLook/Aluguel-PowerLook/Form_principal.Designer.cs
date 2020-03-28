@@ -30,16 +30,20 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vestidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,18 +71,6 @@
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
-            // cToolStripMenuItem
-            // 
-            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.cToolStripMenuItem.Text = "Consulta";
-            // 
-            // relatórioToolStripMenuItem
-            // 
-            this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
-            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.relatórioToolStripMenuItem.Text = "Relatório";
-            // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
@@ -103,8 +95,21 @@
             this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
             // 
+            // cToolStripMenuItem
+            // 
+            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cToolStripMenuItem.Text = "Consulta";
+            // 
+            // relatórioToolStripMenuItem
+            // 
+            this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
+            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.relatórioToolStripMenuItem.Text = "Relatório";
+            // 
             // button4
             // 
+            this.button4.Image = global::Aluguel_PowerLook.Properties.Resources.Fornecedor;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(37, 169);
             this.button4.Name = "button4";
@@ -116,8 +121,9 @@
             // 
             // button3
             // 
+            this.button3.Image = global::Aluguel_PowerLook.Properties.Resources.Vestido;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(37, 246);
+            this.button3.Location = new System.Drawing.Point(37, 324);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(189, 56);
             this.button3.TabIndex = 3;
@@ -127,8 +133,9 @@
             // 
             // button2
             // 
+            this.button2.Image = global::Aluguel_PowerLook.Properties.Resources.Funcionario;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(37, 322);
+            this.button2.Location = new System.Drawing.Point(37, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(189, 56);
             this.button2.TabIndex = 2;
@@ -138,6 +145,7 @@
             // 
             // button1
             // 
+            this.button1.Image = global::Aluguel_PowerLook.Properties.Resources.Cliente;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(37, 92);
             this.button1.Name = "button1";
@@ -147,12 +155,64 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Image = global::Aluguel_PowerLook.Properties.Resources.Aluguel;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(319, 92);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(189, 56);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Aluguel";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Image = global::Aluguel_PowerLook.Properties.Resources.Devolução;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(319, 169);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(189, 56);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Devolução";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Image = global::Aluguel_PowerLook.Properties.Resources.Relatorio;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(595, 169);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(189, 56);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Relatório";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Image = global::Aluguel_PowerLook.Properties.Resources.Busca;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(595, 92);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(189, 56);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "Busca";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // Form_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(822, 474);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -182,6 +242,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 
