@@ -31,3 +31,7 @@ C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerL
 C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.csproj.GenerateResource.cache
 C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.exe
 C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel-PowerLook.pdb
+C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Form1.resources
+C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Form_cad_vestido.resources
+C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Form_cad_funcionario.resources
+C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\Aluguel-PowerLook\obj\Debug\Aluguel_PowerLook.Login.resources

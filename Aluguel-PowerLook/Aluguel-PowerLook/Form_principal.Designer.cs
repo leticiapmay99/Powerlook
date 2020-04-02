@@ -40,9 +40,10 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_cadFornecedor = new System.Windows.Forms.Button();
+            this.btn_cadVestido = new System.Windows.Forms.Button();
+            this.btn_cadFuncionario = new System.Windows.Forms.Button();
+            this.btn_cadCliente = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +57,7 @@
             this.relatórioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(896, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(997, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,26 +75,30 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // fornecedorToolStripMenuItem
             // 
             this.fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
-            this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.fornecedorToolStripMenuItem.Text = "Fornecedor";
+            this.fornecedorToolStripMenuItem.Click += new System.EventHandler(this.fornecedorToolStripMenuItem_Click);
             // 
             // vestidoToolStripMenuItem
             // 
             this.vestidoToolStripMenuItem.Name = "vestidoToolStripMenuItem";
-            this.vestidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vestidoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.vestidoToolStripMenuItem.Text = "Vestido";
+            this.vestidoToolStripMenuItem.Click += new System.EventHandler(this.vestidoToolStripMenuItem_Click);
             // 
             // funcionárioToolStripMenuItem
             // 
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
-            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
+            this.funcionárioToolStripMenuItem.Click += new System.EventHandler(this.funcionárioToolStripMenuItem_Click);
             // 
             // cToolStripMenuItem
             // 
@@ -111,7 +116,7 @@
             // 
             this.button8.Image = global::Aluguel_PowerLook.Properties.Resources.Busca;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(624, 91);
+            this.button8.Location = new System.Drawing.Point(692, 108);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(189, 56);
             this.button8.TabIndex = 8;
@@ -123,7 +128,7 @@
             // 
             this.button7.Image = global::Aluguel_PowerLook.Properties.Resources.Relatorio;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(624, 168);
+            this.button7.Location = new System.Drawing.Point(692, 185);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(189, 56);
             this.button7.TabIndex = 7;
@@ -135,7 +140,7 @@
             // 
             this.button6.Image = global::Aluguel_PowerLook.Properties.Resources.Devolução;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(348, 168);
+            this.button6.Location = new System.Drawing.Point(416, 185);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(189, 56);
             this.button6.TabIndex = 6;
@@ -147,7 +152,7 @@
             // 
             this.button5.Image = global::Aluguel_PowerLook.Properties.Resources.Aluguel;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(348, 91);
+            this.button5.Location = new System.Drawing.Point(416, 108);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(189, 56);
             this.button5.TabIndex = 5;
@@ -155,72 +160,92 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_cadFornecedor
             // 
-            this.button4.Image = global::Aluguel_PowerLook.Properties.Resources.Fornecedor;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(66, 168);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(189, 56);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Cadastro Fornecedor";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_cadFornecedor.Image = global::Aluguel_PowerLook.Properties.Resources.Fornecedor;
+            this.btn_cadFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cadFornecedor.Location = new System.Drawing.Point(134, 185);
+            this.btn_cadFornecedor.Name = "btn_cadFornecedor";
+            this.btn_cadFornecedor.Size = new System.Drawing.Size(189, 56);
+            this.btn_cadFornecedor.TabIndex = 4;
+            this.btn_cadFornecedor.Text = "Cadastro Fornecedor";
+            this.btn_cadFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_cadFornecedor.UseVisualStyleBackColor = true;
+            this.btn_cadFornecedor.Click += new System.EventHandler(this.btn_cadFornecedor_Click);
             // 
-            // button3
+            // btn_cadVestido
             // 
-            this.button3.Image = global::Aluguel_PowerLook.Properties.Resources.Vestido;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(66, 322);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(189, 56);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Cadastro Vestido";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_cadVestido.Image = global::Aluguel_PowerLook.Properties.Resources.Vestido;
+            this.btn_cadVestido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cadVestido.Location = new System.Drawing.Point(134, 260);
+            this.btn_cadVestido.Name = "btn_cadVestido";
+            this.btn_cadVestido.Size = new System.Drawing.Size(189, 56);
+            this.btn_cadVestido.TabIndex = 3;
+            this.btn_cadVestido.Text = "Cadastro Vestido";
+            this.btn_cadVestido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_cadVestido.UseVisualStyleBackColor = true;
+            this.btn_cadVestido.Click += new System.EventHandler(this.btn_cadVestido_Click);
             // 
-            // button2
+            // btn_cadFuncionario
             // 
-            this.button2.Image = global::Aluguel_PowerLook.Properties.Resources.Funcionario;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(66, 244);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 56);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cadastro Funcionário";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_cadFuncionario.Image = global::Aluguel_PowerLook.Properties.Resources.Funcionario;
+            this.btn_cadFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cadFuncionario.Location = new System.Drawing.Point(134, 336);
+            this.btn_cadFuncionario.Name = "btn_cadFuncionario";
+            this.btn_cadFuncionario.Size = new System.Drawing.Size(189, 56);
+            this.btn_cadFuncionario.TabIndex = 2;
+            this.btn_cadFuncionario.Text = "Cadastro Funcionário";
+            this.btn_cadFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_cadFuncionario.UseVisualStyleBackColor = true;
+            this.btn_cadFuncionario.Click += new System.EventHandler(this.btn_cadFuncionario_Click);
+            // 
+            // btn_cadCliente
+            // 
+            this.btn_cadCliente.Image = global::Aluguel_PowerLook.Properties.Resources.Cliente;
+            this.btn_cadCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cadCliente.Location = new System.Drawing.Point(134, 108);
+            this.btn_cadCliente.Name = "btn_cadCliente";
+            this.btn_cadCliente.Size = new System.Drawing.Size(189, 56);
+            this.btn_cadCliente.TabIndex = 1;
+            this.btn_cadCliente.Text = "Cadastro Cliente";
+            this.btn_cadCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_cadCliente.UseVisualStyleBackColor = true;
+            this.btn_cadCliente.Click += new System.EventHandler(this.btn_cadCliente_Click);
             // 
             // button1
             // 
-            this.button1.Image = global::Aluguel_PowerLook.Properties.Resources.Cliente;
+            this.button1.Image = global::Aluguel_PowerLook.Properties.Resources.Relatorio;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(66, 91);
+            this.button1.Location = new System.Drawing.Point(692, 317);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(189, 56);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cadastro Cliente";
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Teste";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(896, 516);
+            this.ClientSize = new System.Drawing.Size(997, 592);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_cadFornecedor);
+            this.Controls.Add(this.btn_cadVestido);
+            this.Controls.Add(this.btn_cadFuncionario);
+            this.Controls.Add(this.btn_cadCliente);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.Load += new System.EventHandler(this.Form_principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -238,14 +263,15 @@
         private System.Windows.Forms.ToolStripMenuItem funcionárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_cadCliente;
+        private System.Windows.Forms.Button btn_cadFuncionario;
+        private System.Windows.Forms.Button btn_cadVestido;
+        private System.Windows.Forms.Button btn_cadFornecedor;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button1;
     }
 }
 
