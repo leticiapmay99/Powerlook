@@ -1,5 +1,5 @@
 CREATE TABLE [Usuarios] (
-  [id] int PRIMARY KEY NOT NULL,
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [nome] nvarchar(255) NOT NULL,
   [email] nvarchar(255) UNIQUE NOT NULL,
   [data_nascimento] nvarchar(255) NOT NULL,
@@ -11,20 +11,20 @@ CREATE TABLE [Usuarios] (
 GO
 
 CREATE TABLE [PessoaFisica] (
-  [id] int PRIMARY KEY NOT NULL,
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [cpf] nvarchar(255) UNIQUE NOT NULL,
   [rg] nvarchar(255) UNIQUE NOT NULL
 )
 GO
 
 CREATE TABLE [TipoUsuario] (
-  [id] int PRIMARY KEY NOT NULL,
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [name] nvarchar(255) NOT NULL
 )
 GO
 
 CREATE TABLE [Enderecos] (
-  [id] int PRIMARY KEY NOT NULL,
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [cep] nvarchar(255) NOT NULL,
   [endereco] nvarchar(255) NOT NULL,
   [bairro] nvarchar(255) NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE [Enderecos] (
 GO
 
 CREATE TABLE [Fornecedores] (
-  [id] int PRIMARY KEY NOT NULL,
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [nome_fantasia] nvarchar(255) NOT NULL,
   [email] nvarchar(255) UNIQUE NOT NULL,
   [telefone] nvarchar(255) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE [Fornecedores] (
 GO
 
 CREATE TABLE [PessoaJurifica] (
-  [id] int PRIMARY KEY NOT NULL,
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [cnpj] nvarchar(255) UNIQUE NOT NULL,
   [inscricao_estadual] nvarchar(255) NOT NULL,
   [razao_social] nvarchar(255) NOT NULL
@@ -53,7 +53,7 @@ CREATE TABLE [PessoaJurifica] (
 GO
 
 CREATE TABLE [Produtos] (
-  [id] int PRIMARY KEY NOT NULL,
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [nome] nvarchar(255) NOT NULL,
   [descricao] nvarchar(255),
   [tamanho] float NOT NULL,
@@ -66,20 +66,20 @@ CREATE TABLE [Produtos] (
 GO
 
 CREATE TABLE [Cores] (
-  [id] int PRIMARY KEY NOT NULL,
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [name] nvarchar(255) NOT NULL
 )
 GO
 
 CREATE TABLE [ProdutosCores] (
-  [id] int PRIMARY KEY NOT NULL,
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [id_produto] int NOT NULL,
   [id_cor] int NOT NULL
 )
 GO
 
 CREATE TABLE [Locacoes] (
-  [id] int PRIMARY KEY NOT NULL
+  [id] int PRIMARY KEY NOT NULL IDENTITY(1, 1)
 )
 GO
 
