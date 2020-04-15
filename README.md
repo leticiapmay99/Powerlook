@@ -17,3 +17,7 @@
 ## Sobre
 
 Breve detalhamento da aplicação
+
+Passo-a-passo para fazer backup e restore no SQL Server:
+
+http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-restore-no-microsoft-sql-server/
