@@ -17,34 +17,10 @@ namespace Aluguel_PowerLook
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void Form_cad_fornecedor_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
+            MeusFormularios.FormCadFornecedor = null;
         }
     }
 }

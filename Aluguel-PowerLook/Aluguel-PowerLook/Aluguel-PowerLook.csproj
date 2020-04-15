@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -94,6 +95,7 @@
     <Compile Include="Form_principal.Designer.cs">
       <DependentUpon>Form_principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="MeusFormularios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Devolucao.resx">
@@ -166,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagem\Relatorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\powerLook.DAL\powerLook.DAL.csproj">
+      <Project>{c41e1e0b-2df7-40e4-a4b7-2acd3f889a2c}</Project>
+      <Name>powerLook.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

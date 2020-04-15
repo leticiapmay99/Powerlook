@@ -17,14 +17,10 @@ namespace Aluguel_PowerLook
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+        private void Form_cad_cliente_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void Form_cad_cliente_Load(object sender, EventArgs e)
-        {
-
+            MeusFormularios.FormCadCliente = null;
         }
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aluguel-PowerLook", "Aluguel-PowerLook\Aluguel-PowerLook.csproj", "{72C3051C-DBB7-489F-B592-ACAF89854C8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "powerLook.DAL", "powerLook.DAL\powerLook.DAL.csproj", "{C41E1E0B-2DF7-40E4-A4B7-2ACD3F889A2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{72C3051C-DBB7-489F-B592-ACAF89854C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72C3051C-DBB7-489F-B592-ACAF89854C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72C3051C-DBB7-489F-B592-ACAF89854C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C41E1E0B-2DF7-40E4-A4B7-2ACD3F889A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C41E1E0B-2DF7-40E4-A4B7-2ACD3F889A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C41E1E0B-2DF7-40E4-A4B7-2ACD3F889A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C41E1E0B-2DF7-40E4-A4B7-2ACD3F889A2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

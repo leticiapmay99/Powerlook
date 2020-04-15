@@ -17,9 +17,9 @@ namespace Aluguel_PowerLook
             InitializeComponent();
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
+        private void Form_cad_funcionario_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            MeusFormularios.FormCadFuncionario = null;
         }
     }
 }

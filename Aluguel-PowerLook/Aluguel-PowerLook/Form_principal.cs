@@ -17,63 +17,77 @@ namespace Aluguel_PowerLook
             InitializeComponent();
         }
 
-        private void btn_cadCliente_Click(object sender, EventArgs e)
-        {
-            Form_cad_cliente form = new Form_cad_cliente();
-            form.Show();
-        }
-
-        private void btn_cadFornecedor_Click(object sender, EventArgs e)
-        {
-            Form_cad_fornecedor form = new Form_cad_fornecedor();
-            form.Show();
-        }
-
-        private void btn_cadFuncionario_Click(object sender, EventArgs e)
-        {
-            Form_cad_funcionario form = new Form_cad_funcionario();
-            form.Show();
-        }
-
-        private void btn_cadVestido_Click(object sender, EventArgs e)
-        {
-            Form_cad_vestido form = new Form_cad_vestido();
-            form.Show();
-        }
-
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_cad_cliente form = new Form_cad_cliente();
-            form.Show();
+
+            if (MeusFormularios.FormCadCliente == null)
+                MeusFormularios.FormCadCliente = new Form_cad_cliente();
+
+            MeusFormularios.FormCadCliente.Show();
+            MeusFormularios.FormCadCliente.Focus();
         }
 
         private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_cad_fornecedor form = new Form_cad_fornecedor();
-            form.Show();
+            if (MeusFormularios.FormCadFornecedor == null)
+                MeusFormularios.FormCadFornecedor = new Form_cad_fornecedor();
+
+            MeusFormularios.FormCadFornecedor.Show();
+            MeusFormularios.FormCadFornecedor.Focus();
         }
 
         private void vestidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_cad_vestido form = new Form_cad_vestido();
-            form.Show();
+            if (MeusFormularios.FormCadVestido == null)
+                MeusFormularios.FormCadVestido = new Form_cad_vestido();
+
+            MeusFormularios.FormCadVestido.Show();
+            MeusFormularios.FormCadVestido.Focus();
         }
 
         private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_cad_funcionario form = new Form_cad_funcionario();
-            form.Show();
+            if (MeusFormularios.FormCadFuncionario == null)
+                MeusFormularios.FormCadFuncionario = new Form_cad_funcionario();
+
+            MeusFormularios.FormCadFuncionario.Show();
+            MeusFormularios.FormCadFuncionario.Focus();
         }
 
-        private void Form_principal_Load(object sender, EventArgs e)
+        private void btn_cadCliente_Click(object sender, EventArgs e)
         {
+            if (MeusFormularios.FormCadCliente == null)
+                MeusFormularios.FormCadCliente = new Form_cad_cliente();
 
+            MeusFormularios.FormCadCliente.Show();
+            MeusFormularios.FormCadCliente.Focus();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_cadFornecedor_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-            form.Show();
+            if (MeusFormularios.FormCadFornecedor == null)
+                MeusFormularios.FormCadFornecedor = new Form_cad_fornecedor();
+
+            MeusFormularios.FormCadFornecedor.Show();
+            MeusFormularios.FormCadFornecedor.Focus();
+        }
+
+        private void btn_cadVestido_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormCadVestido == null)
+                MeusFormularios.FormCadVestido = new Form_cad_vestido();
+
+            MeusFormularios.FormCadVestido.Show();
+            MeusFormularios.FormCadVestido.Focus();
+        }
+
+        private void btn_cadFuncionario_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormCadFuncionario == null)
+                MeusFormularios.FormCadFuncionario = new Form_cad_funcionario();
+
+            MeusFormularios.FormCadFuncionario.Show();
+            MeusFormularios.FormCadFuncionario.Focus();
         }
     }
 }
