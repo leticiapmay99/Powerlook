@@ -1,0 +1,8 @@
+C:\Users\leticia.may\Desktop\PowerLook-Aluguel\PowerLook-Aluguel\bin\Debug\PowerLook-Aluguel.exe.config
+C:\Users\leticia.may\Desktop\PowerLook-Aluguel\PowerLook-Aluguel\bin\Debug\PowerLook-Aluguel.exe
+C:\Users\leticia.may\Desktop\PowerLook-Aluguel\PowerLook-Aluguel\bin\Debug\PowerLook-Aluguel.pdb
+C:\Users\leticia.may\Desktop\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook-Aluguel.csprojAssemblyReference.cache
+C:\Users\leticia.may\Desktop\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Properties.Resources.resources
+C:\Users\leticia.may\Desktop\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook-Aluguel.csproj.GenerateResource.cache
+C:\Users\leticia.may\Desktop\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook-Aluguel.exe
+C:\Users\leticia.may\Desktop\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook-Aluguel.pdb
