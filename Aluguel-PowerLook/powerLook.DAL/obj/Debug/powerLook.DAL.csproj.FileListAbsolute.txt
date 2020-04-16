@@ -1,6 +1,0 @@
-C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\powerLook.DAL\bin\Debug\powerLook.DAL.dll.config
-C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\powerLook.DAL\bin\Debug\powerLook.DAL.dll
-C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\powerLook.DAL\bin\Debug\powerLook.DAL.pdb
-C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\powerLook.DAL\obj\Debug\powerLook.DAL.csprojAssemblyReference.cache
-C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\powerLook.DAL\obj\Debug\powerLook.DAL.dll
-C:\Users\leticia.may\Documents\GitHub\Powerlook\Aluguel-PowerLook\powerLook.DAL\obj\Debug\powerLook.DAL.pdb
