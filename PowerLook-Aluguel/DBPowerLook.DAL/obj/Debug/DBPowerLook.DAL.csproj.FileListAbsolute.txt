@@ -1,0 +1,5 @@
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\bin\Debug\DBPowerLook.DAL.dll.config
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\bin\Debug\DBPowerLook.DAL.dll
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\bin\Debug\DBPowerLook.DAL.pdb
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.dll
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.pdb
