@@ -35,10 +35,7 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormProduto.Focus();
         }
 
-        private void btnCliente_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnFornecedor_Click(object sender, EventArgs e)
         {
@@ -56,6 +53,24 @@ namespace PowerLook_Aluguel
 
             MeusFormularios.FormFornecedor.Show();
             MeusFormularios.FormFornecedor.Focus();
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormCliente == null)
+                MeusFormularios.FormCliente = new Form_cad_cliente();
+
+            MeusFormularios.FormCliente.Show();
+            MeusFormularios.FormCliente.Focus();
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormCliente == null)
+                MeusFormularios.FormCliente = new Form_cad_cliente();
+
+            MeusFormularios.FormCliente.Show();
+            MeusFormularios.FormCliente.Focus();
         }
     }
 }

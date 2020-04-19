@@ -10,5 +10,7 @@ namespace PowerLook_Aluguel
     {
         public static Form_cad_produto  FormProduto { get; set; }
         public static Form_cad_Fornecedor FormFornecedor { get; set; }
+
+        public static Form_cad_cliente FormCliente { get; set; }
     }
 }

@@ -172,13 +172,14 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // funcionárioToolStripMenuItem
             // 
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
-            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
             // 
             // fornecedorToolStripMenuItem
@@ -191,7 +192,7 @@
             // vestidoToolStripMenuItem
             // 
             this.vestidoToolStripMenuItem.Name = "vestidoToolStripMenuItem";
-            this.vestidoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.vestidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vestidoToolStripMenuItem.Text = "Vestido";
             this.vestidoToolStripMenuItem.Click += new System.EventHandler(this.vestidoToolStripMenuItem_Click);
             // 

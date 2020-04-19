@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_cad_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_cad_cliente.Designer.cs">
+      <DependentUpon>Form_cad_cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_cad_Fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="MeusFormularios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_cad_cliente.resx">
+      <DependentUpon>Form_cad_cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_cad_Fornecedor.resx">
       <DependentUpon>Form_cad_Fornecedor.cs</DependentUpon>
     </EmbeddedResource>

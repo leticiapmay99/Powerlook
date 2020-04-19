@@ -31,12 +31,13 @@ namespace PowerLook_Aluguel
             this.enderecosBindingSource.DataSource = DataContextFactory.DataContext.Enderecos;
 
         }
-
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
-            this.fornecedoresBindingSource.AddNew();
-           this.PessoaCorrente.PessoaJurifica = new PessoaJurifica();
+            this.fornecedoresBindingSource.RemoveCurrent();
+            DataContextFactory.DataContext.SubmitChanges();
+            MessageBox.Show("Produto Excluido com sucesso");
         }
+
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
@@ -48,15 +49,13 @@ namespace PowerLook_Aluguel
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-        
             this.fornecedoresBindingSource.CancelEdit();
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void btnNovo_Click(object sender, EventArgs e)
         {
-            this.fornecedoresBindingSource.RemoveCurrent();
-            DataContextFactory.DataContext.SubmitChanges();
-            MessageBox.Show("Produto Excluido com sucesso");
+            this.fornecedoresBindingSource.AddNew();
+            this.PessoaCorrente.PessoaJurifica = new PessoaJurifica();
         }
 
         private void fornecedoresDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -81,5 +80,12 @@ namespace PowerLook_Aluguel
             }
 
         }
+
+        private void Form_cad_Fornecedor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MeusFormularios.FormFornecedor = null;
+        }
+
+
     }
 }

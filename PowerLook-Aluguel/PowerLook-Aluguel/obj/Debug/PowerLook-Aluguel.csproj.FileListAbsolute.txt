@@ -21,3 +21,4 @@ C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Alug
 C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\bin\Debug\DBPowerLook.DAL.pdb
 C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\bin\Debug\DBPowerLook.DAL.dll.config
 C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_cad_Fornecedor.resources
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_cad_cliente.resources
