@@ -72,5 +72,23 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormCliente.Show();
             MeusFormularios.FormCliente.Focus();
         }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormRelatorios == null)
+                MeusFormularios.FormRelatorios = new Form_relatorios();
+
+            MeusFormularios.FormRelatorios.Show();
+            MeusFormularios.FormRelatorios.Focus();
+        }
+
+        private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormRelatorios == null)
+                MeusFormularios.FormRelatorios = new Form_relatorios();
+
+            MeusFormularios.FormRelatorios.Show();
+            MeusFormularios.FormRelatorios.Focus();
+        }
     }
 }

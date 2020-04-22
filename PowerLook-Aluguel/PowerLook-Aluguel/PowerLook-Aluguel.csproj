@@ -89,6 +89,18 @@
     <Compile Include="Form_principal.Designer.cs">
       <DependentUpon>Form_principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_relatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_relatorios.Designer.cs">
+      <DependentUpon>Form_relatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_relatorio_produto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_relatorio_produto.Designer.cs">
+      <DependentUpon>Form_relatorio_produto.cs</DependentUpon>
+    </Compile>
     <Compile Include="MeusFormularios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_principal.resx">
       <DependentUpon>Form_principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_relatorios.resx">
+      <DependentUpon>Form_relatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_relatorio_produto.resx">
+      <DependentUpon>Form_relatorio_produto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
