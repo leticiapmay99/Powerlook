@@ -138,6 +138,15 @@
             tipo_mangaLabel.TabIndex = 19;
             tipo_mangaLabel.Text = "Manga:";
             // 
+            // id_fornecedorLabel
+            // 
+            id_fornecedorLabel.AutoSize = true;
+            id_fornecedorLabel.Location = new System.Drawing.Point(200, 68);
+            id_fornecedorLabel.Name = "id_fornecedorLabel";
+            id_fornecedorLabel.Size = new System.Drawing.Size(64, 13);
+            id_fornecedorLabel.TabIndex = 9;
+            id_fornecedorLabel.Text = "Fornecedor:";
+            // 
             // btnNovo
             // 
             this.btnNovo.Location = new System.Drawing.Point(14, 244);
@@ -339,15 +348,6 @@
             // fornecedoresBindingSource
             // 
             this.fornecedoresBindingSource.DataSource = typeof(DBPowerLook.DAL.Fornecedores);
-            // 
-            // id_fornecedorLabel
-            // 
-            id_fornecedorLabel.AutoSize = true;
-            id_fornecedorLabel.Location = new System.Drawing.Point(200, 68);
-            id_fornecedorLabel.Name = "id_fornecedorLabel";
-            id_fornecedorLabel.Size = new System.Drawing.Size(64, 13);
-            id_fornecedorLabel.TabIndex = 9;
-            id_fornecedorLabel.Text = "Fornecedor:";
             // 
             // id_fornecedorComboBox
             // 
