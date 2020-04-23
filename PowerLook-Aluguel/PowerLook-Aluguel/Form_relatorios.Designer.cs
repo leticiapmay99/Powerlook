@@ -84,6 +84,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnProduto);
             this.Name = "Form_relatorios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_relatorios";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_relatorios_FormClosed);
             this.ResumeLayout(false);

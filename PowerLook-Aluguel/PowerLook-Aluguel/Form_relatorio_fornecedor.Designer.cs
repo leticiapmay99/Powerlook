@@ -29,28 +29,43 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ProdutosTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.ProdutosTableAdapter();
+            this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
             this.FornecedorRelatorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ProdutosTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.ProdutosTableAdapter();
             this.FornecedorRelatorioTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.FornecedorRelatorioTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FornecedorRelatorioBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ProdutosBindingSource
+            // 
+            this.ProdutosBindingSource.DataMember = "Produtos";
+            this.ProdutosBindingSource.DataSource = this.PowerLookDataSet;
+            // 
+            // PowerLookDataSet
+            // 
+            this.PowerLookDataSet.DataSetName = "PowerLookDataSet";
+            this.PowerLookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // FornecedorRelatorioBindingSource
+            // 
+            this.FornecedorRelatorioBindingSource.DataMember = "FornecedorRelatorio";
+            this.FornecedorRelatorioBindingSource.DataSource = this.PowerLookDataSet;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "produto";
-            reportDataSource1.Value = this.ProdutosBindingSource;
-            reportDataSource2.Name = "Fornecedor";
-            reportDataSource2.Value = this.FornecedorRelatorioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource3.Name = "produto";
+            reportDataSource3.Value = this.ProdutosBindingSource;
+            reportDataSource4.Name = "Fornecedor";
+            reportDataSource4.Value = this.FornecedorRelatorioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PowerLook_Aluguel.Fornecedor.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -58,24 +73,9 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // PowerLookDataSet
-            // 
-            this.PowerLookDataSet.DataSetName = "PowerLookDataSet";
-            this.PowerLookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ProdutosBindingSource
-            // 
-            this.ProdutosBindingSource.DataMember = "Produtos";
-            this.ProdutosBindingSource.DataSource = this.PowerLookDataSet;
-            // 
             // ProdutosTableAdapter
             // 
             this.ProdutosTableAdapter.ClearBeforeFill = true;
-            // 
-            // FornecedorRelatorioBindingSource
-            // 
-            this.FornecedorRelatorioBindingSource.DataMember = "FornecedorRelatorio";
-            this.FornecedorRelatorioBindingSource.DataSource = this.PowerLookDataSet;
             // 
             // FornecedorRelatorioTableAdapter
             // 
@@ -88,10 +88,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form_relatorio_fornecedor";
-            this.Text = "Form_relatorio_fornecedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form_relatorio_fornecedor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FornecedorRelatorioBindingSource)).EndInit();
             this.ResumeLayout(false);
 

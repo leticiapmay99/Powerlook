@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
             this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ProdutosTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.ProdutosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ProdutosBindingSource
+            // 
+            this.ProdutosBindingSource.DataMember = "Produtos";
+            this.ProdutosBindingSource.DataSource = this.PowerLookDataSet;
+            // 
+            // PowerLookDataSet
+            // 
+            this.PowerLookDataSet.DataSetName = "PowerLookDataSet";
+            this.PowerLookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // PowerLookDataSet
-            // 
-            this.PowerLookDataSet.DataSetName = "PowerLookDataSet";
-            this.PowerLookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ProdutosBindingSource
-            // 
-            this.ProdutosBindingSource.DataMember = "Produtos";
-            this.ProdutosBindingSource.DataSource = this.PowerLookDataSet;
-            // 
             // ProdutosTableAdapter
             // 
             this.ProdutosTableAdapter.ClearBeforeFill = true;
@@ -72,11 +72,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form_relatorio_produto";
-            this.Text = "Form_relatorio_produto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_relatorio_produto_FormClosed);
             this.Load += new System.EventHandler(this.Form_relatorio_produto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
