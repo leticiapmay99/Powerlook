@@ -108,3 +108,7 @@ C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Alug
 C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook-Aluguel.exe.config
 C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_relatorios.resources
 C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_relatorio_produto.resources
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\RdlCompile.cache
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\RdlCompile.compiled
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_relatorio_cliente.resources
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_relatorio_fornecedor.resources

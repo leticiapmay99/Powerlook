@@ -95,6 +95,18 @@
     <Compile Include="Form_relatorios.Designer.cs">
       <DependentUpon>Form_relatorios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_relatorio_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_relatorio_cliente.Designer.cs">
+      <DependentUpon>Form_relatorio_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_relatorio_fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_relatorio_fornecedor.Designer.cs">
+      <DependentUpon>Form_relatorio_fornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_relatorio_produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,11 @@
       <DependentUpon>Form_relatorio_produto.cs</DependentUpon>
     </Compile>
     <Compile Include="MeusFormularios.cs" />
+    <Compile Include="PowerLookDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PowerLookDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -120,9 +137,18 @@
     <EmbeddedResource Include="Form_relatorios.resx">
       <DependentUpon>Form_relatorios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_relatorio_cliente.resx">
+      <DependentUpon>Form_relatorio_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_relatorio_fornecedor.resx">
+      <DependentUpon>Form_relatorio_fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_relatorio_produto.resx">
       <DependentUpon>Form_relatorio_produto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cliente.rdlc" />
+    <EmbeddedResource Include="Fornecedor.rdlc" />
+    <EmbeddedResource Include="Produto.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -134,6 +160,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="PowerLookDataSet.xsc">
+      <DependentUpon>PowerLookDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PowerLookDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PowerLookDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PowerLookDataSet.xss">
+      <DependentUpon>PowerLookDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\DBPowerLook.DAL.Enderecos.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Fornecedores.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Locacoes.datasource" />

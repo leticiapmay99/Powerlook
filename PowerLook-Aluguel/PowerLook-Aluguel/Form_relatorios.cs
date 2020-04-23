@@ -30,5 +30,23 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormRelatoriosProduto.Show();
             MeusFormularios.FormRelatoriosProduto.Focus();
         }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormRelatoriosCliente == null)
+                MeusFormularios.FormRelatoriosCliente = new Form_relatorio_cliente();
+
+            MeusFormularios.FormRelatoriosCliente.Show();
+            MeusFormularios.FormRelatoriosCliente.Focus();
+        }
+
+        private void btnFornecedor_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormRelatoriosFornecedor == null)
+                MeusFormularios.FormRelatoriosFornecedor = new Form_relatorio_fornecedor();
+
+            MeusFormularios.FormRelatoriosFornecedor.Show();
+            MeusFormularios.FormRelatoriosFornecedor.Focus();
+        }
     }
 }
