@@ -30,12 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ProdutosTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.ProdutosTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.FornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.FornecedoresTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.FornecedoresTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FornecedoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ProdutosBindingSource
@@ -48,12 +52,19 @@
             this.PowerLookDataSet.DataSetName = "PowerLookDataSet";
             this.PowerLookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // ProdutosTableAdapter
+            // 
+            this.ProdutosTableAdapter.ClearBeforeFill = true;
+            // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "produto";
             reportDataSource1.Value = this.ProdutosBindingSource;
+            reportDataSource2.Name = "Fornecedor";
+            reportDataSource2.Value = this.FornecedoresBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PowerLook_Aluguel.Produto.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -61,9 +72,14 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // ProdutosTableAdapter
+            // FornecedoresBindingSource
             // 
-            this.ProdutosTableAdapter.ClearBeforeFill = true;
+            this.FornecedoresBindingSource.DataMember = "Fornecedores";
+            this.FornecedoresBindingSource.DataSource = this.PowerLookDataSet;
+            // 
+            // FornecedoresTableAdapter
+            // 
+            this.FornecedoresTableAdapter.ClearBeforeFill = true;
             // 
             // Form_relatorio_produto
             // 
@@ -77,15 +93,17 @@
             this.Load += new System.EventHandler(this.Form_relatorio_produto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FornecedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource ProdutosBindingSource;
         private PowerLookDataSet PowerLookDataSet;
         private PowerLookDataSetTableAdapters.ProdutosTableAdapter ProdutosTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource FornecedoresBindingSource;
+        private PowerLookDataSetTableAdapters.FornecedoresTableAdapter FornecedoresTableAdapter;
     }
 }

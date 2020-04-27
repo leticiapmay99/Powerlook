@@ -26,5 +26,10 @@ namespace PowerLook_Aluguel
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void Form_relatorio_fornecedor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MeusFormularios.FormRelatoriosFornecedor = null;
+        }
     }
 }

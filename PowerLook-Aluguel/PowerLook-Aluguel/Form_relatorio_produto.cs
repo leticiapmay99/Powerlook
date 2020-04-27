@@ -24,9 +24,12 @@ namespace PowerLook_Aluguel
 
         private void Form_relatorio_produto_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'PowerLookDataSet.Fornecedores'. Você pode movê-la ou removê-la conforme necessário.
+            this.FornecedoresTableAdapter.Fill(this.PowerLookDataSet.Fornecedores);
             // TODO: esta linha de código carrega dados na tabela 'PowerLookDataSet.Produtos'. Você pode movê-la ou removê-la conforme necessário.
             this.ProdutosTableAdapter.Fill(this.PowerLookDataSet.Produtos);
 
+            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
     }
