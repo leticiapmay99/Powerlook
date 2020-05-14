@@ -78,7 +78,7 @@
             // corLabel
             // 
             corLabel.AutoSize = true;
-            corLabel.Location = new System.Drawing.Point(39, 96);
+            corLabel.Location = new System.Drawing.Point(67, 170);
             corLabel.Name = "corLabel";
             corLabel.Size = new System.Drawing.Size(26, 13);
             corLabel.TabIndex = 7;
@@ -87,7 +87,7 @@
             // descricaoLabel
             // 
             descricaoLabel.AutoSize = true;
-            descricaoLabel.Location = new System.Drawing.Point(216, 99);
+            descricaoLabel.Location = new System.Drawing.Point(244, 173);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(58, 13);
             descricaoLabel.TabIndex = 8;
@@ -96,7 +96,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(28, 69);
+            nomeLabel.Location = new System.Drawing.Point(56, 143);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(38, 13);
             nomeLabel.TabIndex = 11;
@@ -105,7 +105,7 @@
             // precoLabel
             // 
             precoLabel.AutoSize = true;
-            precoLabel.Location = new System.Drawing.Point(235, 129);
+            precoLabel.Location = new System.Drawing.Point(263, 203);
             precoLabel.Name = "precoLabel";
             precoLabel.Size = new System.Drawing.Size(38, 13);
             precoLabel.TabIndex = 13;
@@ -114,7 +114,7 @@
             // tamanhoLabel
             // 
             tamanhoLabel.AutoSize = true;
-            tamanhoLabel.Location = new System.Drawing.Point(13, 126);
+            tamanhoLabel.Location = new System.Drawing.Point(41, 200);
             tamanhoLabel.Name = "tamanhoLabel";
             tamanhoLabel.Size = new System.Drawing.Size(55, 13);
             tamanhoLabel.TabIndex = 15;
@@ -123,7 +123,7 @@
             // tipo_decoteLabel
             // 
             tipo_decoteLabel.AutoSize = true;
-            tipo_decoteLabel.Location = new System.Drawing.Point(21, 153);
+            tipo_decoteLabel.Location = new System.Drawing.Point(49, 227);
             tipo_decoteLabel.Name = "tipo_decoteLabel";
             tipo_decoteLabel.Size = new System.Drawing.Size(45, 13);
             tipo_decoteLabel.TabIndex = 17;
@@ -132,7 +132,7 @@
             // tipo_mangaLabel
             // 
             tipo_mangaLabel.AutoSize = true;
-            tipo_mangaLabel.Location = new System.Drawing.Point(21, 179);
+            tipo_mangaLabel.Location = new System.Drawing.Point(49, 253);
             tipo_mangaLabel.Name = "tipo_mangaLabel";
             tipo_mangaLabel.Size = new System.Drawing.Size(43, 13);
             tipo_mangaLabel.TabIndex = 19;
@@ -141,7 +141,7 @@
             // id_fornecedorLabel
             // 
             id_fornecedorLabel.AutoSize = true;
-            id_fornecedorLabel.Location = new System.Drawing.Point(200, 68);
+            id_fornecedorLabel.Location = new System.Drawing.Point(228, 142);
             id_fornecedorLabel.Name = "id_fornecedorLabel";
             id_fornecedorLabel.Size = new System.Drawing.Size(64, 13);
             id_fornecedorLabel.TabIndex = 9;
@@ -149,7 +149,7 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(14, 244);
+            this.btnNovo.Location = new System.Drawing.Point(170, 63);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 33);
             this.btnNovo.TabIndex = 0;
@@ -159,7 +159,7 @@
             // 
             // btnGravar
             // 
-            this.btnGravar.Location = new System.Drawing.Point(108, 244);
+            this.btnGravar.Location = new System.Drawing.Point(264, 63);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 33);
             this.btnGravar.TabIndex = 4;
@@ -169,7 +169,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(202, 244);
+            this.btnCancelar.Location = new System.Drawing.Point(358, 63);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 33);
             this.btnCancelar.TabIndex = 5;
@@ -179,7 +179,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(295, 244);
+            this.btnExcluir.Location = new System.Drawing.Point(451, 63);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 33);
             this.btnExcluir.TabIndex = 6;
@@ -209,6 +209,7 @@
             this.produtosDataGridView.ReadOnly = true;
             this.produtosDataGridView.Size = new System.Drawing.Size(878, 220);
             this.produtosDataGridView.TabIndex = 7;
+            this.produtosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.produtosDataGridView_CellContentClick);
             this.produtosDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.produtosDataGridView_CellFormatting);
             // 
             // dataGridViewTextBoxColumn1
@@ -282,7 +283,7 @@
             // corTextBox
             // 
             this.corTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "cor", true));
-            this.corTextBox.Location = new System.Drawing.Point(70, 93);
+            this.corTextBox.Location = new System.Drawing.Point(98, 167);
             this.corTextBox.Name = "corTextBox";
             this.corTextBox.Size = new System.Drawing.Size(100, 20);
             this.corTextBox.TabIndex = 8;
@@ -290,7 +291,7 @@
             // descricaoTextBox
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "descricao", true));
-            this.descricaoTextBox.Location = new System.Drawing.Point(278, 96);
+            this.descricaoTextBox.Location = new System.Drawing.Point(306, 170);
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(100, 20);
             this.descricaoTextBox.TabIndex = 9;
@@ -298,7 +299,7 @@
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(70, 66);
+            this.nomeTextBox.Location = new System.Drawing.Point(98, 140);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
             this.nomeTextBox.TabIndex = 12;
@@ -306,7 +307,7 @@
             // precoTextBox
             // 
             this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "preco", true));
-            this.precoTextBox.Location = new System.Drawing.Point(278, 126);
+            this.precoTextBox.Location = new System.Drawing.Point(306, 200);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.Size = new System.Drawing.Size(100, 20);
             this.precoTextBox.TabIndex = 14;
@@ -314,7 +315,7 @@
             // tamanhoTextBox
             // 
             this.tamanhoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "tamanho", true));
-            this.tamanhoTextBox.Location = new System.Drawing.Point(70, 123);
+            this.tamanhoTextBox.Location = new System.Drawing.Point(98, 197);
             this.tamanhoTextBox.Name = "tamanhoTextBox";
             this.tamanhoTextBox.Size = new System.Drawing.Size(100, 20);
             this.tamanhoTextBox.TabIndex = 16;
@@ -322,7 +323,7 @@
             // tipo_decoteTextBox
             // 
             this.tipo_decoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "tipo_decote", true));
-            this.tipo_decoteTextBox.Location = new System.Drawing.Point(70, 150);
+            this.tipo_decoteTextBox.Location = new System.Drawing.Point(98, 224);
             this.tipo_decoteTextBox.Name = "tipo_decoteTextBox";
             this.tipo_decoteTextBox.Size = new System.Drawing.Size(100, 20);
             this.tipo_decoteTextBox.TabIndex = 18;
@@ -330,7 +331,7 @@
             // tipo_mangaTextBox
             // 
             this.tipo_mangaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "tipo_manga", true));
-            this.tipo_mangaTextBox.Location = new System.Drawing.Point(70, 176);
+            this.tipo_mangaTextBox.Location = new System.Drawing.Point(98, 250);
             this.tipo_mangaTextBox.Name = "tipo_mangaTextBox";
             this.tipo_mangaTextBox.Size = new System.Drawing.Size(100, 20);
             this.tipo_mangaTextBox.TabIndex = 20;
@@ -356,7 +357,7 @@
             this.id_fornecedorComboBox.DisplayMember = "nome_fantasia";
             this.id_fornecedorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.id_fornecedorComboBox.FormattingEnabled = true;
-            this.id_fornecedorComboBox.Location = new System.Drawing.Point(278, 65);
+            this.id_fornecedorComboBox.Location = new System.Drawing.Point(306, 139);
             this.id_fornecedorComboBox.Name = "id_fornecedorComboBox";
             this.id_fornecedorComboBox.Size = new System.Drawing.Size(121, 21);
             this.id_fornecedorComboBox.TabIndex = 10;

@@ -282,13 +282,13 @@
             // 
             this.id_enderecoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.fornecedoresBindingSource, "id_endereco", true));
             this.id_enderecoComboBox.DataSource = this.enderecosBindingSource;
-            this.id_enderecoComboBox.DisplayMember = "cep";
+            this.id_enderecoComboBox.DisplayMember = "cidade";
             this.id_enderecoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.id_enderecoComboBox.FormattingEnabled = true;
             this.id_enderecoComboBox.Location = new System.Drawing.Point(320, 112);
             this.id_enderecoComboBox.Name = "id_enderecoComboBox";
             this.id_enderecoComboBox.Size = new System.Drawing.Size(233, 21);
-            this.id_enderecoComboBox.TabIndex = 2;
+            this.id_enderecoComboBox.TabIndex = 7;
             this.id_enderecoComboBox.ValueMember = "id";
             // 
             // enderecosBindingSource
@@ -301,7 +301,7 @@
             this.complementoTextBox.Location = new System.Drawing.Point(319, 246);
             this.complementoTextBox.Name = "complementoTextBox";
             this.complementoTextBox.Size = new System.Drawing.Size(198, 20);
-            this.complementoTextBox.TabIndex = 4;
+            this.complementoTextBox.TabIndex = 9;
             // 
             // emailTextBox
             // 
@@ -309,7 +309,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(106, 217);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(100, 20);
-            this.emailTextBox.TabIndex = 6;
+            this.emailTextBox.TabIndex = 5;
             // 
             // nome_fantasiaTextBox
             // 
@@ -317,7 +317,7 @@
             this.nome_fantasiaTextBox.Location = new System.Drawing.Point(106, 113);
             this.nome_fantasiaTextBox.Name = "nome_fantasiaTextBox";
             this.nome_fantasiaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nome_fantasiaTextBox.TabIndex = 8;
+            this.nome_fantasiaTextBox.TabIndex = 1;
             // 
             // numero_casaTextBox
             // 
@@ -325,7 +325,7 @@
             this.numero_casaTextBox.Location = new System.Drawing.Point(320, 217);
             this.numero_casaTextBox.Name = "numero_casaTextBox";
             this.numero_casaTextBox.Size = new System.Drawing.Size(65, 20);
-            this.numero_casaTextBox.TabIndex = 10;
+            this.numero_casaTextBox.TabIndex = 8;
             // 
             // telefoneTextBox
             // 
@@ -333,7 +333,7 @@
             this.telefoneTextBox.Location = new System.Drawing.Point(106, 243);
             this.telefoneTextBox.Name = "telefoneTextBox";
             this.telefoneTextBox.Size = new System.Drawing.Size(100, 20);
-            this.telefoneTextBox.TabIndex = 12;
+            this.telefoneTextBox.TabIndex = 6;
             // 
             // cnpjTextBox
             // 
@@ -341,7 +341,7 @@
             this.cnpjTextBox.Location = new System.Drawing.Point(106, 139);
             this.cnpjTextBox.Name = "cnpjTextBox";
             this.cnpjTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cnpjTextBox.TabIndex = 14;
+            this.cnpjTextBox.TabIndex = 2;
             // 
             // inscricao_estadualTextBox
             // 
@@ -349,7 +349,7 @@
             this.inscricao_estadualTextBox.Location = new System.Drawing.Point(106, 165);
             this.inscricao_estadualTextBox.Name = "inscricao_estadualTextBox";
             this.inscricao_estadualTextBox.Size = new System.Drawing.Size(100, 20);
-            this.inscricao_estadualTextBox.TabIndex = 16;
+            this.inscricao_estadualTextBox.TabIndex = 3;
             // 
             // razao_socialTextBox
             // 
@@ -357,11 +357,12 @@
             this.razao_socialTextBox.Location = new System.Drawing.Point(106, 191);
             this.razao_socialTextBox.Name = "razao_socialTextBox";
             this.razao_socialTextBox.Size = new System.Drawing.Size(100, 20);
-            this.razao_socialTextBox.TabIndex = 18;
+            this.razao_socialTextBox.TabIndex = 4;
             // 
             // textBox4
             // 
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "uf", true));
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(453, 139);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
@@ -379,6 +380,8 @@
             // textBox3
             // 
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "bairro", true));
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "bairro", true));
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(320, 187);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(197, 20);
@@ -396,6 +399,8 @@
             // textBox2
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cep", true));
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "endereco", true));
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(320, 162);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(197, 20);
@@ -413,6 +418,7 @@
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cep", true));
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(320, 139);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
@@ -423,7 +429,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(478, 58);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 33);
-            this.btnExcluir.TabIndex = 43;
+            this.btnExcluir.TabIndex = 13;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -433,7 +439,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(385, 58);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 33);
-            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -443,7 +449,7 @@
             this.btnGravar.Location = new System.Drawing.Point(291, 58);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 33);
-            this.btnGravar.TabIndex = 41;
+            this.btnGravar.TabIndex = 11;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
@@ -453,7 +459,7 @@
             this.btnNovo.Location = new System.Drawing.Point(197, 58);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 33);
-            this.btnNovo.TabIndex = 40;
+            this.btnNovo.TabIndex = 10;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);

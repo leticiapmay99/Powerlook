@@ -33,9 +33,17 @@ namespace PowerLook_Aluguel
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            this.fornecedoresBindingSource.RemoveCurrent();
-            DataContextFactory.DataContext.SubmitChanges();
-            MessageBox.Show("Produto Excluido com sucesso");
+            if (MessageBox.Show("Tem certeza", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (this.FornecedorPossuiProduto(this.FornecedoresCorrente))
+                    MessageBox.Show("Você não pode excluir um fornecedor que possui produto");
+                else
+                {
+                    this.fornecedoresBindingSource.RemoveCurrent();
+                    DataContextFactory.DataContext.SubmitChanges();
+                    MessageBox.Show("Fornecedor Excluido com sucesso");
+                }
+            } 
         }
 
 
@@ -85,7 +93,23 @@ namespace PowerLook_Aluguel
         {
             MeusFormularios.FormFornecedor = null;
         }
+           
+        public Fornecedores FornecedoresCorrente { 
+        get
+            {
+                return (Fornecedores) this.fornecedoresBindingSource.Current;
+            }
+        }
 
-
+        private bool FornecedorPossuiProduto(Fornecedores fornecedores)
+        {
+            var produtos = DataContextFactory.DataContext.Produtos.Where(x => x.id_fornecedor == fornecedores.id);
+            if (produtos.Count() > 0)
+                return true;
+            else
+                return false;
+        } 
     }
 }
+
+          

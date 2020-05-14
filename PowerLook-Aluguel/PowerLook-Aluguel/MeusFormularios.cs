@@ -13,6 +13,7 @@ namespace PowerLook_Aluguel
 
         public static Form_cad_cliente FormCliente { get; set; }
 
+        public static Form_cad_funcionario FormFuncionario { get; set; }
 
 
 
@@ -22,5 +23,6 @@ namespace PowerLook_Aluguel
 
         public static Form_relatorio_fornecedor FormRelatoriosFornecedor{ get; set; }
 
+      
     }
 }

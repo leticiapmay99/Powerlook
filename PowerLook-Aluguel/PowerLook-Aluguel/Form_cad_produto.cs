@@ -49,9 +49,12 @@ namespace PowerLook_Aluguel
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            this.produtosBindingSource.RemoveCurrent();
-            DataContextFactory.DataContext.SubmitChanges();
-            MessageBox.Show("Produto Excluido com sucesso");
+            if (MessageBox.Show("Tem certeza", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.produtosBindingSource.RemoveCurrent();
+                DataContextFactory.DataContext.SubmitChanges();
+                MessageBox.Show("Produto Excluido com sucesso");
+            }
         }
 
         private void produtosDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -60,6 +63,11 @@ namespace PowerLook_Aluguel
             {
                 e.Value = ((Fornecedores)e.Value).nome_fantasia;
             }
+        }
+
+        private void produtosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

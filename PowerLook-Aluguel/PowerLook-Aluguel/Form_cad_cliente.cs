@@ -60,9 +60,12 @@ namespace PowerLook_Aluguel
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            this.usuariosBindingSource.RemoveCurrent();
-            DataContextFactory.DataContext.SubmitChanges();
-            MessageBox.Show("Produto Excluido com sucesso");
+            if (MessageBox.Show("Tem certeza", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.usuariosBindingSource.RemoveCurrent();
+                DataContextFactory.DataContext.SubmitChanges();
+                MessageBox.Show("Produto Excluido com sucesso");
+            }
         }
 
         private void usuariosDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
