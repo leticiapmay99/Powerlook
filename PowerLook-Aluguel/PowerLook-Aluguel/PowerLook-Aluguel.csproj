@@ -134,6 +134,9 @@
     <EmbeddedResource Include="Form_cad_Fornecedor.resx">
       <DependentUpon>Form_cad_Fornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_cad_funcionario.resx">
+      <DependentUpon>Form_cad_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_cad_produto.resx">
       <DependentUpon>Form_cad_produto.cs</DependentUpon>
     </EmbeddedResource>

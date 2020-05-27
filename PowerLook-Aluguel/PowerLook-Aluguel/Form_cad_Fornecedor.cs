@@ -36,7 +36,7 @@ namespace PowerLook_Aluguel
             if (MessageBox.Show("Tem certeza", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (this.FornecedorPossuiProduto(this.FornecedoresCorrente))
-                    MessageBox.Show("Você não pode excluir um fornecedor que possui produto");
+                    MessageBox.Show("Você não pode excluir este fornecedor");
                 else
                 {
                     this.fornecedoresBindingSource.RemoveCurrent();

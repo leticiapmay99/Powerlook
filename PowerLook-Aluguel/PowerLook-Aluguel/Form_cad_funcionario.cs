@@ -16,5 +16,10 @@ namespace PowerLook_Aluguel
         {
             InitializeComponent();
         }
+
+        private void Form_cad_funcionario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MeusFormularios.FormFuncionario = null;
+        }
     }
 }
