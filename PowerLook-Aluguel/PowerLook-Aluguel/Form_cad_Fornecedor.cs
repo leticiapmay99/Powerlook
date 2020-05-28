@@ -25,6 +25,14 @@ namespace PowerLook_Aluguel
             }
         }
 
+        public Fornecedores FornecedoresCorrente
+        {
+            get
+            {
+                return (Fornecedores)this.fornecedoresBindingSource.Current;
+            }
+        }
+
         private void Form_cad_Fornecedor_Load(object sender, EventArgs e)
         {
             this.fornecedoresBindingSource.DataSource = DataContextFactory.DataContext.Fornecedores;
@@ -94,12 +102,8 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormFornecedor = null;
         }
            
-        public Fornecedores FornecedoresCorrente { 
-        get
-            {
-                return (Fornecedores) this.fornecedoresBindingSource.Current;
-            }
-        }
+    
+  
 
         private bool FornecedorPossuiProduto(Fornecedores fornecedores)
         {

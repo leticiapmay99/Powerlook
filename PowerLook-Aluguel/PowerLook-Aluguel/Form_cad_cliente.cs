@@ -50,7 +50,7 @@ namespace PowerLook_Aluguel
             this.usuariosBindingSource.EndEdit();
             DataContextFactory.DataContext.SubmitChanges();
             usuariosDataGridView.Refresh();
-            MessageBox.Show("Fornecedor Cadastrado com sucesso");
+            MessageBox.Show("Cliente Cadastrado com sucesso");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace PowerLook_Aluguel
             {
                 this.usuariosBindingSource.RemoveCurrent();
                 DataContextFactory.DataContext.SubmitChanges();
-                MessageBox.Show("Produto Excluido com sucesso");
+                MessageBox.Show("Cliente Excluido com sucesso");
             }
         }
 
@@ -83,11 +83,6 @@ namespace PowerLook_Aluguel
             if (e.Value != null && e.ColumnIndex == 7)
             {
                 e.Value = ((Enderecos)e.Value).cidade;
-            }
-
-            if (e.Value != null && e.ColumnIndex == 10)
-            {
-                e.Value = ((TipoUsuario)e.Value).name;
             }
         }
     }
