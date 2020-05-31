@@ -24,32 +24,32 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 
 ## ToDo
 
-	- Fluxo de Locação
+- Fluxo de Locação
 
-	- Fluxo de Devolução
-	
-	- Relatório de:
-		- Vestidos mais vendidos;
+- Fluxo de Devolução
 
-		- Aluguel
+- Relatório de:
+	- Vestidos mais vendidos;
 
-		- Devoluçãp
+	- Aluguel
 
-	- Login
+	- Devoluçãp
 
-	- Procurar Ícones
+- Login
 
-	- Algumas validações
+- Procurar Ícones
 
-	- Criar tabela de Categoria
+- Algumas validações
 
-	- Separar Cliente e Funcionário (eu sei o que isso quer dizer)
+- Criar tabela de Categoria
 
-	- Busca vestido
+- Separar Cliente e Funcionário (eu sei o que isso quer dizer)
 
-	- Emissão de Boleto
+- Busca vestido
 
-	- Correções:
+- Emissão de Boleto
 
-		- Alterar o endereço de todos;
+- Correções:
+
+	- Alterar o endereço de todos;
 
