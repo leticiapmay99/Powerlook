@@ -126,5 +126,15 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormCategoria.Show();
             MeusFormularios.FormCategoria.Focus();
         }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormCategoria == null)
+                MeusFormularios.FormCategoria = new Form_cad_categoria();
+
+            MeusFormularios.FormCategoria.Show();
+            MeusFormularios.FormCategoria.Focus();
+        }
+    
     }
 }
