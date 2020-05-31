@@ -10,3 +10,4 @@ D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\bin\Debug\DBPow
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.csproj.CoreCompileInputs.cache
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.dll
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.pdb
+D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.csprojAssemblyReference.cache

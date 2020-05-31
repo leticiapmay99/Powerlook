@@ -15,11 +15,6 @@
       <Association Name="PessoaJurifica_Fornecedores" Member="PessoaJurifica" ThisKey="id_pessoa_juridica" OtherKey="id" Type="PessoaJurifica" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Locacoes" Member="Locacoes">
-    <Type Name="Locacoes">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.PessoaFisica" Member="PessoaFisica">
     <Type Name="PessoaFisica">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -50,21 +45,6 @@
       <Association Name="PessoaJurifica_Fornecedores" Member="Fornecedores" ThisKey="id" OtherKey="id_pessoa_juridica" Type="Fornecedores" />
     </Type>
   </Table>
-  <Table Name="dbo.Produtos" Member="Produtos">
-    <Type Name="Produtos">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="nome" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="descricao" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="tamanho" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="tipo_manga" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="tipo_decote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="cor" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="preco" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="imagem" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="id_fornecedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Fornecedores_Produtos" Member="Fornecedores" ThisKey="id_fornecedor" OtherKey="id" Type="Fornecedores" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.TipoUsuario" Member="TipoUsuario">
     <Type Name="TipoUsuario">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -87,6 +67,36 @@
       <Association Name="Enderecos_Usuarios" Member="Enderecos" ThisKey="id_endereco" OtherKey="id" Type="Enderecos" IsForeignKey="true" />
       <Association Name="PessoaFisica_Usuarios" Member="PessoaFisica" ThisKey="id_pessoa_fisica" OtherKey="id" Type="PessoaFisica" IsForeignKey="true" />
       <Association Name="TipoUsuario_Usuarios" Member="TipoUsuario" ThisKey="id_tipo_pessoa" OtherKey="id" Type="TipoUsuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categorias" Member="Categorias">
+    <Type Name="Categorias">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="descrição" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Categorias_Produtos" Member="Produtos" ThisKey="id" OtherKey="id_categoria" Type="Produtos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Produtos" Member="Produtos">
+    <Type Name="Produtos">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="tamanho" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_manga" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="tipo_decote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cor" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="preco" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="imagem" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="id_fornecedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_categoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Fornecedores_Produtos" Member="Fornecedores" ThisKey="id_fornecedor" OtherKey="id" Type="Fornecedores" IsForeignKey="true" />
+      <Association Name="Categorias_Produtos" Member="Categorias" ThisKey="id_categoria" OtherKey="id" Type="Categorias" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Locacoes" Member="Locacoes">
+    <Type Name="Locacoes">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

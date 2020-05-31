@@ -117,5 +117,14 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormFuncionario.Show();
             MeusFormularios.FormFuncionario.Focus();
         }
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormCategoria == null)
+                MeusFormularios.FormCategoria = new Form_cad_categoria();
+
+            MeusFormularios.FormCategoria.Show();
+            MeusFormularios.FormCategoria.Focus();
+        }
     }
 }

@@ -219,3 +219,4 @@ D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\Pow
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook-Aluguel.pdb
 C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_cad_funcionario.resources
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_cad_funcionario.resources
+D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_cad_categoria.resources

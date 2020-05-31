@@ -27,6 +27,7 @@ namespace PowerLook_Aluguel
         {
             this.produtosBindingSource.DataSource = DataContextFactory.DataContext.Produtos;
             this.fornecedoresBindingSource.DataSource = DataContextFactory.DataContext.Fornecedores;
+            this.categoriasBindingSource.DataSource = DataContextFactory.DataContext.Categorias;
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -59,9 +60,14 @@ namespace PowerLook_Aluguel
 
         private void produtosDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.Value != null && e.ColumnIndex == 8)
+            if (e.Value != null && e.ColumnIndex == 9)
             {
                 e.Value = ((Fornecedores)e.Value).nome_fantasia;
+            }
+
+            if (e.Value != null && e.ColumnIndex == 3)
+            {
+                e.Value = ((Categorias)e.Value).nome;
             }
         }
 
