@@ -84,6 +84,10 @@ namespace PowerLook_Aluguel
             {
                 e.Value = ((Enderecos)e.Value).cidade;
             }
+            if (e.Value != null && e.ColumnIndex == 10)
+            {
+                e.Value = ((TipoUsuario)e.Value).name;
+            }
         }
     }
 }
