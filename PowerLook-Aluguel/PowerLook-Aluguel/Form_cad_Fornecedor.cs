@@ -38,7 +38,8 @@ namespace PowerLook_Aluguel
             this.fornecedoresBindingSource.DataSource = DataContextFactory.DataContext.Fornecedores;
             this.enderecosBindingSource.DataSource = DataContextFactory.DataContext.Enderecos;
 
-        }
+        }  
+
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Tem certeza", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -57,10 +58,13 @@ namespace PowerLook_Aluguel
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            this.fornecedoresBindingSource.EndEdit();
-            DataContextFactory.DataContext.SubmitChanges();
-            fornecedoresDataGridView.Refresh();
-            MessageBox.Show("Fornecedor Cadastrado com sucesso");
+            if (this.Valida())
+            {
+                this.fornecedoresBindingSource.EndEdit();
+                DataContextFactory.DataContext.SubmitChanges();
+                fornecedoresDataGridView.Refresh();
+                MessageBox.Show("Fornecedor Cadastrado com sucesso");
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -112,7 +116,69 @@ namespace PowerLook_Aluguel
                 return true;
             else
                 return false;
-        } 
+        }
+
+
+
+        private bool Valida()
+        {
+            if (nome_fantasiaTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Nome é obrigatório");
+                nome_fantasiaTextBox.Focus();
+                return false;
+            }
+            if (cnpjMaskedTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo CNPJ é obrigatório");
+                cnpjMaskedTextBox.Focus();
+                return false;
+            }
+            if (inscricao_estadualTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Incrição Estadual é obrigatório");
+                inscricao_estadualTextBox.Focus();
+                return false;
+            }
+            if (razao_socialTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Razão Social é obrigatório");
+                razao_socialTextBox.Focus();
+                return false;
+            }
+            if (emailTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Email é obrigatório");
+                emailTextBox.Focus();
+                return false;
+            }
+            if (telefoneMaskedTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Telefone é obrigatório");
+                telefoneMaskedTextBox.Focus();
+                return false;
+            }
+            if (id_enderecoComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Endereço é obrigatório");
+                id_enderecoComboBox.Focus();
+                return false;
+            }
+            if (numero_casaTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Número é obrigatório");
+                numero_casaTextBox.Focus();
+                return false;
+            }
+            if (complementoTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Complemento é obrigatório");
+                complementoTextBox.Focus();
+                return false;
+            }
+
+            return true;
+        }
     }
 }
 

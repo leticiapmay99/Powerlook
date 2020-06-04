@@ -32,21 +32,39 @@
             System.Windows.Forms.Label descriçãoLabel;
             System.Windows.Forms.Label nomeLabel;
             this.categoriasDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.descriçãoTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             descriçãoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // descriçãoLabel
+            // 
+            descriçãoLabel.AutoSize = true;
+            descriçãoLabel.Location = new System.Drawing.Point(171, 177);
+            descriçãoLabel.Name = "descriçãoLabel";
+            descriçãoLabel.Size = new System.Drawing.Size(58, 13);
+            descriçãoLabel.TabIndex = 1;
+            descriçãoLabel.Text = "Descrição:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(191, 151);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.TabIndex = 5;
+            nomeLabel.Text = "Nome:";
             // 
             // categoriasDataGridView
             // 
@@ -59,48 +77,54 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.categoriasDataGridView.DataSource = this.categoriasBindingSource;
-            this.categoriasDataGridView.Location = new System.Drawing.Point(233, 231);
+            this.categoriasDataGridView.Location = new System.Drawing.Point(207, 250);
             this.categoriasDataGridView.Name = "categoriasDataGridView";
             this.categoriasDataGridView.ReadOnly = true;
             this.categoriasDataGridView.Size = new System.Drawing.Size(290, 220);
             this.categoriasDataGridView.TabIndex = 0;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "descrição";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
             // categoriasBindingSource
             // 
             this.categoriasBindingSource.DataSource = typeof(DBPowerLook.DAL.Categorias);
             // 
-            // descriçãoLabel
-            // 
-            descriçãoLabel.AutoSize = true;
-            descriçãoLabel.Location = new System.Drawing.Point(171, 199);
-            descriçãoLabel.Name = "descriçãoLabel";
-            descriçãoLabel.Size = new System.Drawing.Size(58, 13);
-            descriçãoLabel.TabIndex = 1;
-            descriçãoLabel.Text = "Descrição:";
-            // 
             // descriçãoTextBox
             // 
             this.descriçãoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriasBindingSource, "descrição", true));
-            this.descriçãoTextBox.Location = new System.Drawing.Point(233, 196);
+            this.descriçãoTextBox.Location = new System.Drawing.Point(233, 174);
+            this.descriçãoTextBox.Multiline = true;
             this.descriçãoTextBox.Name = "descriçãoTextBox";
-            this.descriçãoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.descriçãoTextBox.Size = new System.Drawing.Size(132, 70);
             this.descriçãoTextBox.TabIndex = 2;
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(194, 168);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(38, 13);
-            nomeLabel.TabIndex = 5;
-            nomeLabel.Text = "Nome:";
+            this.descriçãoTextBox.TextChanged += new System.EventHandler(this.descriçãoTextBox_TextChanged);
             // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriasBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(236, 165);
+            this.nomeTextBox.Location = new System.Drawing.Point(233, 148);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(132, 20);
             this.nomeTextBox.TabIndex = 6;
             // 
             // btnExcluir
@@ -132,28 +156,6 @@
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "descrição";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // label1
             // 

@@ -47,25 +47,6 @@
             this.enderecosComboBox = new System.Windows.Forms.ComboBox();
             this.enderecosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.rgTextBox = new System.Windows.Forms.TextBox();
-            this.cpfTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.telefoneTextBox = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.complementoTextBox = new System.Windows.Forms.TextBox();
-            this.numero_casaTextBox1 = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +58,25 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.rgTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.complementoTextBox = new System.Windows.Forms.TextBox();
+            this.numero_casaTextBox1 = new System.Windows.Forms.TextBox();
+            this.telefoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.cepMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             tipoUsuarioLabel = new System.Windows.Forms.Label();
             enderecosLabel = new System.Windows.Forms.Label();
             rgLabel = new System.Windows.Forms.Label();
@@ -169,7 +169,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(585, 182);
+            label5.Location = new System.Drawing.Point(568, 182);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(24, 13);
             label5.TabIndex = 70;
@@ -267,177 +267,6 @@
             this.usuariosDataGridView.TabIndex = 34;
             this.usuariosDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.usuariosDataGridView_CellFormatting);
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(473, 70);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 33);
-            this.btnExcluir.TabIndex = 38;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(380, 70);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 33);
-            this.btnCancelar.TabIndex = 37;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGravar
-            // 
-            this.btnGravar.Location = new System.Drawing.Point(286, 70);
-            this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(75, 33);
-            this.btnGravar.TabIndex = 36;
-            this.btnGravar.Text = "Gravar";
-            this.btnGravar.UseVisualStyleBackColor = true;
-            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(192, 70);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(75, 33);
-            this.btnNovo.TabIndex = 35;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // rgTextBox
-            // 
-            this.rgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "PessoaFisica.rg", true));
-            this.rgTextBox.Location = new System.Drawing.Point(117, 306);
-            this.rgTextBox.Name = "rgTextBox";
-            this.rgTextBox.Size = new System.Drawing.Size(100, 20);
-            this.rgTextBox.TabIndex = 44;
-            // 
-            // cpfTextBox
-            // 
-            this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "PessoaFisica.cpf", true));
-            this.cpfTextBox.Location = new System.Drawing.Point(117, 280);
-            this.cpfTextBox.Name = "cpfTextBox";
-            this.cpfTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cpfTextBox.TabIndex = 43;
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(117, 254);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(210, 20);
-            this.emailTextBox.TabIndex = 42;
-            // 
-            // data_nascimentoDateTimePicker
-            // 
-            this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "data_nascimento", true));
-            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(117, 228);
-            this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
-            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(210, 20);
-            this.data_nascimentoDateTimePicker.TabIndex = 41;
-            // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(117, 176);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(210, 20);
-            this.nomeTextBox.TabIndex = 39;
-            // 
-            // telefoneTextBox
-            // 
-            this.telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "telefone", true));
-            this.telefoneTextBox.Location = new System.Drawing.Point(117, 202);
-            this.telefoneTextBox.Name = "telefoneTextBox";
-            this.telefoneTextBox.Size = new System.Drawing.Size(100, 20);
-            this.telefoneTextBox.TabIndex = 40;
-            // 
-            // textBox4
-            // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "uf", true));
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "uf", true));
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(615, 179);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(79, 20);
-            this.textBox4.TabIndex = 71;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(439, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 69;
-            this.label4.Text = "Bairro:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "bairro", true));
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "bairro", true));
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(482, 227);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 20);
-            this.textBox3.TabIndex = 68;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(420, 205);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 67;
-            this.label3.Text = "Endereço:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "endereco", true));
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "endereco", true));
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(482, 202);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 20);
-            this.textBox2.TabIndex = 66;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(445, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 65;
-            this.label2.Text = "CEP:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cep", true));
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "cep", true));
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(482, 179);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 64;
-            // 
-            // complementoTextBox
-            // 
-            this.complementoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "complemento", true));
-            this.complementoTextBox.Location = new System.Drawing.Point(482, 281);
-            this.complementoTextBox.Name = "complementoTextBox";
-            this.complementoTextBox.Size = new System.Drawing.Size(212, 20);
-            this.complementoTextBox.TabIndex = 61;
-            // 
-            // numero_casaTextBox1
-            // 
-            this.numero_casaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "numero_casa", true));
-            this.numero_casaTextBox1.Location = new System.Drawing.Point(482, 254);
-            this.numero_casaTextBox1.Name = "numero_casaTextBox1";
-            this.numero_casaTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.numero_casaTextBox1.TabIndex = 60;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
@@ -516,12 +345,188 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(473, 70);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 33);
+            this.btnExcluir.TabIndex = 38;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(380, 70);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 33);
+            this.btnCancelar.TabIndex = 37;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGravar
+            // 
+            this.btnGravar.Location = new System.Drawing.Point(286, 70);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(75, 33);
+            this.btnGravar.TabIndex = 36;
+            this.btnGravar.Text = "Gravar";
+            this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(192, 70);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(75, 33);
+            this.btnNovo.TabIndex = 35;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // rgTextBox
+            // 
+            this.rgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "PessoaFisica.rg", true));
+            this.rgTextBox.Location = new System.Drawing.Point(117, 306);
+            this.rgTextBox.Name = "rgTextBox";
+            this.rgTextBox.Size = new System.Drawing.Size(78, 20);
+            this.rgTextBox.TabIndex = 44;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(117, 254);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(210, 20);
+            this.emailTextBox.TabIndex = 42;
+            // 
+            // data_nascimentoDateTimePicker
+            // 
+            this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "data_nascimento", true));
+            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(117, 228);
+            this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
+            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(210, 20);
+            this.data_nascimentoDateTimePicker.TabIndex = 41;
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(117, 176);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(210, 20);
+            this.nomeTextBox.TabIndex = 39;
+            // 
+            // textBox4
+            // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "uf", true));
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "uf", true));
+            this.textBox4.Enabled = false;
+            this.textBox4.Location = new System.Drawing.Point(598, 179);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(79, 20);
+            this.textBox4.TabIndex = 71;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(439, 231);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "Bairro:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "bairro", true));
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "bairro", true));
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(482, 227);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(212, 20);
+            this.textBox3.TabIndex = 68;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(420, 205);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 67;
+            this.label3.Text = "Endereço:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "endereco", true));
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "endereco", true));
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(482, 202);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(212, 20);
+            this.textBox2.TabIndex = 66;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(445, 183);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 65;
+            this.label2.Text = "CEP:";
+            // 
+            // complementoTextBox
+            // 
+            this.complementoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "complemento", true));
+            this.complementoTextBox.Location = new System.Drawing.Point(482, 281);
+            this.complementoTextBox.Name = "complementoTextBox";
+            this.complementoTextBox.Size = new System.Drawing.Size(212, 20);
+            this.complementoTextBox.TabIndex = 61;
+            // 
+            // numero_casaTextBox1
+            // 
+            this.numero_casaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "numero_casa", true));
+            this.numero_casaTextBox1.Location = new System.Drawing.Point(482, 254);
+            this.numero_casaTextBox1.Name = "numero_casaTextBox1";
+            this.numero_casaTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.numero_casaTextBox1.TabIndex = 60;
+            // 
+            // telefoneMaskedTextBox
+            // 
+            this.telefoneMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "telefone", true));
+            this.telefoneMaskedTextBox.Location = new System.Drawing.Point(121, 202);
+            this.telefoneMaskedTextBox.Mask = "(99) 99999-9999";
+            this.telefoneMaskedTextBox.Name = "telefoneMaskedTextBox";
+            this.telefoneMaskedTextBox.Size = new System.Drawing.Size(84, 20);
+            this.telefoneMaskedTextBox.TabIndex = 72;
+            // 
+            // cpfMaskedTextBox
+            // 
+            this.cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "PessoaFisica.cpf", true));
+            this.cpfMaskedTextBox.Location = new System.Drawing.Point(117, 277);
+            this.cpfMaskedTextBox.Mask = "999.999.999-99";
+            this.cpfMaskedTextBox.Name = "cpfMaskedTextBox";
+            this.cpfMaskedTextBox.Size = new System.Drawing.Size(88, 20);
+            this.cpfMaskedTextBox.TabIndex = 73;
+            // 
+            // cepMaskedTextBox
+            // 
+            this.cepMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Enderecos.cep", true));
+            this.cepMaskedTextBox.Enabled = false;
+            this.cepMaskedTextBox.Location = new System.Drawing.Point(482, 179);
+            this.cepMaskedTextBox.Mask = "999-999-99";
+            this.cepMaskedTextBox.Name = "cepMaskedTextBox";
+            this.cepMaskedTextBox.Size = new System.Drawing.Size(66, 20);
+            this.cepMaskedTextBox.TabIndex = 74;
+            // 
             // Form_cad_funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(805, 582);
+            this.ClientSize = new System.Drawing.Size(813, 590);
+            this.Controls.Add(this.cepMaskedTextBox);
+            this.Controls.Add(this.cpfMaskedTextBox);
+            this.Controls.Add(this.telefoneMaskedTextBox);
             this.Controls.Add(label5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
@@ -529,7 +534,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(complementoLabel);
             this.Controls.Add(this.complementoTextBox);
             this.Controls.Add(numero_casaLabel1);
@@ -537,7 +541,6 @@
             this.Controls.Add(rgLabel);
             this.Controls.Add(this.rgTextBox);
             this.Controls.Add(cpfLabel);
-            this.Controls.Add(this.cpfTextBox);
             this.Controls.Add(emailLabel);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(data_nascimentoLabel);
@@ -545,7 +548,6 @@
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(telefoneLabel);
-            this.Controls.Add(this.telefoneTextBox);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
@@ -584,18 +586,15 @@
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.TextBox rgTextBox;
-        private System.Windows.Forms.TextBox cpfTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker;
         private System.Windows.Forms.TextBox nomeTextBox;
-        private System.Windows.Forms.TextBox telefoneTextBox;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox complementoTextBox;
         private System.Windows.Forms.TextBox numero_casaTextBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -609,5 +608,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.MaskedTextBox telefoneMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cpfMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cepMaskedTextBox;
     }
 }

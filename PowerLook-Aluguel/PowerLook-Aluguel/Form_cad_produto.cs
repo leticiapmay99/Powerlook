@@ -37,10 +37,13 @@ namespace PowerLook_Aluguel
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            this.produtosBindingSource.EndEdit();
-            DataContextFactory.DataContext.SubmitChanges();
-            produtosDataGridView.Refresh();
-            MessageBox.Show("Produto Cadastrado com sucesso");
+            if (this.Valida())
+            {   
+                this.produtosBindingSource.EndEdit();
+                DataContextFactory.DataContext.SubmitChanges();
+                produtosDataGridView.Refresh();
+                MessageBox.Show("Produto Cadastrado com sucesso");
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -70,10 +73,56 @@ namespace PowerLook_Aluguel
                 e.Value = ((Categorias)e.Value).nome;
             }
         }
-
-        private void produtosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private bool Valida()
         {
+            if (nomeTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Nome é obrigatório");
+                nomeTextBox.Focus();
+                return false;
+            }
+            if (tamanhoTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Tamanho é obrigatório");
+                tamanhoTextBox.Focus();
+                return false;
+            }
+            if (precoTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Preço é obrigatório");
+                precoTextBox.Focus();
+                return false;
+            }
+            if (id_categoriaComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Categoria é obrigatório");
+                id_categoriaComboBox.Focus();
+                return false;
+            }
+            if (id_fornecedorComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Fornecedor é obrigatório");
+                id_fornecedorComboBox.Focus();
+                return false;
+            }
 
+            return true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bmp = new Bitmap(openFileDialog1.FileName);
+                Bitmap bmp2 = new Bitmap(bmp, pictureBox1.Size);
+
+                pictureBox1.Image = bmp2;
+                pictureBox1.Image.Save(Application.StartupPath.ToString() + "\\TesteImagem\\" + ".png" + System.Drawing.Imaging.ImageFormat.Png);
+
+                imagen3TextBox.Text = Application.StartupPath.ToString() + "\\TesteImagem\\" + idTextBox.Text + ".png" + System.Drawing.Imaging.ImageFormat.Png;
+                this.produtosBindingSource.EndEdit();
+                DataContextFactory.DataContext.SubmitChanges(); 
+            }
         }
     }
 }

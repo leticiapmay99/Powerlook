@@ -54,11 +54,9 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.telefoneTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.cpfTextBox = new System.Windows.Forms.TextBox();
             this.rgTextBox = new System.Windows.Forms.TextBox();
             this.numero_casaTextBox1 = new System.Windows.Forms.TextBox();
             this.complementoTextBox = new System.Windows.Forms.TextBox();
@@ -72,10 +70,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.enderecosComboBox = new System.Windows.Forms.ComboBox();
             this.tipoUsuarioComboBox = new System.Windows.Forms.ComboBox();
             this.tipoUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pessoaFisicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.telefoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.cepMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.cpfMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             telefoneLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             data_nascimentoLabel = new System.Windows.Forms.Label();
@@ -91,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enderecosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoUsuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pessoaFisicaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // telefoneLabel
@@ -306,18 +308,10 @@
             // 
             this.enderecosBindingSource.DataSource = typeof(DBPowerLook.DAL.Enderecos);
             // 
-            // telefoneTextBox
-            // 
-            this.telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "telefone", true));
-            this.telefoneTextBox.Location = new System.Drawing.Point(119, 204);
-            this.telefoneTextBox.Name = "telefoneTextBox";
-            this.telefoneTextBox.Size = new System.Drawing.Size(100, 20);
-            this.telefoneTextBox.TabIndex = 3;
-            // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(119, 178);
+            this.nomeTextBox.Location = new System.Drawing.Point(119, 181);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(210, 20);
             this.nomeTextBox.TabIndex = 2;
@@ -337,14 +331,6 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(210, 20);
             this.emailTextBox.TabIndex = 5;
-            // 
-            // cpfTextBox
-            // 
-            this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "PessoaFisica.cpf", true));
-            this.cpfTextBox.Location = new System.Drawing.Point(119, 282);
-            this.cpfTextBox.Name = "cpfTextBox";
-            this.cpfTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cpfTextBox.TabIndex = 6;
             // 
             // rgTextBox
             // 
@@ -467,16 +453,6 @@
             this.label2.TabIndex = 53;
             this.label2.Text = "CEP:";
             // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cep", true));
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "cep", true));
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(477, 174);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 52;
-            // 
             // enderecosComboBox
             // 
             this.enderecosComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usuariosBindingSource, "id_endereco", true));
@@ -507,12 +483,47 @@
             // 
             this.tipoUsuarioBindingSource.DataSource = typeof(DBPowerLook.DAL.TipoUsuario);
             // 
+            // pessoaFisicaBindingSource
+            // 
+            this.pessoaFisicaBindingSource.DataSource = typeof(DBPowerLook.DAL.PessoaFisica);
+            // 
+            // telefoneMaskedTextBox
+            // 
+            this.telefoneMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "telefone", true));
+            this.telefoneMaskedTextBox.Location = new System.Drawing.Point(119, 204);
+            this.telefoneMaskedTextBox.Mask = "(99) 99999-9999";
+            this.telefoneMaskedTextBox.Name = "telefoneMaskedTextBox";
+            this.telefoneMaskedTextBox.Size = new System.Drawing.Size(121, 20);
+            this.telefoneMaskedTextBox.TabIndex = 62;
+            // 
+            // cepMaskedTextBox
+            // 
+            this.cepMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cep", true));
+            this.cepMaskedTextBox.Enabled = false;
+            this.cepMaskedTextBox.Location = new System.Drawing.Point(477, 174);
+            this.cepMaskedTextBox.Mask = "99999-9999";
+            this.cepMaskedTextBox.Name = "cepMaskedTextBox";
+            this.cepMaskedTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cepMaskedTextBox.TabIndex = 63;
+            // 
+            // cpfMaskedTextBox1
+            // 
+            this.cpfMaskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "PessoaFisica.cpf", true));
+            this.cpfMaskedTextBox1.Location = new System.Drawing.Point(119, 282);
+            this.cpfMaskedTextBox1.Mask = "999.999.999-99";
+            this.cpfMaskedTextBox1.Name = "cpfMaskedTextBox1";
+            this.cpfMaskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.cpfMaskedTextBox1.TabIndex = 64;
+            // 
             // Form_cad_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(805, 582);
+            this.ClientSize = new System.Drawing.Size(810, 590);
+            this.Controls.Add(this.cpfMaskedTextBox1);
+            this.Controls.Add(this.cepMaskedTextBox);
+            this.Controls.Add(this.telefoneMaskedTextBox);
             this.Controls.Add(tipoUsuarioLabel);
             this.Controls.Add(this.tipoUsuarioComboBox);
             this.Controls.Add(label5);
@@ -522,7 +533,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
@@ -534,7 +544,6 @@
             this.Controls.Add(rgLabel);
             this.Controls.Add(this.rgTextBox);
             this.Controls.Add(cpfLabel);
-            this.Controls.Add(this.cpfTextBox);
             this.Controls.Add(emailLabel);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(data_nascimentoLabel);
@@ -542,7 +551,6 @@
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(telefoneLabel);
-            this.Controls.Add(this.telefoneTextBox);
             this.Controls.Add(enderecosLabel);
             this.Controls.Add(this.enderecosComboBox);
             this.Controls.Add(this.usuariosDataGridView);
@@ -556,6 +564,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enderecosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoUsuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pessoaFisicaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,11 +575,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private System.Windows.Forms.DataGridView usuariosDataGridView;
-        private System.Windows.Forms.TextBox telefoneTextBox;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox cpfTextBox;
         private System.Windows.Forms.TextBox rgTextBox;
         private System.Windows.Forms.TextBox numero_casaTextBox1;
         private System.Windows.Forms.BindingSource enderecosBindingSource;
@@ -585,7 +592,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -599,5 +605,9 @@
         private System.Windows.Forms.ComboBox enderecosComboBox;
         private System.Windows.Forms.ComboBox tipoUsuarioComboBox;
         private System.Windows.Forms.BindingSource tipoUsuarioBindingSource;
+        private System.Windows.Forms.BindingSource pessoaFisicaBindingSource;
+        private System.Windows.Forms.MaskedTextBox telefoneMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cepMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cpfMaskedTextBox1;
     }
 }

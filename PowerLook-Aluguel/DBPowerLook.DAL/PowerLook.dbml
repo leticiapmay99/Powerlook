@@ -77,6 +77,11 @@
       <Association Name="Categorias_Produtos" Member="Produtos" ThisKey="id" OtherKey="id_categoria" Type="Produtos" />
     </Type>
   </Table>
+  <Table Name="dbo.Locacoes" Member="Locacoes">
+    <Type Name="Locacoes">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
   <Table Name="dbo.Produtos" Member="Produtos">
     <Type Name="Produtos">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -87,16 +92,11 @@
       <Column Name="tipo_decote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="cor" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="preco" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="imagem" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="id_fornecedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_categoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="imagen3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="Fornecedores_Produtos" Member="Fornecedores" ThisKey="id_fornecedor" OtherKey="id" Type="Fornecedores" IsForeignKey="true" />
       <Association Name="Categorias_Produtos" Member="Categorias" ThisKey="id_categoria" OtherKey="id" Type="Categorias" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Locacoes" Member="Locacoes">
-    <Type Name="Locacoes">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

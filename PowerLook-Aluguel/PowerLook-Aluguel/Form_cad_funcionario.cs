@@ -45,10 +45,13 @@ namespace PowerLook_Aluguel
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            this.usuariosBindingSource.EndEdit();
-            DataContextFactory.DataContext.SubmitChanges();
-            usuariosDataGridView.Refresh();
-            MessageBox.Show("Funcionario Cadastrado com sucesso");
+            if (this.Valida())
+            {
+                this.usuariosBindingSource.EndEdit();
+                DataContextFactory.DataContext.SubmitChanges();
+                usuariosDataGridView.Refresh();
+                MessageBox.Show("Funcionario Cadastrado com sucesso");
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -88,6 +91,76 @@ namespace PowerLook_Aluguel
             {
                 e.Value = ((TipoUsuario)e.Value).name;
             }
+        }
+
+
+        private bool Valida()
+        {
+            if (tipoUsuarioComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Tipo do Usuário é obrigatório");
+                nomeTextBox.Focus();
+                return false;
+            }
+            if (nomeTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Nome é obrigatório");
+                nomeTextBox.Focus();
+                return false;
+            }
+            if (emailTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Email é obrigatório");
+                emailTextBox.Focus();
+                return false;
+            }
+            if (telefoneMaskedTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Telefone é obrigatório");
+                telefoneMaskedTextBox.Focus();
+                return false;
+            }
+
+            if (data_nascimentoDateTimePicker.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Data de Nascimento é obrigatório");
+                nomeTextBox.Focus();
+                return false;
+            }
+
+            if (cpfMaskedTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo CPF é obrigatório");
+                cpfMaskedTextBox.Focus();
+                return false;
+            }
+            if (rgTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo RG é obrigatório");
+                rgTextBox.Focus();
+                return false;
+            }
+
+            if (enderecosComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Endereço é obrigatório");
+                enderecosComboBox.Focus();
+                return false;
+            }
+            if (numero_casaTextBox1.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Número é obrigatório");
+                numero_casaTextBox1.Focus();
+                return false;
+            }
+            if (complementoTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("O campo Completo é obrigatório");
+                complementoTextBox.Focus();
+                return false;
+            }
+
+            return true;
         }
     }
 }

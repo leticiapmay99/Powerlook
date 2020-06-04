@@ -51,12 +51,12 @@ namespace DBPowerLook.DAL
     partial void InsertCategorias(Categorias instance);
     partial void UpdateCategorias(Categorias instance);
     partial void DeleteCategorias(Categorias instance);
-    partial void InsertProdutos(Produtos instance);
-    partial void UpdateProdutos(Produtos instance);
-    partial void DeleteProdutos(Produtos instance);
     partial void InsertLocacoes(Locacoes instance);
     partial void UpdateLocacoes(Locacoes instance);
     partial void DeleteLocacoes(Locacoes instance);
+    partial void InsertProdutos(Produtos instance);
+    partial void UpdateProdutos(Produtos instance);
+    partial void DeleteProdutos(Produtos instance);
     #endregion
 		
 		public PowerLookDataContext() : 
@@ -145,19 +145,19 @@ namespace DBPowerLook.DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<Produtos> Produtos
-		{
-			get
-			{
-				return this.GetTable<Produtos>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Locacoes> Locacoes
 		{
 			get
 			{
 				return this.GetTable<Locacoes>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Produtos> Produtos
+		{
+			get
+			{
+				return this.GetTable<Produtos>();
 			}
 		}
 	}
@@ -1717,6 +1717,68 @@ namespace DBPowerLook.DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Locacoes")]
+	public partial class Locacoes : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    #endregion
+		
+		public Locacoes()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Produtos")]
 	public partial class Produtos : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1739,11 +1801,11 @@ namespace DBPowerLook.DAL
 		
 		private decimal _preco;
 		
-		private System.Data.Linq.Binary _imagem;
-		
 		private int _id_fornecedor;
 		
 		private int _id_categoria;
+		
+		private string _imagen3;
 		
 		private EntityRef<Fornecedores> _Fornecedores;
 		
@@ -1769,12 +1831,12 @@ namespace DBPowerLook.DAL
     partial void OncorChanged();
     partial void OnprecoChanging(decimal value);
     partial void OnprecoChanged();
-    partial void OnimagemChanging(System.Data.Linq.Binary value);
-    partial void OnimagemChanged();
     partial void Onid_fornecedorChanging(int value);
     partial void Onid_fornecedorChanged();
     partial void Onid_categoriaChanging(int value);
     partial void Onid_categoriaChanged();
+    partial void Onimagen3Changing(string value);
+    partial void Onimagen3Changed();
     #endregion
 		
 		public Produtos()
@@ -1944,26 +2006,6 @@ namespace DBPowerLook.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imagem", DbType="Image", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary imagem
-		{
-			get
-			{
-				return this._imagem;
-			}
-			set
-			{
-				if ((this._imagem != value))
-				{
-					this.OnimagemChanging(value);
-					this.SendPropertyChanging();
-					this._imagem = value;
-					this.SendPropertyChanged("imagem");
-					this.OnimagemChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_fornecedor", DbType="Int NOT NULL")]
 		public int id_fornecedor
 		{
@@ -2008,6 +2050,26 @@ namespace DBPowerLook.DAL
 					this._id_categoria = value;
 					this.SendPropertyChanged("id_categoria");
 					this.Onid_categoriaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imagen3", DbType="NVarChar(255)")]
+		public string imagen3
+		{
+			get
+			{
+				return this._imagen3;
+			}
+			set
+			{
+				if ((this._imagen3 != value))
+				{
+					this.Onimagen3Changing(value);
+					this.SendPropertyChanging();
+					this._imagen3 = value;
+					this.SendPropertyChanged("imagen3");
+					this.Onimagen3Changed();
 				}
 			}
 		}
@@ -2076,68 +2138,6 @@ namespace DBPowerLook.DAL
 						this._id_categoria = default(int);
 					}
 					this.SendPropertyChanged("Categorias");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Locacoes")]
-	public partial class Locacoes : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    #endregion
-		
-		public Locacoes()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
 				}
 			}
 		}
