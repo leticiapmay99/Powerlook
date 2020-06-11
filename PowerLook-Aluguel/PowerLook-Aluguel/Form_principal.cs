@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBPowerLook.DAL;
 
 namespace PowerLook_Aluguel
 {
@@ -19,11 +20,14 @@ namespace PowerLook_Aluguel
 
         private void btnVestido_Click(object sender, EventArgs e)
         {
-            if (MeusFormularios.FormProduto == null)
-                MeusFormularios.FormProduto = new Form_cad_produto();
 
-            MeusFormularios.FormProduto.Show();
-            MeusFormularios.FormProduto.Focus();
+
+                if (MeusFormularios.FormProduto == null)
+                    MeusFormularios.FormProduto = new Form_cad_produto();
+
+                MeusFormularios.FormProduto.Show();
+                MeusFormularios.FormProduto.Focus();
+
         }
 
         private void vestidoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -135,6 +139,10 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormCategoria.Show();
             MeusFormularios.FormCategoria.Focus();
         }
-    
+
+        private void Form_principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,8 +38,6 @@
             System.Windows.Forms.Label tipo_mangaLabel;
             System.Windows.Forms.Label id_fornecedorLabel;
             System.Windows.Forms.Label id_categoriaLabel;
-            System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label imagen3Label;
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -68,11 +66,6 @@
             this.id_fornecedorComboBox = new System.Windows.Forms.ComboBox();
             this.id_categoriaComboBox = new System.Windows.Forms.ComboBox();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.imagen3TextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             corLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
@@ -82,13 +75,10 @@
             tipo_mangaLabel = new System.Windows.Forms.Label();
             id_fornecedorLabel = new System.Windows.Forms.Label();
             id_categoriaLabel = new System.Windows.Forms.Label();
-            idLabel = new System.Windows.Forms.Label();
-            imagen3Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // corLabel
@@ -171,24 +161,6 @@
             id_categoriaLabel.Size = new System.Drawing.Size(55, 13);
             id_categoriaLabel.TabIndex = 24;
             id_categoriaLabel.Text = "Categoria:";
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(134, 117);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(18, 13);
-            idLabel.TabIndex = 28;
-            idLabel.Text = "id:";
-            // 
-            // imagen3Label
-            // 
-            imagen3Label.AutoSize = true;
-            imagen3Label.Location = new System.Drawing.Point(532, 251);
-            imagen3Label.Name = "imagen3Label";
-            imagen3Label.Size = new System.Drawing.Size(50, 13);
-            imagen3Label.TabIndex = 29;
-            imagen3Label.Text = "imagen3:";
             // 
             // btnNovo
             // 
@@ -431,56 +403,12 @@
             // 
             this.categoriasBindingSource.DataSource = typeof(DBPowerLook.DAL.Categorias);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(681, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Carregar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "id", true));
-            this.idTextBox.Location = new System.Drawing.Point(158, 114);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idTextBox.TabIndex = 29;
-            // 
-            // imagen3TextBox
-            // 
-            this.imagen3TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "imagen3", true));
-            this.imagen3TextBox.Location = new System.Drawing.Point(571, 248);
-            this.imagen3TextBox.Name = "imagen3TextBox";
-            this.imagen3TextBox.Size = new System.Drawing.Size(100, 20);
-            this.imagen3TextBox.TabIndex = 30;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(557, 144);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form_cad_produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(912, 646);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(imagen3Label);
-            this.Controls.Add(this.imagen3TextBox);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.button1);
             this.Controls.Add(id_categoriaLabel);
             this.Controls.Add(this.id_categoriaComboBox);
             this.Controls.Add(this.label1);
@@ -514,7 +442,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,10 +477,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.ComboBox id_categoriaComboBox;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.TextBox imagen3TextBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

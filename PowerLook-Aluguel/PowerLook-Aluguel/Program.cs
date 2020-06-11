@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace PowerLook_Aluguel
 {
     static class Program
@@ -16,7 +15,13 @@ namespace PowerLook_Aluguel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_principal());
+            Form_login FormLogin = new Form_login();
+            FormLogin.ShowDialog();
+            if(FormLogin.logado == true)
+            {
+                Application.Run(new Form_principal());
+              
+            }
         }
     }
 }

@@ -95,6 +95,12 @@
     <Compile Include="Form_cad_produto.Designer.cs">
       <DependentUpon>Form_cad_produto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_login.Designer.cs">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,11 +137,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PowerLookDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PowerLookDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PowerLookDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -153,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_cad_produto.resx">
       <DependentUpon>Form_cad_produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_login.resx">
+      <DependentUpon>Form_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_principal.resx">
       <DependentUpon>Form_principal.cs</DependentUpon>
@@ -194,20 +198,10 @@
     <None Include="PowerLookDataSet.xss">
       <DependentUpon>PowerLookDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PowerLookDataSet1.xsc">
-      <DependentUpon>PowerLookDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="PowerLookDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PowerLookDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PowerLookDataSet1.xss">
-      <DependentUpon>PowerLookDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\DataSources\DBPowerLook.DAL.Categorias.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Enderecos.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Fornecedores.datasource" />
+    <None Include="Properties\DataSources\DBPowerLook.DAL.Login.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.PessoaFisica.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.PessoaJurifica.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Produtos.datasource" />

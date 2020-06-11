@@ -108,21 +108,5 @@ namespace PowerLook_Aluguel
 
             return true;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Bitmap bmp = new Bitmap(openFileDialog1.FileName);
-                Bitmap bmp2 = new Bitmap(bmp, pictureBox1.Size);
-
-                pictureBox1.Image = bmp2;
-                pictureBox1.Image.Save(Application.StartupPath.ToString() + "\\TesteImagem\\" + ".png" + System.Drawing.Imaging.ImageFormat.Png);
-
-                imagen3TextBox.Text = Application.StartupPath.ToString() + "\\TesteImagem\\" + idTextBox.Text + ".png" + System.Drawing.Imaging.ImageFormat.Png;
-                this.produtosBindingSource.EndEdit();
-                DataContextFactory.DataContext.SubmitChanges(); 
-            }
-        }
     }
 }

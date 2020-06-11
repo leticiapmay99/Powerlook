@@ -57,6 +57,9 @@ namespace DBPowerLook.DAL
     partial void InsertProdutos(Produtos instance);
     partial void UpdateProdutos(Produtos instance);
     partial void DeleteProdutos(Produtos instance);
+    partial void InsertLogin(Login instance);
+    partial void UpdateLogin(Login instance);
+    partial void DeleteLogin(Login instance);
     #endregion
 		
 		public PowerLookDataContext() : 
@@ -158,6 +161,14 @@ namespace DBPowerLook.DAL
 			get
 			{
 				return this.GetTable<Produtos>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Login> Login
+		{
+			get
+			{
+				return this.GetTable<Login>();
 			}
 		}
 	}
@@ -1204,6 +1215,8 @@ namespace DBPowerLook.DAL
 		
 		private int _id_endereco;
 		
+		private EntitySet<Login> _Login;
+		
 		private EntityRef<Enderecos> _Enderecos;
 		
 		private EntityRef<PessoaFisica> _PessoaFisica;
@@ -1238,6 +1251,7 @@ namespace DBPowerLook.DAL
 		
 		public Usuarios()
 		{
+			this._Login = new EntitySet<Login>(new Action<Login>(this.attach_Login), new Action<Login>(this.detach_Login));
 			this._Enderecos = default(EntityRef<Enderecos>);
 			this._PessoaFisica = default(EntityRef<PessoaFisica>);
 			this._TipoUsuario = default(EntityRef<TipoUsuario>);
@@ -1456,6 +1470,19 @@ namespace DBPowerLook.DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuarios_Login", Storage="_Login", ThisKey="id", OtherKey="id_usuario")]
+		public EntitySet<Login> Login
+		{
+			get
+			{
+				return this._Login;
+			}
+			set
+			{
+				this._Login.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Enderecos_Usuarios", Storage="_Enderecos", ThisKey="id_endereco", OtherKey="id", IsForeignKey=true)]
 		public Enderecos Enderecos
 		{
@@ -1576,6 +1603,18 @@ namespace DBPowerLook.DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_Login(Login entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuarios = this;
+		}
+		
+		private void detach_Login(Login entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuarios = null;
 		}
 	}
 	
@@ -1805,8 +1844,6 @@ namespace DBPowerLook.DAL
 		
 		private int _id_categoria;
 		
-		private string _imagen3;
-		
 		private EntityRef<Fornecedores> _Fornecedores;
 		
 		private EntityRef<Categorias> _Categorias;
@@ -1835,8 +1872,6 @@ namespace DBPowerLook.DAL
     partial void Onid_fornecedorChanged();
     partial void Onid_categoriaChanging(int value);
     partial void Onid_categoriaChanged();
-    partial void Onimagen3Changing(string value);
-    partial void Onimagen3Changed();
     #endregion
 		
 		public Produtos()
@@ -2054,26 +2089,6 @@ namespace DBPowerLook.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imagen3", DbType="NVarChar(255)")]
-		public string imagen3
-		{
-			get
-			{
-				return this._imagen3;
-			}
-			set
-			{
-				if ((this._imagen3 != value))
-				{
-					this.Onimagen3Changing(value);
-					this.SendPropertyChanging();
-					this._imagen3 = value;
-					this.SendPropertyChanged("imagen3");
-					this.Onimagen3Changed();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Fornecedores_Produtos", Storage="_Fornecedores", ThisKey="id_fornecedor", OtherKey="id", IsForeignKey=true)]
 		public Fornecedores Fornecedores
 		{
@@ -2138,6 +2153,181 @@ namespace DBPowerLook.DAL
 						this._id_categoria = default(int);
 					}
 					this.SendPropertyChanged("Categorias");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Login")]
+	public partial class Login : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _login1;
+		
+		private string _senha;
+		
+		private int _id_usuario;
+		
+		private EntityRef<Usuarios> _Usuarios;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void Onlogin1Changing(string value);
+    partial void Onlogin1Changed();
+    partial void OnsenhaChanging(string value);
+    partial void OnsenhaChanged();
+    partial void Onid_usuarioChanging(int value);
+    partial void Onid_usuarioChanged();
+    #endregion
+		
+		public Login()
+		{
+			this._Usuarios = default(EntityRef<Usuarios>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="login", Storage="_login1", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string login1
+		{
+			get
+			{
+				return this._login1;
+			}
+			set
+			{
+				if ((this._login1 != value))
+				{
+					this.Onlogin1Changing(value);
+					this.SendPropertyChanging();
+					this._login1 = value;
+					this.SendPropertyChanged("login1");
+					this.Onlogin1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_senha", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string senha
+		{
+			get
+			{
+				return this._senha;
+			}
+			set
+			{
+				if ((this._senha != value))
+				{
+					this.OnsenhaChanging(value);
+					this.SendPropertyChanging();
+					this._senha = value;
+					this.SendPropertyChanged("senha");
+					this.OnsenhaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_usuario", DbType="Int NOT NULL")]
+		public int id_usuario
+		{
+			get
+			{
+				return this._id_usuario;
+			}
+			set
+			{
+				if ((this._id_usuario != value))
+				{
+					if (this._Usuarios.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onid_usuarioChanging(value);
+					this.SendPropertyChanging();
+					this._id_usuario = value;
+					this.SendPropertyChanged("id_usuario");
+					this.Onid_usuarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuarios_Login", Storage="_Usuarios", ThisKey="id_usuario", OtherKey="id", IsForeignKey=true)]
+		public Usuarios Usuarios
+		{
+			get
+			{
+				return this._Usuarios.Entity;
+			}
+			set
+			{
+				Usuarios previousValue = this._Usuarios.Entity;
+				if (((previousValue != value) 
+							|| (this._Usuarios.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Usuarios.Entity = null;
+						previousValue.Login.Remove(this);
+					}
+					this._Usuarios.Entity = value;
+					if ((value != null))
+					{
+						value.Login.Add(this);
+						this._id_usuario = value.id;
+					}
+					else
+					{
+						this._id_usuario = default(int);
+					}
+					this.SendPropertyChanged("Usuarios");
 				}
 			}
 		}
