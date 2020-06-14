@@ -15,13 +15,16 @@ namespace PowerLook_Aluguel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Login FormLogin = new Login();
-            FormLogin.ShowDialog();
-            if(FormLogin.logado == true)
+            //Login FormLogin = new Login();
+            //FormLogin.ShowDialog();
+
+            /* if(FormLogin.logado == true)
             {
                 Application.Run(new Form_principal());
               
-            }
+            }*/
+
+            Application.Run(new Form_principal());
         }
     }
 }
