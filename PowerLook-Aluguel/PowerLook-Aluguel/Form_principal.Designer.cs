@@ -48,7 +48,9 @@
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCategoria = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCliente
@@ -56,7 +58,7 @@
             this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.Image = global::PowerLook_Aluguel.Properties.Resources.Cliente;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(83, 87);
+            this.btnCliente.Location = new System.Drawing.Point(36, 33);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(148, 67);
             this.btnCliente.TabIndex = 0;
@@ -70,7 +72,7 @@
             this.btnVestido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVestido.Image = global::PowerLook_Aluguel.Properties.Resources.Vestido;
             this.btnVestido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVestido.Location = new System.Drawing.Point(83, 379);
+            this.btnVestido.Location = new System.Drawing.Point(36, 295);
             this.btnVestido.Name = "btnVestido";
             this.btnVestido.Size = new System.Drawing.Size(148, 67);
             this.btnVestido.TabIndex = 1;
@@ -84,7 +86,7 @@
             this.btnFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFornecedor.Image = global::PowerLook_Aluguel.Properties.Resources.Fornecedor;
             this.btnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFornecedor.Location = new System.Drawing.Point(83, 281);
+            this.btnFornecedor.Location = new System.Drawing.Point(36, 206);
             this.btnFornecedor.Name = "btnFornecedor";
             this.btnFornecedor.Size = new System.Drawing.Size(148, 67);
             this.btnFornecedor.TabIndex = 2;
@@ -98,7 +100,7 @@
             this.btnFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFuncionario.Image = global::PowerLook_Aluguel.Properties.Resources.Funcionario;
             this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFuncionario.Location = new System.Drawing.Point(83, 185);
+            this.btnFuncionario.Location = new System.Drawing.Point(36, 118);
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.Size = new System.Drawing.Size(148, 67);
             this.btnFuncionario.TabIndex = 3;
@@ -258,21 +260,31 @@
             this.btnCategoria.UseVisualStyleBackColor = true;
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnCliente);
+            this.groupBox1.Controls.Add(this.btnFuncionario);
+            this.groupBox1.Controls.Add(this.btnFornecedor);
+            this.groupBox1.Controls.Add(this.btnVestido);
+            this.groupBox1.Location = new System.Drawing.Point(56, 54);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(229, 381);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cadastros";
+            // 
             // Form_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(896, 516);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.btnFuncionario);
-            this.Controls.Add(this.btnFornecedor);
-            this.Controls.Add(this.btnVestido);
-            this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_principal";
@@ -281,6 +293,7 @@
             this.Load += new System.EventHandler(this.Form_principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,6 +321,7 @@
         private System.Windows.Forms.ToolStripMenuItem fornecedorToolStripMenuItem1;
         private System.Windows.Forms.Button btnCategoria;
         private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

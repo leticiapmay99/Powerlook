@@ -15,7 +15,7 @@ namespace PowerLook_Aluguel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form_login FormLogin = new Form_login();
+            Login FormLogin = new Login();
             FormLogin.ShowDialog();
             if(FormLogin.logado == true)
             {

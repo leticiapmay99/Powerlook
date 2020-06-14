@@ -11,12 +11,12 @@ using DBPowerLook.DAL;
 
 namespace PowerLook_Aluguel
 {
-    public partial class Form_login : Form
+    public partial class Login : Form
     {
 
         public bool logado = false;
          
-        public Form_login()
+        public Login()
         {
             InitializeComponent();
         }
