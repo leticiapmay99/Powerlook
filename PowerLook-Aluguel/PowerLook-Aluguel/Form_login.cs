@@ -15,7 +15,8 @@ namespace PowerLook_Aluguel
     {
 
         public bool logado = false;
-         
+        public bool admin = false;
+
         public Login()
         {
             InitializeComponent();

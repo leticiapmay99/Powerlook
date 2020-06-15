@@ -32,8 +32,7 @@
             this.btnVestido = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.btnFuncionario = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnVenda = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -47,6 +46,8 @@
             this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
@@ -109,29 +110,18 @@
             this.btnFuncionario.UseVisualStyleBackColor = true;
             this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
             // 
-            // button5
+            // btnVenda
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(341, 87);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 67);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Aluguel";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(341, 185);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(148, 67);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Devolução";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVenda.Location = new System.Drawing.Point(341, 87);
+            this.btnVenda.Name = "btnVenda";
+            this.btnVenda.Size = new System.Drawing.Size(148, 67);
+            this.btnVenda.TabIndex = 4;
+            this.btnVenda.Text = "Venda";
+            this.btnVenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVenda.UseVisualStyleBackColor = true;
+            this.btnVenda.Click += new System.EventHandler(this.btnVenda_Click);
             // 
             // btnRelatorio
             // 
@@ -162,7 +152,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
-            this.relatóriosToolStripMenuItem});
+            this.relatóriosToolStripMenuItem,
+            this.vendaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(896, 24);
@@ -246,6 +237,21 @@
             this.fornecedorToolStripMenuItem1.Text = "Fornecedor";
             this.fornecedorToolStripMenuItem1.Click += new System.EventHandler(this.fornecedorToolStripMenuItem1_Click);
             // 
+            // vendaToolStripMenuItem
+            // 
+            this.vendaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vendaToolStripMenuItem1});
+            this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
+            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.vendaToolStripMenuItem.Text = "Venda";
+            // 
+            // vendaToolStripMenuItem1
+            // 
+            this.vendaToolStripMenuItem1.Name = "vendaToolStripMenuItem1";
+            this.vendaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.vendaToolStripMenuItem1.Text = "Venda";
+            this.vendaToolStripMenuItem1.Click += new System.EventHandler(this.vendaToolStripMenuItem1_Click);
+            // 
             // btnCategoria
             // 
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,14 +289,12 @@
             this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.btnRelatorio);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnVenda);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário Principal";
-            this.Load += new System.EventHandler(this.Form_principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -305,8 +309,7 @@
         private System.Windows.Forms.Button btnVestido;
         private System.Windows.Forms.Button btnFornecedor;
         private System.Windows.Forms.Button btnFuncionario;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnVenda;
         private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -322,6 +325,8 @@
         private System.Windows.Forms.Button btnCategoria;
         private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem1;
     }
 }
 

@@ -140,9 +140,23 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormCategoria.Focus();
         }
 
-        private void Form_principal_Load(object sender, EventArgs e)
+        private void btnVenda_Click(object sender, EventArgs e)
         {
+            if (MeusFormularios.FormVenda == null)
+                MeusFormularios.FormVenda = new Form_Venda();
 
+            MeusFormularios.FormVenda.Show();
+            MeusFormularios.FormVenda.Focus();
         }
+
+        private void vendaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormVenda == null)
+                MeusFormularios.FormVenda = new Form_Venda();
+
+            MeusFormularios.FormVenda.Show();
+            MeusFormularios.FormVenda.Focus();
+        }
+    
     }
 }

@@ -32,7 +32,7 @@ namespace PowerLook_Aluguel
 
         private void Form_cad_funcionario_Load(object sender, EventArgs e)
         {
-            this.usuariosBindingSource.DataSource = DataContextFactory.DataContext.Usuarios;
+            this.usuariosBindingSource.DataSource = DataContextFactory.DataContext.Usuarios.Where(x => x.id_tipo_pessoa == 1 || x.id_tipo_pessoa == 3); 
             this.tipoUsuarioBindingSource.DataSource = DataContextFactory.DataContext.TipoUsuario;
             this.enderecosBindingSource.DataSource = DataContextFactory.DataContext.Enderecos;
         }

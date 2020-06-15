@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Venda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Venda.Designer.cs">
+      <DependentUpon>Form_Venda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_cad_categoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
       <DependentUpon>Form_relatorio_produto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente.rdlc" />
+    <EmbeddedResource Include="Form_Venda.resx">
+      <DependentUpon>Form_Venda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fornecedor.rdlc" />
     <EmbeddedResource Include="Produto.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -201,12 +210,14 @@
     <None Include="Properties\DataSources\DBPowerLook.DAL.Categorias.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Enderecos.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Fornecedores.datasource" />
+    <None Include="Properties\DataSources\DBPowerLook.DAL.itensVenda.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Login.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.PessoaFisica.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.PessoaJurifica.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Produtos.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.TipoUsuario.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Usuarios.datasource" />
+    <None Include="Properties\DataSources\DBPowerLook.DAL.Venda.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
