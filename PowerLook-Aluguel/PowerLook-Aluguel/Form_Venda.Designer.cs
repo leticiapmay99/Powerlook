@@ -37,11 +37,19 @@
             System.Windows.Forms.Label valor_pagoLabel;
             System.Windows.Forms.Label descontoLabel;
             System.Windows.Forms.Label valorLabel1;
+            System.Windows.Forms.Label id_statusLabel;
+            System.Windows.Forms.Label data_vencimentoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Venda));
             this.vendaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.id_usuarioComboBox = new System.Windows.Forms.ComboBox();
+            this.ComboBoxUsuario = new System.Windows.Forms.ComboBox();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnNovaVenda = new System.Windows.Forms.Button();
             this.groupBoxNovaVenda = new System.Windows.Forms.GroupBox();
+            this.BtnFinalizar = new System.Windows.Forms.Button();
+            this.DateTimeVencimento = new System.Windows.Forms.DateTimePicker();
+            this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ComboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.statusPagamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnFinalizarVenda = new System.Windows.Forms.Button();
             this.BtnFinalizarPedido = new System.Windows.Forms.Button();
@@ -61,6 +69,9 @@
             this.ComboBoxProduto = new System.Windows.Forms.ComboBox();
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id_vendaTextBox = new System.Windows.Forms.TextBox();
+            this.caixa = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             id_usuarioLabel = new System.Windows.Forms.Label();
             id_vendaLabel = new System.Windows.Forms.Label();
             id_produtoLabel = new System.Windows.Forms.Label();
@@ -69,9 +80,13 @@
             valor_pagoLabel = new System.Windows.Forms.Label();
             descontoLabel = new System.Windows.Forms.Label();
             valorLabel1 = new System.Windows.Forms.Label();
+            id_statusLabel = new System.Windows.Forms.Label();
+            data_vencimentoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vendaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.groupBoxNovaVenda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusPagamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itensVendaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
@@ -80,7 +95,7 @@
             // id_usuarioLabel
             // 
             id_usuarioLabel.AutoSize = true;
-            id_usuarioLabel.Location = new System.Drawing.Point(139, 44);
+            id_usuarioLabel.Location = new System.Drawing.Point(89, 70);
             id_usuarioLabel.Name = "id_usuarioLabel";
             id_usuarioLabel.Size = new System.Drawing.Size(42, 13);
             id_usuarioLabel.TabIndex = 1;
@@ -149,22 +164,40 @@
             valorLabel1.TabIndex = 12;
             valorLabel1.Text = "Valor";
             // 
+            // id_statusLabel
+            // 
+            id_statusLabel.AutoSize = true;
+            id_statusLabel.Location = new System.Drawing.Point(398, 414);
+            id_statusLabel.Name = "id_statusLabel";
+            id_statusLabel.Size = new System.Drawing.Size(107, 13);
+            id_statusLabel.TabIndex = 20;
+            id_statusLabel.Text = "Forma de pagamento";
+            // 
+            // data_vencimentoLabel
+            // 
+            data_vencimentoLabel.AutoSize = true;
+            data_vencimentoLabel.Location = new System.Drawing.Point(398, 447);
+            data_vencimentoLabel.Name = "data_vencimentoLabel";
+            data_vencimentoLabel.Size = new System.Drawing.Size(107, 13);
+            data_vencimentoLabel.TabIndex = 21;
+            data_vencimentoLabel.Text = "Data  de Vencimento";
+            // 
             // vendaBindingSource
             // 
             this.vendaBindingSource.DataSource = typeof(DBPowerLook.DAL.Venda);
             // 
-            // id_usuarioComboBox
+            // ComboBoxUsuario
             // 
-            this.id_usuarioComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vendaBindingSource, "id_usuario", true));
-            this.id_usuarioComboBox.DataSource = this.usuariosBindingSource;
-            this.id_usuarioComboBox.DisplayMember = "nome";
-            this.id_usuarioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.id_usuarioComboBox.FormattingEnabled = true;
-            this.id_usuarioComboBox.Location = new System.Drawing.Point(187, 41);
-            this.id_usuarioComboBox.Name = "id_usuarioComboBox";
-            this.id_usuarioComboBox.Size = new System.Drawing.Size(282, 21);
-            this.id_usuarioComboBox.TabIndex = 2;
-            this.id_usuarioComboBox.ValueMember = "id";
+            this.ComboBoxUsuario.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vendaBindingSource, "id_usuario", true));
+            this.ComboBoxUsuario.DataSource = this.usuariosBindingSource;
+            this.ComboBoxUsuario.DisplayMember = "nome";
+            this.ComboBoxUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxUsuario.FormattingEnabled = true;
+            this.ComboBoxUsuario.Location = new System.Drawing.Point(137, 67);
+            this.ComboBoxUsuario.Name = "ComboBoxUsuario";
+            this.ComboBoxUsuario.Size = new System.Drawing.Size(282, 21);
+            this.ComboBoxUsuario.TabIndex = 2;
+            this.ComboBoxUsuario.ValueMember = "id";
             // 
             // usuariosBindingSource
             // 
@@ -172,7 +205,7 @@
             // 
             // btnNovaVenda
             // 
-            this.btnNovaVenda.Location = new System.Drawing.Point(498, 39);
+            this.btnNovaVenda.Location = new System.Drawing.Point(448, 65);
             this.btnNovaVenda.Name = "btnNovaVenda";
             this.btnNovaVenda.Size = new System.Drawing.Size(90, 23);
             this.btnNovaVenda.TabIndex = 3;
@@ -182,6 +215,11 @@
             // 
             // groupBoxNovaVenda
             // 
+            this.groupBoxNovaVenda.Controls.Add(this.BtnFinalizar);
+            this.groupBoxNovaVenda.Controls.Add(data_vencimentoLabel);
+            this.groupBoxNovaVenda.Controls.Add(this.DateTimeVencimento);
+            this.groupBoxNovaVenda.Controls.Add(id_statusLabel);
+            this.groupBoxNovaVenda.Controls.Add(this.ComboBoxStatus);
             this.groupBoxNovaVenda.Controls.Add(this.btnImprimir);
             this.groupBoxNovaVenda.Controls.Add(this.btnFinalizarVenda);
             this.groupBoxNovaVenda.Controls.Add(this.BtnFinalizarPedido);
@@ -201,13 +239,57 @@
             this.groupBoxNovaVenda.Controls.Add(this.ComboBoxProduto);
             this.groupBoxNovaVenda.Controls.Add(id_vendaLabel);
             this.groupBoxNovaVenda.Controls.Add(this.id_vendaTextBox);
-            this.groupBoxNovaVenda.Location = new System.Drawing.Point(104, 97);
+            this.groupBoxNovaVenda.Location = new System.Drawing.Point(54, 119);
             this.groupBoxNovaVenda.Name = "groupBoxNovaVenda";
-            this.groupBoxNovaVenda.Size = new System.Drawing.Size(616, 516);
+            this.groupBoxNovaVenda.Size = new System.Drawing.Size(639, 501);
             this.groupBoxNovaVenda.TabIndex = 4;
             this.groupBoxNovaVenda.TabStop = false;
             this.groupBoxNovaVenda.Text = "Nova Venda";
             this.groupBoxNovaVenda.Visible = false;
+            // 
+            // BtnFinalizar
+            // 
+            this.BtnFinalizar.Enabled = false;
+            this.BtnFinalizar.Location = new System.Drawing.Point(536, 471);
+            this.BtnFinalizar.Name = "BtnFinalizar";
+            this.BtnFinalizar.Size = new System.Drawing.Size(90, 23);
+            this.BtnFinalizar.TabIndex = 23;
+            this.BtnFinalizar.Text = "Finalizar";
+            this.BtnFinalizar.UseVisualStyleBackColor = true;
+            this.BtnFinalizar.Click += new System.EventHandler(this.BtnFinalizar_Click);
+            // 
+            // DateTimeVencimento
+            // 
+            this.DateTimeVencimento.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.contasReceberBindingSource, "data_vencimento", true));
+            this.DateTimeVencimento.Enabled = false;
+            this.DateTimeVencimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateTimeVencimento.Location = new System.Drawing.Point(505, 442);
+            this.DateTimeVencimento.Name = "DateTimeVencimento";
+            this.DateTimeVencimento.Size = new System.Drawing.Size(121, 20);
+            this.DateTimeVencimento.TabIndex = 22;
+            // 
+            // contasReceberBindingSource
+            // 
+            this.contasReceberBindingSource.DataSource = typeof(DBPowerLook.DAL.ContasReceber);
+            // 
+            // ComboBoxStatus
+            // 
+            this.ComboBoxStatus.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.contasReceberBindingSource, "id_status", true));
+            this.ComboBoxStatus.DataSource = this.statusPagamentoBindingSource;
+            this.ComboBoxStatus.DisplayMember = "status";
+            this.ComboBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxStatus.Enabled = false;
+            this.ComboBoxStatus.FormattingEnabled = true;
+            this.ComboBoxStatus.Location = new System.Drawing.Point(505, 412);
+            this.ComboBoxStatus.Name = "ComboBoxStatus";
+            this.ComboBoxStatus.Size = new System.Drawing.Size(121, 21);
+            this.ComboBoxStatus.TabIndex = 21;
+            this.ComboBoxStatus.ValueMember = "id_status";
+            this.ComboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.ComboBoxStatus_SelectedIndexChanged);
+            // 
+            // statusPagamentoBindingSource
+            // 
+            this.statusPagamentoBindingSource.DataSource = typeof(DBPowerLook.DAL.StatusPagamento);
             // 
             // btnImprimir
             // 
@@ -294,7 +376,7 @@
             this.DataGridItem.Location = new System.Drawing.Point(83, 173);
             this.DataGridItem.Name = "DataGridItem";
             this.DataGridItem.ReadOnly = true;
-            this.DataGridItem.Size = new System.Drawing.Size(460, 220);
+            this.DataGridItem.Size = new System.Drawing.Size(491, 220);
             this.DataGridItem.TabIndex = 8;
             this.DataGridItem.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGridItem_CellFormatting);
             // 
@@ -329,7 +411,7 @@
             // 
             // ValorTotal
             // 
-            this.ValorTotal.DataPropertyName = "id_item";
+            this.ValorTotal.DataPropertyName = "valor";
             this.ValorTotal.HeaderText = "ValorTotal";
             this.ValorTotal.Name = "ValorTotal";
             this.ValorTotal.ReadOnly = true;
@@ -367,7 +449,7 @@
             this.ComboBoxProduto.Size = new System.Drawing.Size(222, 21);
             this.ComboBoxProduto.TabIndex = 3;
             this.ComboBoxProduto.ValueMember = "id";
-            this.ComboBoxProduto.SelectedIndexChanged += new System.EventHandler(this.id_produtoComboBox_SelectedIndexChanged);
+            this.ComboBoxProduto.SelectedIndexChanged += new System.EventHandler(this.ComboBoxProduto_SelectedIndexChanged);
             // 
             // produtosBindingSource
             // 
@@ -382,23 +464,45 @@
             this.id_vendaTextBox.Size = new System.Drawing.Size(100, 20);
             this.id_vendaTextBox.TabIndex = 1;
             // 
+            // caixa
+            // 
+            this.caixa.UseEXDialog = true;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // Form_Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 625);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(755, 628);
             this.Controls.Add(this.groupBoxNovaVenda);
             this.Controls.Add(this.btnNovaVenda);
             this.Controls.Add(id_usuarioLabel);
-            this.Controls.Add(this.id_usuarioComboBox);
+            this.Controls.Add(this.ComboBoxUsuario);
             this.Name = "Form_Venda";
-            this.Text = "FormVenda";
+            this.Text = "Venda";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Venda_FormClosed);
             this.Load += new System.EventHandler(this.Form_Venda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vendaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.groupBoxNovaVenda.ResumeLayout(false);
             this.groupBoxNovaVenda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusPagamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itensVendaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
@@ -410,7 +514,7 @@
         #endregion
 
         private System.Windows.Forms.BindingSource vendaBindingSource;
-        private System.Windows.Forms.ComboBox id_usuarioComboBox;
+        private System.Windows.Forms.ComboBox ComboBoxUsuario;
         private System.Windows.Forms.Button btnNovaVenda;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private System.Windows.Forms.GroupBox groupBoxNovaVenda;
@@ -422,16 +526,24 @@
         private System.Windows.Forms.ComboBox ComboBoxProduto;
         private System.Windows.Forms.TextBox id_vendaTextBox;
         private System.Windows.Forms.BindingSource produtosBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnFinalizarVenda;
         private System.Windows.Forms.Button BtnFinalizarPedido;
         private System.Windows.Forms.TextBox TextBoxValorTotal;
         private System.Windows.Forms.TextBox TextBoxDesconto;
         private System.Windows.Forms.TextBox TextBoxValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
+        private System.Windows.Forms.DateTimePicker DateTimeVencimento;
+        private System.Windows.Forms.BindingSource contasReceberBindingSource;
+        private System.Windows.Forms.ComboBox ComboBoxStatus;
+        private System.Windows.Forms.Button BtnFinalizar;
+        private System.Windows.Forms.BindingSource statusPagamentoBindingSource;
+        private System.Windows.Forms.PrintDialog caixa;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

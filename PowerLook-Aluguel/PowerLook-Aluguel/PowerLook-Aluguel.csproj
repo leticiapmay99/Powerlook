@@ -208,6 +208,7 @@
       <DependentUpon>PowerLookDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\DBPowerLook.DAL.Categorias.datasource" />
+    <None Include="Properties\DataSources\DBPowerLook.DAL.ContasReceber.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Enderecos.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Fornecedores.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.itensVenda.datasource" />
@@ -215,6 +216,7 @@
     <None Include="Properties\DataSources\DBPowerLook.DAL.PessoaFisica.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.PessoaJurifica.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Produtos.datasource" />
+    <None Include="Properties\DataSources\DBPowerLook.DAL.StatusPagamento.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.TipoUsuario.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Usuarios.datasource" />
     <None Include="Properties\DataSources\DBPowerLook.DAL.Venda.datasource" />
