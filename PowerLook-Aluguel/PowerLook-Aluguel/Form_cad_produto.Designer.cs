@@ -435,7 +435,7 @@
             this.Controls.Add(this.btnNovo);
             this.Name = "Form_cad_produto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " Produtos - Vestidos";
+            this.Text = " Produtos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_cad_produto_FormClosed);
             this.Load += new System.EventHandler(this.Form_cad_produto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).EndInit();

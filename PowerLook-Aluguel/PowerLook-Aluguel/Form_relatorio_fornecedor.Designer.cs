@@ -89,6 +89,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form_relatorio_fornecedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Relatório Fornecedores";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_relatorio_fornecedor_FormClosed);
             this.Load += new System.EventHandler(this.Form_relatorio_fornecedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).EndInit();

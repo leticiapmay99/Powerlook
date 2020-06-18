@@ -33,9 +33,9 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
+            this.FornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ProdutosTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.ProdutosTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.FornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.FornecedoresTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.FornecedoresTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).BeginInit();
@@ -51,6 +51,11 @@
             // 
             this.PowerLookDataSet.DataSetName = "PowerLookDataSet";
             this.PowerLookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // FornecedoresBindingSource
+            // 
+            this.FornecedoresBindingSource.DataMember = "Fornecedores";
+            this.FornecedoresBindingSource.DataSource = this.PowerLookDataSet;
             // 
             // ProdutosTableAdapter
             // 
@@ -72,11 +77,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // FornecedoresBindingSource
-            // 
-            this.FornecedoresBindingSource.DataMember = "Fornecedores";
-            this.FornecedoresBindingSource.DataSource = this.PowerLookDataSet;
-            // 
             // FornecedoresTableAdapter
             // 
             this.FornecedoresTableAdapter.ClearBeforeFill = true;
@@ -89,6 +89,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form_relatorio_produto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Relatório Produtos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_relatorio_produto_FormClosed);
             this.Load += new System.EventHandler(this.Form_relatorio_produto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).EndInit();

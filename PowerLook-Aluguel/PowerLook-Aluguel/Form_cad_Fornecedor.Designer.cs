@@ -171,6 +171,15 @@
             label5.TabIndex = 38;
             label5.Text = "UF:";
             // 
+            // cnpjLabel
+            // 
+            cnpjLabel.AutoSize = true;
+            cnpjLabel.Location = new System.Drawing.Point(74, 188);
+            cnpjLabel.Name = "cnpjLabel";
+            cnpjLabel.Size = new System.Drawing.Size(37, 13);
+            cnpjLabel.TabIndex = 13;
+            cnpjLabel.Text = "CNPJ:";
+            // 
             // fornecedoresBindingSource
             // 
             this.fornecedoresBindingSource.DataSource = typeof(DBPowerLook.DAL.Fornecedores);
@@ -446,15 +455,6 @@
             // 
             this.pessoaJurificaBindingSource.DataSource = typeof(DBPowerLook.DAL.PessoaJurifica);
             // 
-            // cnpjLabel
-            // 
-            cnpjLabel.AutoSize = true;
-            cnpjLabel.Location = new System.Drawing.Point(74, 188);
-            cnpjLabel.Name = "cnpjLabel";
-            cnpjLabel.Size = new System.Drawing.Size(37, 13);
-            cnpjLabel.TabIndex = 13;
-            cnpjLabel.Text = "CNPJ:";
-            // 
             // telefoneMaskedTextBox
             // 
             this.telefoneMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedoresBindingSource, "telefone", true));
@@ -523,7 +523,7 @@
             this.Controls.Add(this.fornecedoresDataGridView);
             this.Name = "Form_cad_Fornecedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_cad_Fornecedor";
+            this.Text = "Fornecedor";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_cad_Fornecedor_FormClosed);
             this.Load += new System.EventHandler(this.Form_cad_Fornecedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();

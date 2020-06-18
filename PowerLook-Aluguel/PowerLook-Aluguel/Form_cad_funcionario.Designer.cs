@@ -560,7 +560,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form_cad_funcionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_cad_funcionario";
+            this.Text = "Funcionário";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_cad_funcionario_FormClosed);
             this.Load += new System.EventHandler(this.Form_cad_funcionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();

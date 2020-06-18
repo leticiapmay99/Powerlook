@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
             this.FornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -69,15 +69,15 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "produto";
-            reportDataSource4.Value = this.ProdutosBindingSource;
-            reportDataSource5.Name = "Fornecedor";
-            reportDataSource5.Value = this.FornecedoresBindingSource;
-            reportDataSource6.Name = "ClienteRelatorio";
-            reportDataSource6.Value = this.ClienteRelatorioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource1.Name = "produto";
+            reportDataSource1.Value = this.ProdutosBindingSource;
+            reportDataSource2.Name = "Fornecedor";
+            reportDataSource2.Value = this.FornecedoresBindingSource;
+            reportDataSource3.Name = "ClienteRelatorio";
+            reportDataSource3.Value = this.ClienteRelatorioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PowerLook_Aluguel.Cliente.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -105,6 +105,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form_relatorio_cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Relatório Clientes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_relatorio_cliente_FormClosed);
             this.Load += new System.EventHandler(this.Form_relatorio_cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).EndInit();
