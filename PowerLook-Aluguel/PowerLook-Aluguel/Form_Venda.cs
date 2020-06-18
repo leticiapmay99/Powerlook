@@ -217,14 +217,5 @@ namespace PowerLook_Aluguel
                 printDocument1.Print();
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
-            {
-                printDocument1.Print();
-            }
-        }
     }
 }

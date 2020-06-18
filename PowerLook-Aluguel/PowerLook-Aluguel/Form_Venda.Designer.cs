@@ -241,7 +241,7 @@
             this.groupBoxNovaVenda.Controls.Add(this.id_vendaTextBox);
             this.groupBoxNovaVenda.Location = new System.Drawing.Point(54, 119);
             this.groupBoxNovaVenda.Name = "groupBoxNovaVenda";
-            this.groupBoxNovaVenda.Size = new System.Drawing.Size(639, 501);
+            this.groupBoxNovaVenda.Size = new System.Drawing.Size(639, 516);
             this.groupBoxNovaVenda.TabIndex = 4;
             this.groupBoxNovaVenda.TabStop = false;
             this.groupBoxNovaVenda.Text = "Nova Venda";
@@ -488,7 +488,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(755, 628);
+            this.ClientSize = new System.Drawing.Size(789, 647);
             this.Controls.Add(this.groupBoxNovaVenda);
             this.Controls.Add(this.btnNovaVenda);
             this.Controls.Add(id_usuarioLabel);
