@@ -176,5 +176,14 @@ namespace PowerLook_Aluguel
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormBuscas == null)
+                MeusFormularios.FormBuscas = new Form_buscas();
+
+            MeusFormularios.FormBuscas.Show();
+            MeusFormularios.FormBuscas.Focus();
+        }
     }
 }

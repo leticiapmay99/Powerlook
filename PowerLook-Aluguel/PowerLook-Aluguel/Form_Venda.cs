@@ -72,7 +72,7 @@ namespace PowerLook_Aluguel
             this.vendaBindingSource.EndEdit();
             DataContextFactory.DataContext.SubmitChanges();
             ComboBoxUsuario.Enabled = false;
-            groupBoxNovaVenda.Visible = true;
+            groupBoxNovaVenda.Enabled = true;
             btnNovaVenda.Enabled = false;
             this.itensVendaBindingSource.DataSource = DataContextFactory.DataContext.itensVenda.Where(x => x.id_produto == this.VendaCorrente.id_venda);
             NovoItem();

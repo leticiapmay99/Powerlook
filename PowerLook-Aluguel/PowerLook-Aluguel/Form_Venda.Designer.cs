@@ -239,13 +239,13 @@
             this.groupBoxNovaVenda.Controls.Add(this.ComboBoxProduto);
             this.groupBoxNovaVenda.Controls.Add(id_vendaLabel);
             this.groupBoxNovaVenda.Controls.Add(this.id_vendaTextBox);
+            this.groupBoxNovaVenda.Enabled = false;
             this.groupBoxNovaVenda.Location = new System.Drawing.Point(54, 119);
             this.groupBoxNovaVenda.Name = "groupBoxNovaVenda";
             this.groupBoxNovaVenda.Size = new System.Drawing.Size(639, 516);
             this.groupBoxNovaVenda.TabIndex = 4;
             this.groupBoxNovaVenda.TabStop = false;
             this.groupBoxNovaVenda.Text = "Nova Venda";
-            this.groupBoxNovaVenda.Visible = false;
             // 
             // BtnFinalizar
             // 

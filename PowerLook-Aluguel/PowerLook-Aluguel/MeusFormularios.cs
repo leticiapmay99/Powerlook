@@ -19,7 +19,9 @@ namespace PowerLook_Aluguel
         public static Form_Venda FormVenda { get; set; }
 
 
+        public static Form_buscas FormBuscas { get; set; }
 
+        public static Form_busca_CategoriaVestido FormCategoriaVestidos { get; set; }
         public static Form_relatorios FormRelatorios { get; set; }
         public static Form_relatorio_produto FormRelatoriosProduto { get; set; }
         public static Form_relatorio_cliente FormRelatoriosCliente{ get; set; }
