@@ -45,12 +45,19 @@ namespace PowerLook_Aluguel
                 return (ContasReceber)this.contasReceberBindingSource.Current;
             }
         }
+        public Produtos ProdutosCorrente
+        {
+            get
+            {
+                return (Produtos)this.produtosBindingSource.Current;
+            }
+        }
 
         private void Form_Venda_Load(object sender, EventArgs e)
         {
             this.usuariosBindingSource.DataSource = DataContextFactory.DataContext.Usuarios.Where(x => x.id_tipo_pessoa == 2);
             this.vendaBindingSource.DataSource = DataContextFactory.DataContext.Venda;
-            this.produtosBindingSource.DataSource = DataContextFactory.DataContext.Produtos;
+            this.produtosBindingSource.DataSource = DataContextFactory.DataContext.Produtos.Where(x => x.quantidade > 0);
 
             this.contasReceberBindingSource.DataSource = DataContextFactory.DataContext.ContasReceber;
             this.statusPagamentoBindingSource.DataSource = DataContextFactory.DataContext.StatusPagamento;
@@ -82,6 +89,7 @@ namespace PowerLook_Aluguel
         private void btnNovoItem_Click(object sender, EventArgs e)
         {
             this.itensVendaBindingSource.EndEdit();
+            this.ProdutosCorrente.quantidade = (int)(this.ProdutosCorrente.quantidade - Convert.ToInt32(quantidadeTextBox.Text));
             DataGridItem.Refresh();
             DataContextFactory.DataContext.SubmitChanges();
             MostraSomaValores();

@@ -106,6 +106,13 @@ namespace PowerLook_Aluguel
                 return false;
             }
 
+            if (quantidadeTextBox.Text.Trim() == string.Empty || quantidadeTextBox.Text == "0")
+            {
+                MessageBox.Show("O campo Quantidade é obrigatório \nOu deve ser maior que '0'");
+                quantidadeTextBox.Focus();
+                return false;
+            }
+
             return true;
         }
     }

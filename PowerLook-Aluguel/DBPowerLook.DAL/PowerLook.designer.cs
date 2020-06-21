@@ -1843,6 +1843,8 @@ namespace DBPowerLook.DAL
 		
 		private int _id_categoria;
 		
+		private int _quantidade;
+		
 		private EntitySet<itensVenda> _itensVenda;
 		
 		private EntityRef<Fornecedores> _Fornecedores;
@@ -1873,6 +1875,8 @@ namespace DBPowerLook.DAL
     partial void Onid_fornecedorChanged();
     partial void Onid_categoriaChanging(int value);
     partial void Onid_categoriaChanged();
+    partial void OnquantidadeChanging(int value);
+    partial void OnquantidadeChanged();
     #endregion
 		
 		public Produtos()
@@ -2087,6 +2091,26 @@ namespace DBPowerLook.DAL
 					this._id_categoria = value;
 					this.SendPropertyChanged("id_categoria");
 					this.Onid_categoriaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quantidade")]
+		public int quantidade
+		{
+			get
+			{
+				return this._quantidade;
+			}
+			set
+			{
+				if ((this._quantidade != value))
+				{
+					this.OnquantidadeChanging(value);
+					this.SendPropertyChanging();
+					this._quantidade = value;
+					this.SendPropertyChanged("quantidade");
+					this.OnquantidadeChanged();
 				}
 			}
 		}

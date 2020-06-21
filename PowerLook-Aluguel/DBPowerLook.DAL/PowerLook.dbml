@@ -91,6 +91,7 @@
       <Column Name="preco" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="id_fornecedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_categoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Member="quantidade" Type="System.Int32" CanBeNull="false" />
       <Association Name="Produtos_itensVenda" Member="itensVenda" ThisKey="id" OtherKey="id_produto" Type="itensVenda" />
       <Association Name="Fornecedores_Produtos" Member="Fornecedores" ThisKey="id_fornecedor" OtherKey="id" Type="Fornecedores" IsForeignKey="true" />
       <Association Name="Categorias_Produtos" Member="Categorias" ThisKey="id_categoria" OtherKey="id" Type="Categorias" IsForeignKey="true" />
