@@ -32,23 +32,28 @@
             System.Windows.Forms.Label login1Label;
             System.Windows.Forms.Label senhaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.Windows.Forms.Label id_tipoLoginLabel;
             this.login1TextBox = new System.Windows.Forms.TextBox();
             this.senhaTextBox = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ComboBoxTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.tipoUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             login1Label = new System.Windows.Forms.Label();
             senhaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
+            id_tipoLoginLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // login1Label
             // 
             login1Label.AutoSize = true;
-            login1Label.Location = new System.Drawing.Point(378, 137);
+            login1Label.Location = new System.Drawing.Point(450, 136);
             login1Label.Name = "login1Label";
             login1Label.Size = new System.Drawing.Size(36, 13);
             login1Label.TabIndex = 1;
@@ -57,28 +62,22 @@
             // senhaLabel
             // 
             senhaLabel.AutoSize = true;
-            senhaLabel.Location = new System.Drawing.Point(377, 173);
+            senhaLabel.Location = new System.Drawing.Point(449, 172);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new System.Drawing.Size(41, 13);
             senhaLabel.TabIndex = 3;
             senhaLabel.Text = "Senha:";
             // 
-            // loginBindingSource
-            // 
-            this.loginBindingSource.DataSource = typeof(DBPowerLook.DAL.Login);
-            // 
             // login1TextBox
             // 
-            this.login1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginBindingSource, "login1", true));
-            this.login1TextBox.Location = new System.Drawing.Point(422, 134);
+            this.login1TextBox.Location = new System.Drawing.Point(494, 133);
             this.login1TextBox.Name = "login1TextBox";
             this.login1TextBox.Size = new System.Drawing.Size(100, 20);
             this.login1TextBox.TabIndex = 2;
             // 
             // senhaTextBox
             // 
-            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginBindingSource, "senha", true));
-            this.senhaTextBox.Location = new System.Drawing.Point(422, 170);
+            this.senhaTextBox.Location = new System.Drawing.Point(494, 169);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.PasswordChar = '*';
             this.senhaTextBox.Size = new System.Drawing.Size(100, 20);
@@ -86,7 +85,7 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(372, 214);
+            this.btnEntrar.Location = new System.Drawing.Point(442, 252);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 33);
             this.btnEntrar.TabIndex = 5;
@@ -96,7 +95,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(478, 214);
+            this.btnSair.Location = new System.Drawing.Point(547, 252);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 33);
             this.btnSair.TabIndex = 6;
@@ -118,11 +117,42 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(399, 52);
+            this.label1.Location = new System.Drawing.Point(471, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 46);
             this.label1.TabIndex = 8;
             this.label1.Text = "Login";
+            // 
+            // loginBindingSource
+            // 
+            this.loginBindingSource.DataSource = typeof(DBPowerLook.DAL.Login);
+            // 
+            // id_tipoLoginLabel
+            // 
+            id_tipoLoginLabel.AutoSize = true;
+            id_tipoLoginLabel.Location = new System.Drawing.Point(455, 208);
+            id_tipoLoginLabel.Name = "id_tipoLoginLabel";
+            id_tipoLoginLabel.Size = new System.Drawing.Size(31, 13);
+            id_tipoLoginLabel.TabIndex = 8;
+            id_tipoLoginLabel.Text = "Tipo:";
+            // 
+            // ComboBoxTipoUsuario
+            // 
+            this.ComboBoxTipoUsuario.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.loginBindingSource, "id_tipoLogin", true));
+            this.ComboBoxTipoUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoUsuarioBindingSource, "id", true));
+            this.ComboBoxTipoUsuario.DataSource = this.tipoUsuarioBindingSource;
+            this.ComboBoxTipoUsuario.DisplayMember = "name";
+            this.ComboBoxTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxTipoUsuario.FormattingEnabled = true;
+            this.ComboBoxTipoUsuario.Location = new System.Drawing.Point(494, 205);
+            this.ComboBoxTipoUsuario.Name = "ComboBoxTipoUsuario";
+            this.ComboBoxTipoUsuario.Size = new System.Drawing.Size(100, 21);
+            this.ComboBoxTipoUsuario.TabIndex = 9;
+            this.ComboBoxTipoUsuario.ValueMember = "id";
+            // 
+            // tipoUsuarioBindingSource
+            // 
+            this.tipoUsuarioBindingSource.DataSource = typeof(DBPowerLook.DAL.TipoUsuario);
             // 
             // Login
             // 
@@ -130,8 +160,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(603, 347);
+            this.ClientSize = new System.Drawing.Size(787, 347);
             this.ControlBox = false;
+            this.Controls.Add(id_tipoLoginLabel);
+            this.Controls.Add(this.ComboBoxTipoUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSair);
@@ -143,21 +175,23 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form_login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource loginBindingSource;
         private System.Windows.Forms.TextBox login1TextBox;
         private System.Windows.Forms.TextBox senhaTextBox;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource loginBindingSource;
+        private System.Windows.Forms.ComboBox ComboBoxTipoUsuario;
+        private System.Windows.Forms.BindingSource tipoUsuarioBindingSource;
     }
 }

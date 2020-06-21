@@ -15,8 +15,8 @@ namespace PowerLook_Aluguel
     {
 
         public bool logado = false;
-        public bool admin = false;
 
+        public int teste;
         public Login()
         {
             InitializeComponent();
@@ -24,20 +24,26 @@ namespace PowerLook_Aluguel
 
         private void Form_login_Load(object sender, EventArgs e)
         {
-
+            this.tipoUsuarioBindingSource.DataSource = DataContextFactory.DataContext.TipoUsuario.Where
+            (
+                x => x.id != 2
+            );
         }
         private void EfetuarLogin()
         {
+            var tipoUsuario = (int)ComboBoxTipoUsuario.SelectedValue;
+ 
             var user = DataContextFactory.DataContext.Login.Count(
-                x => x.login1 == login1TextBox.Text && x.senha == senhaTextBox.Text);
+                x => x.login1 == login1TextBox.Text && x.senha == senhaTextBox.Text  && x.id_tipoLogin == tipoUsuario);
 
             if(user > 0 )
             {
+                this.teste = tipoUsuario;
                 this.logado = true;
                 this.Dispose();
             } else
             {
-                MessageBox.Show("Usuário ou senha inválidos", "Erro");
+                MessageBox.Show("Usuário, Senha ou Tipo de Usuário inválidos", "Erro");
             }
         }
 
@@ -45,11 +51,14 @@ namespace PowerLook_Aluguel
         {
             EfetuarLogin();
 
+
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
+
     }
 }
+

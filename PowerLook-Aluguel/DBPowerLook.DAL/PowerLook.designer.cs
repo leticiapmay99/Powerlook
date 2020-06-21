@@ -54,9 +54,6 @@ namespace DBPowerLook.DAL
     partial void InsertProdutos(Produtos instance);
     partial void UpdateProdutos(Produtos instance);
     partial void DeleteProdutos(Produtos instance);
-    partial void InsertLogin(Login instance);
-    partial void UpdateLogin(Login instance);
-    partial void DeleteLogin(Login instance);
     partial void InsertVenda(Venda instance);
     partial void UpdateVenda(Venda instance);
     partial void DeleteVenda(Venda instance);
@@ -69,6 +66,9 @@ namespace DBPowerLook.DAL
     partial void InsertStatusPagamento(StatusPagamento instance);
     partial void UpdateStatusPagamento(StatusPagamento instance);
     partial void DeleteStatusPagamento(StatusPagamento instance);
+    partial void InsertLogin(Login instance);
+    partial void UpdateLogin(Login instance);
+    partial void DeleteLogin(Login instance);
     #endregion
 		
 		public PowerLookDataContext() : 
@@ -165,14 +165,6 @@ namespace DBPowerLook.DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<Login> Login
-		{
-			get
-			{
-				return this.GetTable<Login>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Venda> Venda
 		{
 			get
@@ -202,6 +194,14 @@ namespace DBPowerLook.DAL
 			get
 			{
 				return this.GetTable<StatusPagamento>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Login> Login
+		{
+			get
+			{
+				return this.GetTable<Login>();
 			}
 		}
 	}
@@ -1120,6 +1120,8 @@ namespace DBPowerLook.DAL
 		
 		private EntitySet<Usuarios> _Usuarios;
 		
+		private EntitySet<Login> _Login;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1133,6 +1135,7 @@ namespace DBPowerLook.DAL
 		public TipoUsuario()
 		{
 			this._Usuarios = new EntitySet<Usuarios>(new Action<Usuarios>(this.attach_Usuarios), new Action<Usuarios>(this.detach_Usuarios));
+			this._Login = new EntitySet<Login>(new Action<Login>(this.attach_Login), new Action<Login>(this.detach_Login));
 			OnCreated();
 		}
 		
@@ -1189,6 +1192,19 @@ namespace DBPowerLook.DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TipoUsuario_Login", Storage="_Login", ThisKey="id", OtherKey="id_tipoLogin")]
+		public EntitySet<Login> Login
+		{
+			get
+			{
+				return this._Login;
+			}
+			set
+			{
+				this._Login.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1220,6 +1236,18 @@ namespace DBPowerLook.DAL
 			this.SendPropertyChanging();
 			entity.TipoUsuario = null;
 		}
+		
+		private void attach_Login(Login entity)
+		{
+			this.SendPropertyChanging();
+			entity.TipoUsuario = this;
+		}
+		
+		private void detach_Login(Login entity)
+		{
+			this.SendPropertyChanging();
+			entity.TipoUsuario = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Usuarios")]
@@ -1247,8 +1275,6 @@ namespace DBPowerLook.DAL
 		private int _id_tipo_pessoa;
 		
 		private int _id_endereco;
-		
-		private EntitySet<Login> _Login;
 		
 		private EntitySet<Venda> _Venda;
 		
@@ -1286,7 +1312,6 @@ namespace DBPowerLook.DAL
 		
 		public Usuarios()
 		{
-			this._Login = new EntitySet<Login>(new Action<Login>(this.attach_Login), new Action<Login>(this.detach_Login));
 			this._Venda = new EntitySet<Venda>(new Action<Venda>(this.attach_Venda), new Action<Venda>(this.detach_Venda));
 			this._Enderecos = default(EntityRef<Enderecos>);
 			this._PessoaFisica = default(EntityRef<PessoaFisica>);
@@ -1506,19 +1531,6 @@ namespace DBPowerLook.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuarios_Login", Storage="_Login", ThisKey="id", OtherKey="id_usuario")]
-		public EntitySet<Login> Login
-		{
-			get
-			{
-				return this._Login;
-			}
-			set
-			{
-				this._Login.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuarios_Venda", Storage="_Venda", ThisKey="id", OtherKey="id_usuario")]
 		public EntitySet<Venda> Venda
 		{
@@ -1652,18 +1664,6 @@ namespace DBPowerLook.DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_Login(Login entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usuarios = this;
-		}
-		
-		private void detach_Login(Login entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usuarios = null;
 		}
 		
 		private void attach_Venda(Venda entity)
@@ -2202,181 +2202,6 @@ namespace DBPowerLook.DAL
 		{
 			this.SendPropertyChanging();
 			entity.Produtos = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Login")]
-	public partial class Login : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _login1;
-		
-		private string _senha;
-		
-		private int _id_usuario;
-		
-		private EntityRef<Usuarios> _Usuarios;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void Onlogin1Changing(string value);
-    partial void Onlogin1Changed();
-    partial void OnsenhaChanging(string value);
-    partial void OnsenhaChanged();
-    partial void Onid_usuarioChanging(int value);
-    partial void Onid_usuarioChanged();
-    #endregion
-		
-		public Login()
-		{
-			this._Usuarios = default(EntityRef<Usuarios>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="login", Storage="_login1", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string login1
-		{
-			get
-			{
-				return this._login1;
-			}
-			set
-			{
-				if ((this._login1 != value))
-				{
-					this.Onlogin1Changing(value);
-					this.SendPropertyChanging();
-					this._login1 = value;
-					this.SendPropertyChanged("login1");
-					this.Onlogin1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_senha", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string senha
-		{
-			get
-			{
-				return this._senha;
-			}
-			set
-			{
-				if ((this._senha != value))
-				{
-					this.OnsenhaChanging(value);
-					this.SendPropertyChanging();
-					this._senha = value;
-					this.SendPropertyChanged("senha");
-					this.OnsenhaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_usuario", DbType="Int NOT NULL")]
-		public int id_usuario
-		{
-			get
-			{
-				return this._id_usuario;
-			}
-			set
-			{
-				if ((this._id_usuario != value))
-				{
-					if (this._Usuarios.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onid_usuarioChanging(value);
-					this.SendPropertyChanging();
-					this._id_usuario = value;
-					this.SendPropertyChanged("id_usuario");
-					this.Onid_usuarioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuarios_Login", Storage="_Usuarios", ThisKey="id_usuario", OtherKey="id", IsForeignKey=true)]
-		public Usuarios Usuarios
-		{
-			get
-			{
-				return this._Usuarios.Entity;
-			}
-			set
-			{
-				Usuarios previousValue = this._Usuarios.Entity;
-				if (((previousValue != value) 
-							|| (this._Usuarios.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Usuarios.Entity = null;
-						previousValue.Login.Remove(this);
-					}
-					this._Usuarios.Entity = value;
-					if ((value != null))
-					{
-						value.Login.Add(this);
-						this._id_usuario = value.id;
-					}
-					else
-					{
-						this._id_usuario = default(int);
-					}
-					this.SendPropertyChanged("Usuarios");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
@@ -3250,6 +3075,181 @@ namespace DBPowerLook.DAL
 		{
 			this.SendPropertyChanging();
 			entity.StatusPagamento = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Login")]
+	public partial class Login : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _login1;
+		
+		private string _senha;
+		
+		private System.Nullable<int> _id_tipoLogin;
+		
+		private EntityRef<TipoUsuario> _TipoUsuario;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void Onlogin1Changing(string value);
+    partial void Onlogin1Changed();
+    partial void OnsenhaChanging(string value);
+    partial void OnsenhaChanged();
+    partial void Onid_tipoLoginChanging(System.Nullable<int> value);
+    partial void Onid_tipoLoginChanged();
+    #endregion
+		
+		public Login()
+		{
+			this._TipoUsuario = default(EntityRef<TipoUsuario>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="login", Storage="_login1", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string login1
+		{
+			get
+			{
+				return this._login1;
+			}
+			set
+			{
+				if ((this._login1 != value))
+				{
+					this.Onlogin1Changing(value);
+					this.SendPropertyChanging();
+					this._login1 = value;
+					this.SendPropertyChanged("login1");
+					this.Onlogin1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_senha", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string senha
+		{
+			get
+			{
+				return this._senha;
+			}
+			set
+			{
+				if ((this._senha != value))
+				{
+					this.OnsenhaChanging(value);
+					this.SendPropertyChanging();
+					this._senha = value;
+					this.SendPropertyChanged("senha");
+					this.OnsenhaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_tipoLogin", DbType="Int")]
+		public System.Nullable<int> id_tipoLogin
+		{
+			get
+			{
+				return this._id_tipoLogin;
+			}
+			set
+			{
+				if ((this._id_tipoLogin != value))
+				{
+					if (this._TipoUsuario.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onid_tipoLoginChanging(value);
+					this.SendPropertyChanging();
+					this._id_tipoLogin = value;
+					this.SendPropertyChanged("id_tipoLogin");
+					this.Onid_tipoLoginChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TipoUsuario_Login", Storage="_TipoUsuario", ThisKey="id_tipoLogin", OtherKey="id", IsForeignKey=true)]
+		public TipoUsuario TipoUsuario
+		{
+			get
+			{
+				return this._TipoUsuario.Entity;
+			}
+			set
+			{
+				TipoUsuario previousValue = this._TipoUsuario.Entity;
+				if (((previousValue != value) 
+							|| (this._TipoUsuario.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TipoUsuario.Entity = null;
+						previousValue.Login.Remove(this);
+					}
+					this._TipoUsuario.Entity = value;
+					if ((value != null))
+					{
+						value.Login.Add(this);
+						this._id_tipoLogin = value.id;
+					}
+					else
+					{
+						this._id_tipoLogin = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TipoUsuario");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

@@ -13,9 +13,21 @@ namespace PowerLook_Aluguel
 {
     public partial class Form_principal : Form
     {
+       
         public Form_principal()
         {
             InitializeComponent();
+
+            if(Program.permissaoUsuario == true)
+            {
+
+                btnFuncionario.Enabled = true;
+                funcionárioToolStripMenuItem.Enabled = true;
+                btnFornecedor.Enabled = true;
+                fornecedorToolStripMenuItem.Enabled = true;
+                btnRelatorio.Enabled = true;
+                relatóriosToolStripMenuItem .Enabled= true;
+            }
         }
 
         private void btnVestido_Click(object sender, EventArgs e)
@@ -70,11 +82,13 @@ namespace PowerLook_Aluguel
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
+            
             if (MeusFormularios.FormCliente == null)
                 MeusFormularios.FormCliente = new Form_cad_cliente();
 
             MeusFormularios.FormCliente.Show();
             MeusFormularios.FormCliente.Focus();
+
         }
 
         private void btnRelatorio_Click(object sender, EventArgs e)
@@ -157,6 +171,10 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormVenda.Show();
             MeusFormularios.FormVenda.Focus();
         }
-    
+
+        private void Form_principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
