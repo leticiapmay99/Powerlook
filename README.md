@@ -46,3 +46,15 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 
 	- Problema de chave estrangeira (select)
 
+	- Figura 2 – Diagrama de Caso de Uso Módulo Administrativo
+	
+	- Figura 3 – Diagrama de Caso de Uso Módulo Funcionário
+	
+	- Figura 12 – Diagrama de Classes do Sistema
+	
+	- Figura 19 – Diagrama de Atividades – EfetuarLogin
+	
+	- Figura 20 – Diagrama de Atividades – Módulo do Funcionário
+	
+	- Figura 21 – Diagrama de Atividades – Módulo Administrativo
+
