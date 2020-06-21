@@ -1,22 +1,20 @@
 <div align="center">
-  <img src="" width=150px height=150px alt="Powerlook" />
+  <img src="https://user-images.githubusercontent.com/9125404/85236375-df1f0b80-b3f3-11ea-8c88-c4bffd2b2bf2.png" width=250px height=250px alt="Powerlook" />
 </div>
 
-<h2 align="center">Powerlook</h2>
+<h2 align="center">PowerLook</h2>
 
-<div align="center">
+<div align="left">
 
--------------------- 
+Software desenvolvido para a disciplina de Engenharia de Software 3, do curso de Ciência da Computação. Trata-se de uma aplicação para o gerenciamento de produtos, clientes, funcionarios e fluxo de caixa para a comercialização de vestidos de noiva.
 
-<!-- **Demo:** https://cristianambrosi.github.io/actuario -->
+Para o desenvolvimento foi utilizada a linguagem de programação C#, juntamente da IDE Visual Studio e o banco de dados SQL Server.
+
+</div>
 
 --------------------
 
-</div>
-
-## Sobre
-
-Breve detalhamento da aplicação
+## Configurando a máquina local para a aplicação
 
 Passo-a-passo para fazer backup e restore no SQL Server:
 
@@ -24,15 +22,11 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 
 ## ToDo
 
-
-
 - Relatório de:
+
 	- Vestidos mais vendidos;
 
 	- Vendas
-	
-
-- Login
 
 - Procurar Ícones
 
