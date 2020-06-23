@@ -26,7 +26,6 @@ namespace PowerLook_Aluguel
         public static Form_relatorio_produto FormRelatoriosProduto { get; set; }
         public static Form_relatorio_cliente FormRelatoriosCliente{ get; set; }
         public static Form_relatorio_fornecedor FormRelatoriosFornecedor{ get; set; }
-
-      
+        public static Form_relatorio_venda FormRelatoriosVenda { get; set; }
     }
 }

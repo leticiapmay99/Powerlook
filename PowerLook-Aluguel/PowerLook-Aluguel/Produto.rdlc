@@ -476,8 +476,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
-          <Top>0.14111cm</Top>
-          <Left>9.61349cm</Left>
+          <Top>1.94cm</Top>
+          <Left>13.89974cm</Left>
           <Height>0.6cm</Height>
           <Width>4.98708cm</Width>
           <Style>
@@ -505,8 +505,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>0.14111cm</Top>
-          <Left>0.3462cm</Left>
+          <Top>1.94cm</Top>
           <Height>0.6cm</Height>
           <Width>3.21438cm</Width>
           <ZIndex>1</ZIndex>
