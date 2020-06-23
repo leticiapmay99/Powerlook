@@ -258,7 +258,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!data_compra.Value</Value>
+                              <Value>=FormatDateTime(Fields!data_compra.Value, DateFormat.ShortDate)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -287,6 +287,10 @@
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
+                            <TextRun>
+                              <Value>R$ </Value>
+                              <Style />
+                            </TextRun>
                             <TextRun>
                               <Value>=Fields!valor.Value</Value>
                               <Style />
@@ -318,6 +322,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value>R$ </Value>
+                              <Style />
+                            </TextRun>
+                            <TextRun>
                               <Value>=Fields!desconto.Value</Value>
                               <Style />
                             </TextRun>
@@ -347,6 +355,10 @@
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
+                            <TextRun>
+                              <Value>R$ </Value>
+                              <Style />
+                            </TextRun>
                             <TextRun>
                               <Value>=Fields!valor_pago.Value</Value>
                               <Style />
@@ -427,7 +439,7 @@
         <Top>1.76953cm</Top>
         <Left>1.9812cm</Left>
         <Height>1.2cm</Height>
-        <Width>16.75744cm</Width>
+        <Width>16.75745cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

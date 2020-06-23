@@ -30,35 +30,36 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
             this.VendasSimplesRelatorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.VendasSimplesRelatorioTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.VendasSimplesRelatorioTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VendasSimplesRelatorioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // VendasSimplesRelatorioBindingSource
             // 
-            reportDataSource1.Name = "VendasSimples";
-            reportDataSource1.Value = this.VendasSimplesRelatorioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PowerLook_Aluguel.Vendas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(776, 426);
-            this.reportViewer1.TabIndex = 0;
+            this.VendasSimplesRelatorioBindingSource.DataMember = "VendasSimplesRelatorio";
+            this.VendasSimplesRelatorioBindingSource.DataSource = this.PowerLookDataSet;
             // 
             // PowerLookDataSet
             // 
             this.PowerLookDataSet.DataSetName = "PowerLookDataSet";
             this.PowerLookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // VendasSimplesRelatorioBindingSource
+            // reportViewer1
             // 
-            this.VendasSimplesRelatorioBindingSource.DataMember = "VendasSimplesRelatorio";
-            this.VendasSimplesRelatorioBindingSource.DataSource = this.PowerLookDataSet;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "VendasSimples";
+            reportDataSource1.Value = this.VendasSimplesRelatorioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PowerLook_Aluguel.Vendas.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.TabIndex = 0;
             // 
             // VendasSimplesRelatorioTableAdapter
             // 
@@ -74,8 +75,8 @@
             this.Text = "Relatório Vendas Simples";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_relatorio_venda_FormClosed);
             this.Load += new System.EventHandler(this.Form_relatorio_venda_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VendasSimplesRelatorioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
