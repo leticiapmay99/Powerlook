@@ -42,16 +42,21 @@
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             descriçãoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // descriçãoLabel
             // 
             descriçãoLabel.AutoSize = true;
-            descriçãoLabel.Location = new System.Drawing.Point(171, 177);
+            descriçãoLabel.Location = new System.Drawing.Point(31, 87);
             descriçãoLabel.Name = "descriçãoLabel";
             descriçãoLabel.Size = new System.Drawing.Size(58, 13);
             descriçãoLabel.TabIndex = 1;
@@ -60,7 +65,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(191, 151);
+            nomeLabel.Location = new System.Drawing.Point(50, 42);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(38, 13);
             nomeLabel.TabIndex = 5;
@@ -77,10 +82,10 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.categoriasDataGridView.DataSource = this.categoriasBindingSource;
-            this.categoriasDataGridView.Location = new System.Drawing.Point(207, 250);
+            this.categoriasDataGridView.Location = new System.Drawing.Point(459, 212);
             this.categoriasDataGridView.Name = "categoriasDataGridView";
             this.categoriasDataGridView.ReadOnly = true;
-            this.categoriasDataGridView.Size = new System.Drawing.Size(290, 220);
+            this.categoriasDataGridView.Size = new System.Drawing.Size(295, 239);
             this.categoriasDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -112,24 +117,24 @@
             // descriçãoTextBox
             // 
             this.descriçãoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriasBindingSource, "descrição", true));
-            this.descriçãoTextBox.Location = new System.Drawing.Point(233, 174);
+            this.descriçãoTextBox.Location = new System.Drawing.Point(94, 84);
             this.descriçãoTextBox.Multiline = true;
             this.descriçãoTextBox.Name = "descriçãoTextBox";
-            this.descriçãoTextBox.Size = new System.Drawing.Size(132, 70);
+            this.descriçãoTextBox.Size = new System.Drawing.Size(257, 125);
             this.descriçãoTextBox.TabIndex = 2;
             this.descriçãoTextBox.TextChanged += new System.EventHandler(this.descriçãoTextBox_TextChanged);
             // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriasBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(233, 148);
+            this.nomeTextBox.Location = new System.Drawing.Point(94, 42);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(132, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(228, 20);
             this.nomeTextBox.TabIndex = 6;
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(422, 98);
+            this.btnExcluir.Location = new System.Drawing.Point(386, 37);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 33);
             this.btnExcluir.TabIndex = 19;
@@ -139,7 +144,7 @@
             // 
             // btnGravar
             // 
-            this.btnGravar.Location = new System.Drawing.Point(330, 98);
+            this.btnGravar.Location = new System.Drawing.Point(153, 37);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 33);
             this.btnGravar.TabIndex = 17;
@@ -149,7 +154,7 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(236, 98);
+            this.btnNovo.Location = new System.Drawing.Point(38, 37);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 33);
             this.btnNovo.TabIndex = 16;
@@ -167,20 +172,50 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Cadastro de Categoria";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(271, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 33);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnNovo);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnExcluir);
+            this.groupBox1.Controls.Add(this.btnGravar);
+            this.groupBox1.Location = new System.Drawing.Point(139, 72);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(499, 98);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Opções";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(nomeLabel);
+            this.groupBox2.Controls.Add(this.nomeTextBox);
+            this.groupBox2.Controls.Add(descriçãoLabel);
+            this.groupBox2.Controls.Add(this.descriçãoTextBox);
+            this.groupBox2.Location = new System.Drawing.Point(30, 212);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(397, 239);
+            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dados da Categoria";
+            // 
             // Form_cad_categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(800, 482);
+            this.ClientSize = new System.Drawing.Size(789, 497);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.btnNovo);
-            this.Controls.Add(nomeLabel);
-            this.Controls.Add(this.nomeTextBox);
-            this.Controls.Add(descriçãoLabel);
-            this.Controls.Add(this.descriçãoTextBox);
             this.Controls.Add(this.categoriasDataGridView);
             this.Name = "Form_cad_categoria";
             this.Text = "Categoria";
@@ -188,6 +223,9 @@
             this.Load += new System.EventHandler(this.Form_cad_categoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoriasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +244,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
