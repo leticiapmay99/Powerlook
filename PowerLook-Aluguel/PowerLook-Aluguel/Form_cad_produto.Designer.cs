@@ -44,6 +44,17 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.produtosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.corTextBox = new System.Windows.Forms.TextBox();
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
@@ -58,17 +69,8 @@
             this.id_categoriaComboBox = new System.Windows.Forms.ComboBox();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quantidadeTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             corLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
@@ -83,12 +85,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // corLabel
             // 
             corLabel.AutoSize = true;
-            corLabel.Location = new System.Drawing.Point(327, 143);
+            corLabel.Location = new System.Drawing.Point(629, 45);
             corLabel.Name = "corLabel";
             corLabel.Size = new System.Drawing.Size(26, 13);
             corLabel.TabIndex = 7;
@@ -97,7 +101,7 @@
             // descricaoLabel
             // 
             descricaoLabel.AutoSize = true;
-            descricaoLabel.Location = new System.Drawing.Point(295, 227);
+            descricaoLabel.Location = new System.Drawing.Point(82, 71);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(58, 13);
             descricaoLabel.TabIndex = 8;
@@ -106,7 +110,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(116, 143);
+            nomeLabel.Location = new System.Drawing.Point(102, 45);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(38, 13);
             nomeLabel.TabIndex = 11;
@@ -115,7 +119,7 @@
             // precoLabel
             // 
             precoLabel.AutoSize = true;
-            precoLabel.Location = new System.Drawing.Point(315, 173);
+            precoLabel.Location = new System.Drawing.Point(616, 71);
             precoLabel.Name = "precoLabel";
             precoLabel.Size = new System.Drawing.Size(38, 13);
             precoLabel.TabIndex = 13;
@@ -124,7 +128,7 @@
             // tamanhoLabel
             // 
             tamanhoLabel.AutoSize = true;
-            tamanhoLabel.Location = new System.Drawing.Point(101, 204);
+            tamanhoLabel.Location = new System.Drawing.Point(87, 181);
             tamanhoLabel.Name = "tamanhoLabel";
             tamanhoLabel.Size = new System.Drawing.Size(55, 13);
             tamanhoLabel.TabIndex = 15;
@@ -133,7 +137,7 @@
             // tipo_decoteLabel
             // 
             tipo_decoteLabel.AutoSize = true;
-            tipo_decoteLabel.Location = new System.Drawing.Point(109, 285);
+            tipo_decoteLabel.Location = new System.Drawing.Point(609, 153);
             tipo_decoteLabel.Name = "tipo_decoteLabel";
             tipo_decoteLabel.Size = new System.Drawing.Size(45, 13);
             tipo_decoteLabel.TabIndex = 17;
@@ -142,7 +146,7 @@
             // tipo_mangaLabel
             // 
             tipo_mangaLabel.AutoSize = true;
-            tipo_mangaLabel.Location = new System.Drawing.Point(109, 256);
+            tipo_mangaLabel.Location = new System.Drawing.Point(611, 124);
             tipo_mangaLabel.Name = "tipo_mangaLabel";
             tipo_mangaLabel.Size = new System.Drawing.Size(43, 13);
             tipo_mangaLabel.TabIndex = 19;
@@ -151,7 +155,7 @@
             // id_fornecedorLabel
             // 
             id_fornecedorLabel.AutoSize = true;
-            id_fornecedorLabel.Location = new System.Drawing.Point(290, 196);
+            id_fornecedorLabel.Location = new System.Drawing.Point(590, 97);
             id_fornecedorLabel.Name = "id_fornecedorLabel";
             id_fornecedorLabel.Size = new System.Drawing.Size(64, 13);
             id_fornecedorLabel.TabIndex = 9;
@@ -160,7 +164,7 @@
             // id_categoriaLabel
             // 
             id_categoriaLabel.AutoSize = true;
-            id_categoriaLabel.Location = new System.Drawing.Point(99, 177);
+            id_categoriaLabel.Location = new System.Drawing.Point(82, 153);
             id_categoriaLabel.Name = "id_categoriaLabel";
             id_categoriaLabel.Size = new System.Drawing.Size(55, 13);
             id_categoriaLabel.TabIndex = 24;
@@ -169,7 +173,7 @@
             // quantidadeLabel
             // 
             quantidadeLabel.AutoSize = true;
-            quantidadeLabel.Location = new System.Drawing.Point(93, 230);
+            quantidadeLabel.Location = new System.Drawing.Point(290, 181);
             quantidadeLabel.Name = "quantidadeLabel";
             quantidadeLabel.Size = new System.Drawing.Size(65, 13);
             quantidadeLabel.TabIndex = 25;
@@ -177,7 +181,7 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(170, 63);
+            this.btnNovo.Location = new System.Drawing.Point(43, 39);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 33);
             this.btnNovo.TabIndex = 0;
@@ -187,7 +191,7 @@
             // 
             // btnGravar
             // 
-            this.btnGravar.Location = new System.Drawing.Point(264, 63);
+            this.btnGravar.Location = new System.Drawing.Point(150, 39);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 33);
             this.btnGravar.TabIndex = 4;
@@ -197,7 +201,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(358, 63);
+            this.btnCancelar.Location = new System.Drawing.Point(256, 39);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 33);
             this.btnCancelar.TabIndex = 5;
@@ -207,7 +211,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(451, 63);
+            this.btnExcluir.Location = new System.Drawing.Point(362, 39);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 33);
             this.btnExcluir.TabIndex = 6;
@@ -234,125 +238,12 @@
             this.dataGridViewTextBoxColumn11,
             this.Column2});
             this.produtosDataGridView.DataSource = this.produtosBindingSource;
-            this.produtosDataGridView.Location = new System.Drawing.Point(12, 344);
+            this.produtosDataGridView.Location = new System.Drawing.Point(34, 441);
             this.produtosDataGridView.Name = "produtosDataGridView";
             this.produtosDataGridView.ReadOnly = true;
             this.produtosDataGridView.Size = new System.Drawing.Size(878, 220);
             this.produtosDataGridView.TabIndex = 7;
             this.produtosDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.produtosDataGridView_CellFormatting);
-            // 
-            // produtosBindingSource
-            // 
-            this.produtosBindingSource.DataSource = typeof(DBPowerLook.DAL.Produtos);
-            // 
-            // corTextBox
-            // 
-            this.corTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "cor", true));
-            this.corTextBox.Location = new System.Drawing.Point(358, 140);
-            this.corTextBox.Name = "corTextBox";
-            this.corTextBox.Size = new System.Drawing.Size(121, 20);
-            this.corTextBox.TabIndex = 8;
-            // 
-            // descricaoTextBox
-            // 
-            this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "descricao", true));
-            this.descricaoTextBox.Location = new System.Drawing.Point(357, 224);
-            this.descricaoTextBox.Multiline = true;
-            this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(121, 78);
-            this.descricaoTextBox.TabIndex = 9;
-            // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(158, 140);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(121, 20);
-            this.nomeTextBox.TabIndex = 12;
-            // 
-            // precoTextBox
-            // 
-            this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "preco", true));
-            this.precoTextBox.Location = new System.Drawing.Point(358, 170);
-            this.precoTextBox.Name = "precoTextBox";
-            this.precoTextBox.Size = new System.Drawing.Size(121, 20);
-            this.precoTextBox.TabIndex = 14;
-            // 
-            // tamanhoTextBox
-            // 
-            this.tamanhoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "tamanho", true));
-            this.tamanhoTextBox.Location = new System.Drawing.Point(158, 201);
-            this.tamanhoTextBox.Name = "tamanhoTextBox";
-            this.tamanhoTextBox.Size = new System.Drawing.Size(121, 20);
-            this.tamanhoTextBox.TabIndex = 16;
-            // 
-            // tipo_decoteTextBox
-            // 
-            this.tipo_decoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "tipo_decote", true));
-            this.tipo_decoteTextBox.Location = new System.Drawing.Point(158, 282);
-            this.tipo_decoteTextBox.Name = "tipo_decoteTextBox";
-            this.tipo_decoteTextBox.Size = new System.Drawing.Size(121, 20);
-            this.tipo_decoteTextBox.TabIndex = 18;
-            // 
-            // tipo_mangaTextBox
-            // 
-            this.tipo_mangaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "tipo_manga", true));
-            this.tipo_mangaTextBox.Location = new System.Drawing.Point(158, 253);
-            this.tipo_mangaTextBox.Name = "tipo_mangaTextBox";
-            this.tipo_mangaTextBox.Size = new System.Drawing.Size(121, 20);
-            this.tipo_mangaTextBox.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 25);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Cadastro de Vestido";
-            // 
-            // fornecedoresBindingSource
-            // 
-            this.fornecedoresBindingSource.DataSource = typeof(DBPowerLook.DAL.Fornecedores);
-            // 
-            // id_fornecedorComboBox
-            // 
-            this.id_fornecedorComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.produtosBindingSource, "id_fornecedor", true));
-            this.id_fornecedorComboBox.DataSource = this.fornecedoresBindingSource;
-            this.id_fornecedorComboBox.DisplayMember = "nome_fantasia";
-            this.id_fornecedorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.id_fornecedorComboBox.FormattingEnabled = true;
-            this.id_fornecedorComboBox.Location = new System.Drawing.Point(358, 196);
-            this.id_fornecedorComboBox.Name = "id_fornecedorComboBox";
-            this.id_fornecedorComboBox.Size = new System.Drawing.Size(121, 21);
-            this.id_fornecedorComboBox.TabIndex = 10;
-            this.id_fornecedorComboBox.ValueMember = "id";
-            // 
-            // id_categoriaComboBox
-            // 
-            this.id_categoriaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.produtosBindingSource, "id_categoria", true));
-            this.id_categoriaComboBox.DataSource = this.categoriasBindingSource;
-            this.id_categoriaComboBox.DisplayMember = "nome";
-            this.id_categoriaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.id_categoriaComboBox.FormattingEnabled = true;
-            this.id_categoriaComboBox.Location = new System.Drawing.Point(158, 173);
-            this.id_categoriaComboBox.Name = "id_categoriaComboBox";
-            this.id_categoriaComboBox.Size = new System.Drawing.Size(121, 21);
-            this.id_categoriaComboBox.TabIndex = 25;
-            this.id_categoriaComboBox.ValueMember = "id";
-            // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataSource = typeof(DBPowerLook.DAL.Categorias);
-            // 
-            // quantidadeTextBox
-            // 
-            this.quantidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "quantidade", true));
-            this.quantidadeTextBox.Location = new System.Drawing.Point(158, 227);
-            this.quantidadeTextBox.Name = "quantidadeTextBox";
-            this.quantidadeTextBox.Size = new System.Drawing.Size(121, 20);
-            this.quantidadeTextBox.TabIndex = 26;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -433,38 +324,171 @@
             this.Column2.ReadOnly = true;
             this.Column2.Width = 50;
             // 
+            // produtosBindingSource
+            // 
+            this.produtosBindingSource.DataSource = typeof(DBPowerLook.DAL.Produtos);
+            // 
+            // corTextBox
+            // 
+            this.corTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "cor", true));
+            this.corTextBox.Location = new System.Drawing.Point(660, 42);
+            this.corTextBox.Name = "corTextBox";
+            this.corTextBox.Size = new System.Drawing.Size(132, 20);
+            this.corTextBox.TabIndex = 8;
+            // 
+            // descricaoTextBox
+            // 
+            this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "descricao", true));
+            this.descricaoTextBox.Location = new System.Drawing.Point(144, 68);
+            this.descricaoTextBox.Multiline = true;
+            this.descricaoTextBox.Name = "descricaoTextBox";
+            this.descricaoTextBox.Size = new System.Drawing.Size(349, 78);
+            this.descricaoTextBox.TabIndex = 9;
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(144, 42);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(349, 20);
+            this.nomeTextBox.TabIndex = 12;
+            // 
+            // precoTextBox
+            // 
+            this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "preco", true));
+            this.precoTextBox.Location = new System.Drawing.Point(660, 68);
+            this.precoTextBox.Name = "precoTextBox";
+            this.precoTextBox.Size = new System.Drawing.Size(132, 20);
+            this.precoTextBox.TabIndex = 14;
+            // 
+            // tamanhoTextBox
+            // 
+            this.tamanhoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "tamanho", true));
+            this.tamanhoTextBox.Location = new System.Drawing.Point(144, 179);
+            this.tamanhoTextBox.Name = "tamanhoTextBox";
+            this.tamanhoTextBox.Size = new System.Drawing.Size(132, 20);
+            this.tamanhoTextBox.TabIndex = 16;
+            // 
+            // tipo_decoteTextBox
+            // 
+            this.tipo_decoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "tipo_decote", true));
+            this.tipo_decoteTextBox.Location = new System.Drawing.Point(660, 150);
+            this.tipo_decoteTextBox.Name = "tipo_decoteTextBox";
+            this.tipo_decoteTextBox.Size = new System.Drawing.Size(132, 20);
+            this.tipo_decoteTextBox.TabIndex = 18;
+            // 
+            // tipo_mangaTextBox
+            // 
+            this.tipo_mangaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "tipo_manga", true));
+            this.tipo_mangaTextBox.Location = new System.Drawing.Point(660, 121);
+            this.tipo_mangaTextBox.Name = "tipo_mangaTextBox";
+            this.tipo_mangaTextBox.Size = new System.Drawing.Size(132, 20);
+            this.tipo_mangaTextBox.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Cadastro de Vestido";
+            // 
+            // fornecedoresBindingSource
+            // 
+            this.fornecedoresBindingSource.DataSource = typeof(DBPowerLook.DAL.Fornecedores);
+            // 
+            // id_fornecedorComboBox
+            // 
+            this.id_fornecedorComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.produtosBindingSource, "id_fornecedor", true));
+            this.id_fornecedorComboBox.DataSource = this.fornecedoresBindingSource;
+            this.id_fornecedorComboBox.DisplayMember = "nome_fantasia";
+            this.id_fornecedorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.id_fornecedorComboBox.FormattingEnabled = true;
+            this.id_fornecedorComboBox.Location = new System.Drawing.Point(660, 94);
+            this.id_fornecedorComboBox.Name = "id_fornecedorComboBox";
+            this.id_fornecedorComboBox.Size = new System.Drawing.Size(132, 21);
+            this.id_fornecedorComboBox.TabIndex = 10;
+            this.id_fornecedorComboBox.ValueMember = "id";
+            // 
+            // id_categoriaComboBox
+            // 
+            this.id_categoriaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.produtosBindingSource, "id_categoria", true));
+            this.id_categoriaComboBox.DataSource = this.categoriasBindingSource;
+            this.id_categoriaComboBox.DisplayMember = "nome";
+            this.id_categoriaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.id_categoriaComboBox.FormattingEnabled = true;
+            this.id_categoriaComboBox.Location = new System.Drawing.Point(144, 152);
+            this.id_categoriaComboBox.Name = "id_categoriaComboBox";
+            this.id_categoriaComboBox.Size = new System.Drawing.Size(132, 21);
+            this.id_categoriaComboBox.TabIndex = 25;
+            this.id_categoriaComboBox.ValueMember = "id";
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(DBPowerLook.DAL.Categorias);
+            // 
+            // quantidadeTextBox
+            // 
+            this.quantidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "quantidade", true));
+            this.quantidadeTextBox.Location = new System.Drawing.Point(361, 178);
+            this.quantidadeTextBox.Name = "quantidadeTextBox";
+            this.quantidadeTextBox.Size = new System.Drawing.Size(132, 20);
+            this.quantidadeTextBox.TabIndex = 26;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.descricaoTextBox);
+            this.groupBox1.Controls.Add(quantidadeLabel);
+            this.groupBox1.Controls.Add(this.corTextBox);
+            this.groupBox1.Controls.Add(this.quantidadeTextBox);
+            this.groupBox1.Controls.Add(corLabel);
+            this.groupBox1.Controls.Add(id_categoriaLabel);
+            this.groupBox1.Controls.Add(descricaoLabel);
+            this.groupBox1.Controls.Add(this.id_categoriaComboBox);
+            this.groupBox1.Controls.Add(this.id_fornecedorComboBox);
+            this.groupBox1.Controls.Add(id_fornecedorLabel);
+            this.groupBox1.Controls.Add(tipo_mangaLabel);
+            this.groupBox1.Controls.Add(this.nomeTextBox);
+            this.groupBox1.Controls.Add(this.tipo_mangaTextBox);
+            this.groupBox1.Controls.Add(nomeLabel);
+            this.groupBox1.Controls.Add(tipo_decoteLabel);
+            this.groupBox1.Controls.Add(this.precoTextBox);
+            this.groupBox1.Controls.Add(this.tipo_decoteTextBox);
+            this.groupBox1.Controls.Add(precoLabel);
+            this.groupBox1.Controls.Add(tamanhoLabel);
+            this.groupBox1.Controls.Add(this.tamanhoTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(34, 194);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(878, 220);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dados do Produto";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnExcluir);
+            this.groupBox2.Controls.Add(this.btnNovo);
+            this.groupBox2.Controls.Add(this.btnGravar);
+            this.groupBox2.Controls.Add(this.btnCancelar);
+            this.groupBox2.Location = new System.Drawing.Point(233, 65);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(479, 104);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Opções";
+            // 
             // Form_cad_produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(912, 646);
-            this.Controls.Add(quantidadeLabel);
-            this.Controls.Add(this.quantidadeTextBox);
-            this.Controls.Add(id_categoriaLabel);
-            this.Controls.Add(this.id_categoriaComboBox);
+            this.ClientSize = new System.Drawing.Size(945, 686);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(tipo_mangaLabel);
-            this.Controls.Add(this.tipo_mangaTextBox);
-            this.Controls.Add(tipo_decoteLabel);
-            this.Controls.Add(this.tipo_decoteTextBox);
-            this.Controls.Add(tamanhoLabel);
-            this.Controls.Add(this.tamanhoTextBox);
-            this.Controls.Add(precoLabel);
-            this.Controls.Add(this.precoTextBox);
-            this.Controls.Add(nomeLabel);
-            this.Controls.Add(this.nomeTextBox);
-            this.Controls.Add(id_fornecedorLabel);
-            this.Controls.Add(this.id_fornecedorComboBox);
-            this.Controls.Add(descricaoLabel);
-            this.Controls.Add(this.descricaoTextBox);
-            this.Controls.Add(corLabel);
-            this.Controls.Add(this.corTextBox);
             this.Controls.Add(this.produtosDataGridView);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.btnNovo);
             this.Name = "Form_cad_produto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Produtos";
@@ -474,6 +498,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,5 +538,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
