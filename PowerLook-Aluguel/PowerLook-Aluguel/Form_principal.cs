@@ -190,5 +190,6 @@ namespace PowerLook_Aluguel
         {
             this.Dispose();
         }
+
     }
 }

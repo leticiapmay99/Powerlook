@@ -163,6 +163,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Form_buscas.resx">
       <DependentUpon>Form_buscas.cs</DependentUpon>
@@ -214,14 +219,9 @@
     <EmbeddedResource Include="Produto.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Vendas.rdlc" />
     <None Include="packages.config" />
     <None Include="PowerLookDataSet.xsc">
@@ -286,6 +286,16 @@
     <None Include="Imagem\Vestido.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagem\icon-cart-50.png" />
+    <None Include="Imagem\icon-add-employees-50.png" />
+    <None Include="Imagem\icon-dress-50.png" />
+    <None Include="Imagem\icon-search-50.png" />
+    <None Include="Imagem\icon-providers-50.png" />
+    <None Include="Imagem\icon-clients-50.png" />
+    <None Include="Imagem\icon-add-category-40.png" />
+    <None Include="Imagem\icons8-grupo-de-usuário-homem-mulher-60.png" />
+    <None Include="Imagem\icons8-vestido-de-casamento-60.png" />
+    <None Include="Imagem\icon-logout.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

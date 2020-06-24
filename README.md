@@ -20,7 +20,15 @@ Passo-a-passo para fazer backup e restore no SQL Server:
 
 http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-restore-no-microsoft-sql-server/
 
+- Ícones: https://icons8.com.br/icon/pack/profile/ultraviolet
+
 ## ToDo
+
+- Desabilitar botão "Desconto" enquanto realiza a escolha dos produtos e só ativar quando finalizar o pedido
+
+- Corrigir erro ao tentar inserir item na lista sem selecionar o produto (Uma forma pode ser só ativar o botão de adicionar item quando seleciona um produto, outro seria alguma excessão no código)
+
+- Corrigir erro de foreign key que está acontecendo em alguns casos, como por exemplo, no cadastro de clientes
 
 - Relatório de:
 
@@ -28,13 +36,9 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 
 	- Vendas
 
-- Procurar Ícones
-
-- Algumas validações
-
 - Busca vestido
 
-- Corrigir layout
+- Corrigir layout de Relatórios
 
 - Correções:
 
@@ -62,11 +66,4 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 - Implementar o relatório de clientes (POR ULTIMO)
 
 - Opção de dar enter para logar
-
-- Desabilitar botão "Desconto" enquanto realiza a escolha dos produtos e só ativar quando finalizar o pedido
-
-- Corrigir erro ao tentar inserir item na lista sem selecionar o produto (Uma forma pode ser só ativar o botão de adicionar item quando seleciona um produto, outro seria alguma excessão no código)
-
-Alterada interface da tela de Cad. de Funcionarios
-
 
