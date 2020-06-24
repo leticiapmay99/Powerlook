@@ -72,6 +72,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form_relatorio_venda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório Vendas Simples";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_relatorio_venda_FormClosed);
             this.Load += new System.EventHandler(this.Form_relatorio_venda_Load);

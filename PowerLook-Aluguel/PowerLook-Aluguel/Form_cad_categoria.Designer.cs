@@ -218,6 +218,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.categoriasDataGridView);
             this.Name = "Form_cad_categoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categoria";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_cad_categoria_FormClosed);
             this.Load += new System.EventHandler(this.Form_cad_categoria_Load);

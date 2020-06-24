@@ -48,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Name = "Form_buscas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_buscas";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_buscas_FormClosed);
             this.ResumeLayout(false);

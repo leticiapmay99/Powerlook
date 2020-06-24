@@ -45,8 +45,6 @@
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnNovaVenda = new System.Windows.Forms.Button();
             this.groupBoxNovaVenda = new System.Windows.Forms.GroupBox();
-            this.BtnFinalizar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.BtnFinalizarPedido = new System.Windows.Forms.Button();
             this.btnNovoItem = new System.Windows.Forms.Button();
             this.DataGridItem = new System.Windows.Forms.DataGridView();
@@ -61,6 +59,8 @@
             this.ComboBoxProduto = new System.Windows.Forms.ComboBox();
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id_vendaTextBox = new System.Windows.Forms.TextBox();
+            this.BtnFinalizar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.DateTimeVencimento = new System.Windows.Forms.DateTimePicker();
             this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ComboBoxStatus = new System.Windows.Forms.ComboBox();
@@ -240,28 +240,6 @@
             this.groupBoxNovaVenda.TabStop = false;
             this.groupBoxNovaVenda.Text = "Nova Venda";
             // 
-            // BtnFinalizar
-            // 
-            this.BtnFinalizar.Enabled = false;
-            this.BtnFinalizar.Location = new System.Drawing.Point(303, 74);
-            this.BtnFinalizar.Name = "BtnFinalizar";
-            this.BtnFinalizar.Size = new System.Drawing.Size(90, 23);
-            this.BtnFinalizar.TabIndex = 23;
-            this.BtnFinalizar.Text = "Finalizar";
-            this.BtnFinalizar.UseVisualStyleBackColor = true;
-            this.BtnFinalizar.Click += new System.EventHandler(this.BtnFinalizar_Click);
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Enabled = false;
-            this.btnImprimir.Location = new System.Drawing.Point(111, 129);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(189, 23);
-            this.btnImprimir.TabIndex = 20;
-            this.btnImprimir.Text = "Imprimir comprovante da Venda";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
             // BtnFinalizarPedido
             // 
             this.BtnFinalizarPedido.Location = new System.Drawing.Point(310, 157);
@@ -387,6 +365,28 @@
             this.id_vendaTextBox.ReadOnly = true;
             this.id_vendaTextBox.Size = new System.Drawing.Size(100, 20);
             this.id_vendaTextBox.TabIndex = 1;
+            // 
+            // BtnFinalizar
+            // 
+            this.BtnFinalizar.Enabled = false;
+            this.BtnFinalizar.Location = new System.Drawing.Point(303, 74);
+            this.BtnFinalizar.Name = "BtnFinalizar";
+            this.BtnFinalizar.Size = new System.Drawing.Size(90, 23);
+            this.BtnFinalizar.TabIndex = 23;
+            this.BtnFinalizar.Text = "Finalizar";
+            this.BtnFinalizar.UseVisualStyleBackColor = true;
+            this.BtnFinalizar.Click += new System.EventHandler(this.BtnFinalizar_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Enabled = false;
+            this.btnImprimir.Location = new System.Drawing.Point(111, 129);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(189, 23);
+            this.btnImprimir.TabIndex = 20;
+            this.btnImprimir.Text = "Imprimir comprovante da Venda";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // DateTimeVencimento
             // 
@@ -535,6 +535,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxNovaVenda);
             this.Name = "Form_Venda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venda";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Venda_FormClosed);
             this.Load += new System.EventHandler(this.Form_Venda_Load);
