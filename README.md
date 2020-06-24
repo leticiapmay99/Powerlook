@@ -69,7 +69,7 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 
 - Corrigir erro ao tentar inserir item na lista sem selecionar o produto (Uma forma pode ser só ativar o botão de adicionar item quando seleciona um produto, outro seria alguma excessão no código)
 
-- 
+Alterada interface da tela de Cad. de Fornecedores
 
 
 

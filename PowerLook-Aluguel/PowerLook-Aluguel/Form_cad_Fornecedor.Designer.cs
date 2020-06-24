@@ -206,7 +206,7 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn6});
             this.fornecedoresDataGridView.DataSource = this.fornecedoresBindingSource;
-            this.fornecedoresDataGridView.Location = new System.Drawing.Point(26, 434);
+            this.fornecedoresDataGridView.Location = new System.Drawing.Point(26, 429);
             this.fornecedoresDataGridView.Name = "fornecedoresDataGridView";
             this.fornecedoresDataGridView.ReadOnly = true;
             this.fornecedoresDataGridView.Size = new System.Drawing.Size(762, 220);
@@ -515,7 +515,7 @@
             this.groupBox1.Controls.Add(inscricao_estadualLabel);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(razao_socialLabel);
-            this.groupBox1.Location = new System.Drawing.Point(26, 187);
+            this.groupBox1.Location = new System.Drawing.Point(26, 182);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(762, 219);
             this.groupBox1.TabIndex = 49;

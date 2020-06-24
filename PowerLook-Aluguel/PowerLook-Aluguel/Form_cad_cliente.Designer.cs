@@ -362,7 +362,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(400, 38);
+            this.btnExcluir.Location = new System.Drawing.Point(383, 38);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 33);
             this.btnExcluir.TabIndex = 15;
@@ -372,7 +372,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(286, 38);
+            this.btnCancelar.Location = new System.Drawing.Point(273, 38);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 33);
             this.btnCancelar.TabIndex = 14;
@@ -382,7 +382,7 @@
             // 
             // btnGravar
             // 
-            this.btnGravar.Location = new System.Drawing.Point(167, 38);
+            this.btnGravar.Location = new System.Drawing.Point(158, 38);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 33);
             this.btnGravar.TabIndex = 13;
@@ -527,7 +527,7 @@
             this.groupBox1.Controls.Add(this.btnExcluir);
             this.groupBox1.Location = new System.Drawing.Point(163, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(518, 100);
+            this.groupBox1.Size = new System.Drawing.Size(502, 100);
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opções";
