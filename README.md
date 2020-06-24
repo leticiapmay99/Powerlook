@@ -52,3 +52,24 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 	
 	- Figura 21 – Diagrama de Atividades – Módulo Administrativo
 
+
+- Novo item de menu chamado de "Outras opções", nele deve ter:
+
+	- Opção de "Sair" do programa
+
+	- Opção de "Ajuda" 
+
+- Adicionar novos os relatórios no menu
+
+- Implementar o relatório de clientes (POR ULTIMO)
+
+- Opção de dar enter para logar
+
+- Desabilitar botão "Desconto" enquanto realiza a escolha dos produtos e só ativar quando finalizar o pedido
+
+- Corrigir erro ao tentar inserir item na lista sem selecionar o produto (Uma forma pode ser só ativar o botão de adicionar item quando seleciona um produto, outro seria alguma excessão no código)
+
+- 
+
+
+

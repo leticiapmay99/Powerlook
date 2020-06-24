@@ -225,5 +225,6 @@ namespace PowerLook_Aluguel
                 printDocument1.Print();
             }
         }
+
     }
 }
