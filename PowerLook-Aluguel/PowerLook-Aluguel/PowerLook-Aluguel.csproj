@@ -77,6 +77,12 @@
     <Compile Include="Form_busca_CategoriaVestido.Designer.cs">
       <DependentUpon>Form_busca_CategoriaVestido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_busca_FornecedorVestido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_busca_FornecedorVestido.Designer.cs">
+      <DependentUpon>Form_busca_FornecedorVestido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_relatorio_venda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_busca_CategoriaVestido.resx">
       <DependentUpon>Form_busca_CategoriaVestido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_busca_FornecedorVestido.resx">
+      <DependentUpon>Form_busca_FornecedorVestido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_cad_categoria.resx">
       <DependentUpon>Form_cad_categoria.cs</DependentUpon>

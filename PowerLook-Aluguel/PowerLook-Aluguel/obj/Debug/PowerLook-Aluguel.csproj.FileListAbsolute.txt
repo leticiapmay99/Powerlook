@@ -341,3 +341,4 @@ C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-
 C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook-Aluguel.csproj.CopyComplete
 C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook-Aluguel.exe
 C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook-Aluguel.pdb
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_busca_FornecedorVestido.resources

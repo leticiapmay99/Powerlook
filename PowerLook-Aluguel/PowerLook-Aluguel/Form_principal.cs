@@ -179,11 +179,11 @@ namespace PowerLook_Aluguel
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (MeusFormularios.FormCategoriaVestidos == null)
-                MeusFormularios.FormCategoriaVestidos = new Form_busca_CategoriaVestido();
+            if (MeusFormularios.FormBuscas == null)
+                MeusFormularios.FormBuscas = new Form_buscas();
 
-            MeusFormularios.FormCategoriaVestidos.Show();
-            MeusFormularios.FormCategoriaVestidos.Focus();
+            MeusFormularios.FormBuscas.Show();
+            MeusFormularios.FormBuscas.Focus();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -191,9 +191,5 @@ namespace PowerLook_Aluguel
             this.Dispose();
         }
 
-        private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

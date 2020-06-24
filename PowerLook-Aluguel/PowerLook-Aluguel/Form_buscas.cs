@@ -30,5 +30,15 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormCategoriaVestidos.Show();
             MeusFormularios.FormCategoriaVestidos.Focus();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (MeusFormularios.FormFornecedorVestidos == null)
+                MeusFormularios.FormFornecedorVestidos = new Form_busca_FornecedorVestido();
+
+            MeusFormularios.FormFornecedorVestidos.Show();
+            MeusFormularios.FormFornecedorVestidos.Focus();
+        }
     }
 }

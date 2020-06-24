@@ -34,9 +34,9 @@ namespace PowerLook_Aluguel
             this.buscar((int)comboBox1.SelectedValue);
         }
 
-        public void buscar(int idCatgoria)
+        public void buscar(int idCategoria)
         {
-            this.produtosBindingSource.DataSource = DataContextFactory.DataContext.Produtos.Where(x => x.id_categoria == idCatgoria);
+            this.produtosBindingSource.DataSource = DataContextFactory.DataContext.Produtos.Where(x => x.id_categoria == idCategoria);
         }
     }
 }
