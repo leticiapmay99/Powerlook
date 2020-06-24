@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PowerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
             this.FornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -40,10 +38,13 @@
             this.ProdutosTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.ProdutosTableAdapter();
             this.FornecedoresTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.FornecedoresTableAdapter();
             this.ClienteRelatorioTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.ClienteRelatorioTableAdapter();
+            this.Cliente2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Cliente2TableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.Cliente2TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FornecedoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteRelatorioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cliente2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ProdutosBindingSource
@@ -69,16 +70,10 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "produto";
-            reportDataSource1.Value = this.ProdutosBindingSource;
-            reportDataSource2.Name = "Fornecedor";
-            reportDataSource2.Value = this.FornecedoresBindingSource;
-            reportDataSource3.Name = "ClienteRelatorio";
-            reportDataSource3.Value = this.ClienteRelatorioBindingSource;
+            reportDataSource1.Name = "Cliente2";
+            reportDataSource1.Value = this.Cliente2BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PowerLook_Aluguel.Cliente.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PowerLook_Aluguel.Cliente2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -97,6 +92,15 @@
             // 
             this.ClienteRelatorioTableAdapter.ClearBeforeFill = true;
             // 
+            // Cliente2BindingSource
+            // 
+            this.Cliente2BindingSource.DataMember = "Cliente2";
+            this.Cliente2BindingSource.DataSource = this.PowerLookDataSet;
+            // 
+            // Cliente2TableAdapter
+            // 
+            this.Cliente2TableAdapter.ClearBeforeFill = true;
+            // 
             // Form_relatorio_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +116,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PowerLookDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FornecedoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteRelatorioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cliente2BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -126,5 +131,7 @@
         private PowerLookDataSetTableAdapters.ProdutosTableAdapter ProdutosTableAdapter;
         private PowerLookDataSetTableAdapters.FornecedoresTableAdapter FornecedoresTableAdapter;
         private PowerLookDataSetTableAdapters.ClienteRelatorioTableAdapter ClienteRelatorioTableAdapter;
+        private System.Windows.Forms.BindingSource Cliente2BindingSource;
+        private PowerLookDataSetTableAdapters.Cliente2TableAdapter Cliente2TableAdapter;
     }
 }

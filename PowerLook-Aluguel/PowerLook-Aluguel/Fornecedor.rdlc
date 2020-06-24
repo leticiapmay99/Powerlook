@@ -9,19 +9,19 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.33376cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.53999cm</Width>
+              <Width>3.98978cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.16145cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.10854cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.66417cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -449,9 +449,9 @@
         </TablixRowHierarchy>
         <DataSetName>Fornecedor</DataSetName>
         <Top>1.83917cm</Top>
-        <Left>1.06058cm</Left>
+        <Left>0.45204cm</Left>
         <Height>1.2cm</Height>
-        <Width>16.03999cm</Width>
+        <Width>19.7577cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -462,7 +462,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>7.06076in</Width>
+  <Width>8.08159in</Width>
   <Page>
     <PageHeader>
       <Height>3.2112cm</Height>

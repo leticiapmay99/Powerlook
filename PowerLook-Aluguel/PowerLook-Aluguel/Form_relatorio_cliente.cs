@@ -19,6 +19,8 @@ namespace PowerLook_Aluguel
 
         private void Form_relatorio_cliente_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'PowerLookDataSet.Cliente2'. Você pode movê-la ou removê-la conforme necessário.
+            this.Cliente2TableAdapter.Fill(this.PowerLookDataSet.Cliente2);
             // TODO: esta linha de código carrega dados na tabela 'PowerLookDataSet.Produtos'. Você pode movê-la ou removê-la conforme necessário.
             this.ProdutosTableAdapter.Fill(this.PowerLookDataSet.Produtos);
             // TODO: esta linha de código carrega dados na tabela 'PowerLookDataSet.Fornecedores'. Você pode movê-la ou removê-la conforme necessário.

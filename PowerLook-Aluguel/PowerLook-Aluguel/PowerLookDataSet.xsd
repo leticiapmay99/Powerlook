@@ -696,6 +696,30 @@ FROM            ContasReceber INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Cliente2TableAdapter" GeneratorDataComponentClassName="Cliente2TableAdapter" Name="Cliente2" UserDataComponentName="Cliente2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PowerLookConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PessoaFisica.cpf, PessoaFisica.rg, Usuarios.nome, Usuarios.data_nascimento, Usuarios.telefone
+FROM            PessoaFisica INNER JOIN
+                         Usuarios ON PessoaFisica.id = Usuarios.id_pessoa_fisica INNER JOIN
+                         TipoUsuario ON Usuarios.id_tipo_pessoa = TipoUsuario.id
+WHERE        (TipoUsuario.id = 2)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cpf" DataSetColumn="cpf" />
+              <Mapping SourceColumn="rg" DataSetColumn="rg" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="data_nascimento" DataSetColumn="data_nascimento" />
+              <Mapping SourceColumn="telefone" DataSetColumn="telefone" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -704,7 +728,7 @@ FROM            ContasReceber INNER JOIN
   <xs:element name="PowerLookDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PowerLookDataSet" msprop:Generator_UserDSName="PowerLookDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Enderecos" msprop:Generator_TableClassName="EnderecosDataTable" msprop:Generator_TableVarName="tableEnderecos" msprop:Generator_TablePropName="Enderecos" msprop:Generator_RowDeletingName="EnderecosRowDeleting" msprop:Generator_RowChangingName="EnderecosRowChanging" msprop:Generator_RowEvHandlerName="EnderecosRowChangeEventHandler" msprop:Generator_RowDeletedName="EnderecosRowDeleted" msprop:Generator_UserTableName="Enderecos" msprop:Generator_RowChangedName="EnderecosRowChanged" msprop:Generator_RowEvArgName="EnderecosRowChangeEvent" msprop:Generator_RowClassName="EnderecosRow">
+        <xs:element name="Enderecos" msprop:Generator_TableClassName="EnderecosDataTable" msprop:Generator_TableVarName="tableEnderecos" msprop:Generator_RowChangedName="EnderecosRowChanged" msprop:Generator_TablePropName="Enderecos" msprop:Generator_RowDeletingName="EnderecosRowDeleting" msprop:Generator_RowChangingName="EnderecosRowChanging" msprop:Generator_RowEvHandlerName="EnderecosRowChangeEventHandler" msprop:Generator_RowDeletedName="EnderecosRowDeleted" msprop:Generator_RowClassName="EnderecosRow" msprop:Generator_UserTableName="Enderecos" msprop:Generator_RowEvArgName="EnderecosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -753,7 +777,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Fornecedores" msprop:Generator_TableClassName="FornecedoresDataTable" msprop:Generator_TableVarName="tableFornecedores" msprop:Generator_TablePropName="Fornecedores" msprop:Generator_RowDeletingName="FornecedoresRowDeleting" msprop:Generator_RowChangingName="FornecedoresRowChanging" msprop:Generator_RowEvHandlerName="FornecedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="FornecedoresRowDeleted" msprop:Generator_UserTableName="Fornecedores" msprop:Generator_RowChangedName="FornecedoresRowChanged" msprop:Generator_RowEvArgName="FornecedoresRowChangeEvent" msprop:Generator_RowClassName="FornecedoresRow">
+        <xs:element name="Fornecedores" msprop:Generator_TableClassName="FornecedoresDataTable" msprop:Generator_TableVarName="tableFornecedores" msprop:Generator_RowChangedName="FornecedoresRowChanged" msprop:Generator_TablePropName="Fornecedores" msprop:Generator_RowDeletingName="FornecedoresRowDeleting" msprop:Generator_RowChangingName="FornecedoresRowChanging" msprop:Generator_RowEvHandlerName="FornecedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="FornecedoresRowDeleted" msprop:Generator_RowClassName="FornecedoresRow" msprop:Generator_UserTableName="Fornecedores" msprop:Generator_RowEvArgName="FornecedoresRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -797,14 +821,14 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Locacoes" msprop:Generator_TableClassName="LocacoesDataTable" msprop:Generator_TableVarName="tableLocacoes" msprop:Generator_TablePropName="Locacoes" msprop:Generator_RowDeletingName="LocacoesRowDeleting" msprop:Generator_RowChangingName="LocacoesRowChanging" msprop:Generator_RowEvHandlerName="LocacoesRowChangeEventHandler" msprop:Generator_RowDeletedName="LocacoesRowDeleted" msprop:Generator_UserTableName="Locacoes" msprop:Generator_RowChangedName="LocacoesRowChanged" msprop:Generator_RowEvArgName="LocacoesRowChangeEvent" msprop:Generator_RowClassName="LocacoesRow">
+        <xs:element name="Locacoes" msprop:Generator_TableClassName="LocacoesDataTable" msprop:Generator_TableVarName="tableLocacoes" msprop:Generator_RowChangedName="LocacoesRowChanged" msprop:Generator_TablePropName="Locacoes" msprop:Generator_RowDeletingName="LocacoesRowDeleting" msprop:Generator_RowChangingName="LocacoesRowChanging" msprop:Generator_RowEvHandlerName="LocacoesRowChangeEventHandler" msprop:Generator_RowDeletedName="LocacoesRowDeleted" msprop:Generator_RowClassName="LocacoesRow" msprop:Generator_UserTableName="Locacoes" msprop:Generator_RowEvArgName="LocacoesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PessoaFisica" msprop:Generator_TableClassName="PessoaFisicaDataTable" msprop:Generator_TableVarName="tablePessoaFisica" msprop:Generator_TablePropName="PessoaFisica" msprop:Generator_RowDeletingName="PessoaFisicaRowDeleting" msprop:Generator_RowChangingName="PessoaFisicaRowChanging" msprop:Generator_RowEvHandlerName="PessoaFisicaRowChangeEventHandler" msprop:Generator_RowDeletedName="PessoaFisicaRowDeleted" msprop:Generator_UserTableName="PessoaFisica" msprop:Generator_RowChangedName="PessoaFisicaRowChanged" msprop:Generator_RowEvArgName="PessoaFisicaRowChangeEvent" msprop:Generator_RowClassName="PessoaFisicaRow">
+        <xs:element name="PessoaFisica" msprop:Generator_TableClassName="PessoaFisicaDataTable" msprop:Generator_TableVarName="tablePessoaFisica" msprop:Generator_RowChangedName="PessoaFisicaRowChanged" msprop:Generator_TablePropName="PessoaFisica" msprop:Generator_RowDeletingName="PessoaFisicaRowDeleting" msprop:Generator_RowChangingName="PessoaFisicaRowChanging" msprop:Generator_RowEvHandlerName="PessoaFisicaRowChangeEventHandler" msprop:Generator_RowDeletedName="PessoaFisicaRowDeleted" msprop:Generator_RowClassName="PessoaFisicaRow" msprop:Generator_UserTableName="PessoaFisica" msprop:Generator_RowEvArgName="PessoaFisicaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -825,7 +849,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PessoaJurifica" msprop:Generator_TableClassName="PessoaJurificaDataTable" msprop:Generator_TableVarName="tablePessoaJurifica" msprop:Generator_TablePropName="PessoaJurifica" msprop:Generator_RowDeletingName="PessoaJurificaRowDeleting" msprop:Generator_RowChangingName="PessoaJurificaRowChanging" msprop:Generator_RowEvHandlerName="PessoaJurificaRowChangeEventHandler" msprop:Generator_RowDeletedName="PessoaJurificaRowDeleted" msprop:Generator_UserTableName="PessoaJurifica" msprop:Generator_RowChangedName="PessoaJurificaRowChanged" msprop:Generator_RowEvArgName="PessoaJurificaRowChangeEvent" msprop:Generator_RowClassName="PessoaJurificaRow">
+        <xs:element name="PessoaJurifica" msprop:Generator_TableClassName="PessoaJurificaDataTable" msprop:Generator_TableVarName="tablePessoaJurifica" msprop:Generator_RowChangedName="PessoaJurificaRowChanged" msprop:Generator_TablePropName="PessoaJurifica" msprop:Generator_RowDeletingName="PessoaJurificaRowDeleting" msprop:Generator_RowChangingName="PessoaJurificaRowChanging" msprop:Generator_RowEvHandlerName="PessoaJurificaRowChangeEventHandler" msprop:Generator_RowDeletedName="PessoaJurificaRowDeleted" msprop:Generator_RowClassName="PessoaJurificaRow" msprop:Generator_UserTableName="PessoaJurifica" msprop:Generator_RowEvArgName="PessoaJurificaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -853,7 +877,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Produtos" msprop:Generator_TableClassName="ProdutosDataTable" msprop:Generator_TableVarName="tableProdutos" msprop:Generator_TablePropName="Produtos" msprop:Generator_RowDeletingName="ProdutosRowDeleting" msprop:Generator_RowChangingName="ProdutosRowChanging" msprop:Generator_RowEvHandlerName="ProdutosRowChangeEventHandler" msprop:Generator_RowDeletedName="ProdutosRowDeleted" msprop:Generator_UserTableName="Produtos" msprop:Generator_RowChangedName="ProdutosRowChanged" msprop:Generator_RowEvArgName="ProdutosRowChangeEvent" msprop:Generator_RowClassName="ProdutosRow">
+        <xs:element name="Produtos" msprop:Generator_TableClassName="ProdutosDataTable" msprop:Generator_TableVarName="tableProdutos" msprop:Generator_RowChangedName="ProdutosRowChanged" msprop:Generator_TablePropName="Produtos" msprop:Generator_RowDeletingName="ProdutosRowDeleting" msprop:Generator_RowChangingName="ProdutosRowChanging" msprop:Generator_RowEvHandlerName="ProdutosRowChangeEventHandler" msprop:Generator_RowDeletedName="ProdutosRowDeleted" msprop:Generator_RowClassName="ProdutosRow" msprop:Generator_UserTableName="Produtos" msprop:Generator_RowEvArgName="ProdutosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -905,7 +929,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TipoUsuario" msprop:Generator_TableClassName="TipoUsuarioDataTable" msprop:Generator_TableVarName="tableTipoUsuario" msprop:Generator_TablePropName="TipoUsuario" msprop:Generator_RowDeletingName="TipoUsuarioRowDeleting" msprop:Generator_RowChangingName="TipoUsuarioRowChanging" msprop:Generator_RowEvHandlerName="TipoUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="TipoUsuarioRowDeleted" msprop:Generator_UserTableName="TipoUsuario" msprop:Generator_RowChangedName="TipoUsuarioRowChanged" msprop:Generator_RowEvArgName="TipoUsuarioRowChangeEvent" msprop:Generator_RowClassName="TipoUsuarioRow">
+        <xs:element name="TipoUsuario" msprop:Generator_TableClassName="TipoUsuarioDataTable" msprop:Generator_TableVarName="tableTipoUsuario" msprop:Generator_RowChangedName="TipoUsuarioRowChanged" msprop:Generator_TablePropName="TipoUsuario" msprop:Generator_RowDeletingName="TipoUsuarioRowDeleting" msprop:Generator_RowChangingName="TipoUsuarioRowChanging" msprop:Generator_RowEvHandlerName="TipoUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="TipoUsuarioRowDeleted" msprop:Generator_RowClassName="TipoUsuarioRow" msprop:Generator_UserTableName="TipoUsuario" msprop:Generator_RowEvArgName="TipoUsuarioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -919,7 +943,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ClienteRelatorio" msprop:Generator_TableClassName="ClienteRelatorioDataTable" msprop:Generator_TableVarName="tableClienteRelatorio" msprop:Generator_RowChangedName="ClienteRelatorioRowChanged" msprop:Generator_TablePropName="ClienteRelatorio" msprop:Generator_RowDeletingName="ClienteRelatorioRowDeleting" msprop:Generator_RowChangingName="ClienteRelatorioRowChanging" msprop:Generator_RowEvHandlerName="ClienteRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRelatorioRowDeleted" msprop:Generator_RowClassName="ClienteRelatorioRow" msprop:Generator_UserTableName="ClienteRelatorio" msprop:Generator_RowEvArgName="ClienteRelatorioRowChangeEvent">
+        <xs:element name="ClienteRelatorio" msprop:Generator_TableClassName="ClienteRelatorioDataTable" msprop:Generator_TableVarName="tableClienteRelatorio" msprop:Generator_TablePropName="ClienteRelatorio" msprop:Generator_RowDeletingName="ClienteRelatorioRowDeleting" msprop:Generator_RowChangingName="ClienteRelatorioRowChanging" msprop:Generator_RowEvHandlerName="ClienteRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRelatorioRowDeleted" msprop:Generator_UserTableName="ClienteRelatorio" msprop:Generator_RowChangedName="ClienteRelatorioRowChanged" msprop:Generator_RowEvArgName="ClienteRelatorioRowChangeEvent" msprop:Generator_RowClassName="ClienteRelatorioRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cpf" msprop:Generator_ColumnVarNameInTable="columncpf" msprop:Generator_ColumnPropNameInRow="cpf" msprop:Generator_ColumnPropNameInTable="cpfColumn" msprop:Generator_UserColumnName="cpf">
@@ -961,7 +985,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FornecedorRelatorio" msprop:Generator_TableClassName="FornecedorRelatorioDataTable" msprop:Generator_TableVarName="tableFornecedorRelatorio" msprop:Generator_TablePropName="FornecedorRelatorio" msprop:Generator_RowDeletingName="FornecedorRelatorioRowDeleting" msprop:Generator_RowChangingName="FornecedorRelatorioRowChanging" msprop:Generator_RowEvHandlerName="FornecedorRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="FornecedorRelatorioRowDeleted" msprop:Generator_UserTableName="FornecedorRelatorio" msprop:Generator_RowChangedName="FornecedorRelatorioRowChanged" msprop:Generator_RowEvArgName="FornecedorRelatorioRowChangeEvent" msprop:Generator_RowClassName="FornecedorRelatorioRow">
+        <xs:element name="FornecedorRelatorio" msprop:Generator_TableClassName="FornecedorRelatorioDataTable" msprop:Generator_TableVarName="tableFornecedorRelatorio" msprop:Generator_RowChangedName="FornecedorRelatorioRowChanged" msprop:Generator_TablePropName="FornecedorRelatorio" msprop:Generator_RowDeletingName="FornecedorRelatorioRowDeleting" msprop:Generator_RowChangingName="FornecedorRelatorioRowChanging" msprop:Generator_RowEvHandlerName="FornecedorRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="FornecedorRelatorioRowDeleted" msprop:Generator_RowClassName="FornecedorRelatorioRow" msprop:Generator_UserTableName="FornecedorRelatorio" msprop:Generator_RowEvArgName="FornecedorRelatorioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nome_fantasia" msprop:Generator_ColumnVarNameInTable="columnnome_fantasia" msprop:Generator_ColumnPropNameInRow="nome_fantasia" msprop:Generator_ColumnPropNameInTable="nome_fantasiaColumn" msprop:Generator_UserColumnName="nome_fantasia">
@@ -1009,7 +1033,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ContasReceber" msprop:Generator_TableClassName="ContasReceberDataTable" msprop:Generator_TableVarName="tableContasReceber" msprop:Generator_RowChangedName="ContasReceberRowChanged" msprop:Generator_TablePropName="ContasReceber" msprop:Generator_RowDeletingName="ContasReceberRowDeleting" msprop:Generator_RowChangingName="ContasReceberRowChanging" msprop:Generator_RowEvHandlerName="ContasReceberRowChangeEventHandler" msprop:Generator_RowDeletedName="ContasReceberRowDeleted" msprop:Generator_RowClassName="ContasReceberRow" msprop:Generator_UserTableName="ContasReceber" msprop:Generator_RowEvArgName="ContasReceberRowChangeEvent">
+        <xs:element name="ContasReceber" msprop:Generator_TableClassName="ContasReceberDataTable" msprop:Generator_TableVarName="tableContasReceber" msprop:Generator_TablePropName="ContasReceber" msprop:Generator_RowDeletingName="ContasReceberRowDeleting" msprop:Generator_RowChangingName="ContasReceberRowChanging" msprop:Generator_RowEvHandlerName="ContasReceberRowChangeEventHandler" msprop:Generator_RowDeletedName="ContasReceberRowDeleted" msprop:Generator_UserTableName="ContasReceber" msprop:Generator_RowChangedName="ContasReceberRowChanged" msprop:Generator_RowEvArgName="ContasReceberRowChangeEvent" msprop:Generator_RowClassName="ContasReceberRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_conta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_conta" msprop:Generator_ColumnPropNameInRow="id_conta" msprop:Generator_ColumnPropNameInTable="id_contaColumn" msprop:Generator_UserColumnName="id_conta" type="xs:int" />
@@ -1021,7 +1045,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="StatusPagamento" msprop:Generator_TableClassName="StatusPagamentoDataTable" msprop:Generator_TableVarName="tableStatusPagamento" msprop:Generator_RowChangedName="StatusPagamentoRowChanged" msprop:Generator_TablePropName="StatusPagamento" msprop:Generator_RowDeletingName="StatusPagamentoRowDeleting" msprop:Generator_RowChangingName="StatusPagamentoRowChanging" msprop:Generator_RowEvHandlerName="StatusPagamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="StatusPagamentoRowDeleted" msprop:Generator_RowClassName="StatusPagamentoRow" msprop:Generator_UserTableName="StatusPagamento" msprop:Generator_RowEvArgName="StatusPagamentoRowChangeEvent">
+        <xs:element name="StatusPagamento" msprop:Generator_TableClassName="StatusPagamentoDataTable" msprop:Generator_TableVarName="tableStatusPagamento" msprop:Generator_TablePropName="StatusPagamento" msprop:Generator_RowDeletingName="StatusPagamentoRowDeleting" msprop:Generator_RowChangingName="StatusPagamentoRowChanging" msprop:Generator_RowEvHandlerName="StatusPagamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="StatusPagamentoRowDeleted" msprop:Generator_UserTableName="StatusPagamento" msprop:Generator_RowChangedName="StatusPagamentoRowChanged" msprop:Generator_RowEvArgName="StatusPagamentoRowChangeEvent" msprop:Generator_RowClassName="StatusPagamentoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_status" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_status" msprop:Generator_ColumnPropNameInRow="id_status" msprop:Generator_ColumnPropNameInTable="id_statusColumn" msprop:Generator_UserColumnName="id_status" type="xs:int" />
@@ -1035,7 +1059,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Venda" msprop:Generator_TableClassName="VendaDataTable" msprop:Generator_TableVarName="tableVenda" msprop:Generator_RowChangedName="VendaRowChanged" msprop:Generator_TablePropName="Venda" msprop:Generator_RowDeletingName="VendaRowDeleting" msprop:Generator_RowChangingName="VendaRowChanging" msprop:Generator_RowEvHandlerName="VendaRowChangeEventHandler" msprop:Generator_RowDeletedName="VendaRowDeleted" msprop:Generator_RowClassName="VendaRow" msprop:Generator_UserTableName="Venda" msprop:Generator_RowEvArgName="VendaRowChangeEvent">
+        <xs:element name="Venda" msprop:Generator_TableClassName="VendaDataTable" msprop:Generator_TableVarName="tableVenda" msprop:Generator_TablePropName="Venda" msprop:Generator_RowDeletingName="VendaRowDeleting" msprop:Generator_RowChangingName="VendaRowChanging" msprop:Generator_RowEvHandlerName="VendaRowChangeEventHandler" msprop:Generator_RowDeletedName="VendaRowDeleted" msprop:Generator_UserTableName="Venda" msprop:Generator_RowChangedName="VendaRowChanged" msprop:Generator_RowEvArgName="VendaRowChangeEvent" msprop:Generator_RowClassName="VendaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_venda" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_venda" msprop:Generator_ColumnPropNameInRow="id_venda" msprop:Generator_ColumnPropNameInTable="id_vendaColumn" msprop:Generator_UserColumnName="id_venda" type="xs:int" />
@@ -1046,7 +1070,7 @@ FROM            ContasReceber INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VendasSimplesRelatorio" msprop:Generator_TableClassName="VendasSimplesRelatorioDataTable" msprop:Generator_TableVarName="tableVendasSimplesRelatorio" msprop:Generator_TablePropName="VendasSimplesRelatorio" msprop:Generator_RowDeletingName="VendasSimplesRelatorioRowDeleting" msprop:Generator_RowChangingName="VendasSimplesRelatorioRowChanging" msprop:Generator_RowEvHandlerName="VendasSimplesRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="VendasSimplesRelatorioRowDeleted" msprop:Generator_UserTableName="VendasSimplesRelatorio" msprop:Generator_RowChangedName="VendasSimplesRelatorioRowChanged" msprop:Generator_RowEvArgName="VendasSimplesRelatorioRowChangeEvent" msprop:Generator_RowClassName="VendasSimplesRelatorioRow">
+        <xs:element name="VendasSimplesRelatorio" msprop:Generator_TableClassName="VendasSimplesRelatorioDataTable" msprop:Generator_TableVarName="tableVendasSimplesRelatorio" msprop:Generator_RowChangedName="VendasSimplesRelatorioRowChanged" msprop:Generator_TablePropName="VendasSimplesRelatorio" msprop:Generator_RowDeletingName="VendasSimplesRelatorioRowDeleting" msprop:Generator_RowChangingName="VendasSimplesRelatorioRowChanging" msprop:Generator_RowEvHandlerName="VendasSimplesRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="VendasSimplesRelatorioRowDeleted" msprop:Generator_RowClassName="VendasSimplesRelatorioRow" msprop:Generator_UserTableName="VendasSimplesRelatorio" msprop:Generator_RowEvArgName="VendasSimplesRelatorioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="data_compra" msprop:Generator_ColumnVarNameInTable="columndata_compra" msprop:Generator_ColumnPropNameInRow="data_compra" msprop:Generator_ColumnPropNameInTable="data_compraColumn" msprop:Generator_UserColumnName="data_compra" type="xs:dateTime" />
@@ -1067,6 +1091,41 @@ FROM            ContasReceber INNER JOIN
                 </xs:simpleType>
               </xs:element>
               <xs:element name="valor" msprop:Generator_ColumnVarNameInTable="columnvalor" msprop:Generator_ColumnPropNameInRow="valor" msprop:Generator_ColumnPropNameInTable="valorColumn" msprop:Generator_UserColumnName="valor" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cliente2" msprop:Generator_TableClassName="Cliente2DataTable" msprop:Generator_TableVarName="tableCliente2" msprop:Generator_TablePropName="Cliente2" msprop:Generator_RowDeletingName="Cliente2RowDeleting" msprop:Generator_RowChangingName="Cliente2RowChanging" msprop:Generator_RowEvHandlerName="Cliente2RowChangeEventHandler" msprop:Generator_RowDeletedName="Cliente2RowDeleted" msprop:Generator_UserTableName="Cliente2" msprop:Generator_RowChangedName="Cliente2RowChanged" msprop:Generator_RowEvArgName="Cliente2RowChangeEvent" msprop:Generator_RowClassName="Cliente2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cpf" msprop:Generator_ColumnVarNameInTable="columncpf" msprop:Generator_ColumnPropNameInRow="cpf" msprop:Generator_ColumnPropNameInTable="cpfColumn" msprop:Generator_UserColumnName="cpf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rg" msprop:Generator_ColumnVarNameInTable="columnrg" msprop:Generator_ColumnPropNameInRow="rg" msprop:Generator_ColumnPropNameInTable="rgColumn" msprop:Generator_UserColumnName="rg">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_nascimento" msprop:Generator_ColumnVarNameInTable="columndata_nascimento" msprop:Generator_ColumnPropNameInRow="data_nascimento" msprop:Generator_ColumnPropNameInTable="data_nascimentoColumn" msprop:Generator_UserColumnName="data_nascimento" type="xs:dateTime" />
+              <xs:element name="telefone" msprop:Generator_ColumnVarNameInTable="columntelefone" msprop:Generator_ColumnPropNameInRow="telefone" msprop:Generator_ColumnPropNameInTable="telefoneColumn" msprop:Generator_UserColumnName="telefone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1115,11 +1174,11 @@ FROM            ContasReceber INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Fornecedo__id_en__4D94879B" msdata:parent="Enderecos" msdata:child="Fornecedores" msdata:parentkey="id" msdata:childkey="id_endereco" msprop:Generator_UserChildTable="Fornecedores" msprop:Generator_ChildPropName="GetFornecedoresRows" msprop:Generator_UserRelationName="FK__Fornecedo__id_en__4D94879B" msprop:Generator_ParentPropName="EnderecosRow" msprop:Generator_RelationVarName="relationFK__Fornecedo__id_en__4D94879B" msprop:Generator_UserParentTable="Enderecos" />
-      <msdata:Relationship name="FK__Fornecedo__id_pe__4CA06362" msdata:parent="PessoaJurifica" msdata:child="Fornecedores" msdata:parentkey="id" msdata:childkey="id_pessoa_juridica" msprop:Generator_UserChildTable="Fornecedores" msprop:Generator_ChildPropName="GetFornecedoresRows" msprop:Generator_UserRelationName="FK__Fornecedo__id_pe__4CA06362" msprop:Generator_RelationVarName="relationFK__Fornecedo__id_pe__4CA06362" msprop:Generator_UserParentTable="PessoaJurifica" msprop:Generator_ParentPropName="PessoaJurificaRow" />
-      <msdata:Relationship name="FK__Produtos__id_for__4E88ABD4" msdata:parent="Fornecedores" msdata:child="Produtos" msdata:parentkey="id" msdata:childkey="id_fornecedor" msprop:Generator_UserChildTable="Produtos" msprop:Generator_ChildPropName="GetProdutosRows" msprop:Generator_UserRelationName="FK__Produtos__id_for__4E88ABD4" msprop:Generator_ParentPropName="FornecedoresRow" msprop:Generator_RelationVarName="relationFK__Produtos__id_for__4E88ABD4" msprop:Generator_UserParentTable="Fornecedores" />
-      <msdata:Relationship name="FK_ContasReceber_Status" msdata:parent="StatusPagamento" msdata:child="ContasReceber" msdata:parentkey="id_status" msdata:childkey="id_status" msprop:Generator_UserChildTable="ContasReceber" msprop:Generator_ChildPropName="GetContasReceberRows" msprop:Generator_UserRelationName="FK_ContasReceber_Status" msprop:Generator_ParentPropName="StatusPagamentoRow" msprop:Generator_RelationVarName="relationFK_ContasReceber_Status" msprop:Generator_UserParentTable="StatusPagamento" />
-      <msdata:Relationship name="FK_ContasReceber_Venda" msdata:parent="Venda" msdata:child="ContasReceber" msdata:parentkey="id_venda" msdata:childkey="id_venda" msprop:Generator_UserChildTable="ContasReceber" msprop:Generator_ChildPropName="GetContasReceberRows" msprop:Generator_UserRelationName="FK_ContasReceber_Venda" msprop:Generator_ParentPropName="VendaRow" msprop:Generator_RelationVarName="relationFK_ContasReceber_Venda" msprop:Generator_UserParentTable="Venda" />
+      <msdata:Relationship name="FK__Fornecedo__id_en__4D94879B" msdata:parent="Enderecos" msdata:child="Fornecedores" msdata:parentkey="id" msdata:childkey="id_endereco" msprop:Generator_UserChildTable="Fornecedores" msprop:Generator_ChildPropName="GetFornecedoresRows" msprop:Generator_UserRelationName="FK__Fornecedo__id_en__4D94879B" msprop:Generator_RelationVarName="relationFK__Fornecedo__id_en__4D94879B" msprop:Generator_UserParentTable="Enderecos" msprop:Generator_ParentPropName="EnderecosRow" />
+      <msdata:Relationship name="FK__Fornecedo__id_pe__4CA06362" msdata:parent="PessoaJurifica" msdata:child="Fornecedores" msdata:parentkey="id" msdata:childkey="id_pessoa_juridica" msprop:Generator_UserChildTable="Fornecedores" msprop:Generator_ChildPropName="GetFornecedoresRows" msprop:Generator_UserRelationName="FK__Fornecedo__id_pe__4CA06362" msprop:Generator_ParentPropName="PessoaJurificaRow" msprop:Generator_RelationVarName="relationFK__Fornecedo__id_pe__4CA06362" msprop:Generator_UserParentTable="PessoaJurifica" />
+      <msdata:Relationship name="FK__Produtos__id_for__4E88ABD4" msdata:parent="Fornecedores" msdata:child="Produtos" msdata:parentkey="id" msdata:childkey="id_fornecedor" msprop:Generator_UserChildTable="Produtos" msprop:Generator_ChildPropName="GetProdutosRows" msprop:Generator_UserRelationName="FK__Produtos__id_for__4E88ABD4" msprop:Generator_RelationVarName="relationFK__Produtos__id_for__4E88ABD4" msprop:Generator_UserParentTable="Fornecedores" msprop:Generator_ParentPropName="FornecedoresRow" />
+      <msdata:Relationship name="FK_ContasReceber_Status" msdata:parent="StatusPagamento" msdata:child="ContasReceber" msdata:parentkey="id_status" msdata:childkey="id_status" msprop:Generator_UserChildTable="ContasReceber" msprop:Generator_ChildPropName="GetContasReceberRows" msprop:Generator_UserRelationName="FK_ContasReceber_Status" msprop:Generator_RelationVarName="relationFK_ContasReceber_Status" msprop:Generator_UserParentTable="StatusPagamento" msprop:Generator_ParentPropName="StatusPagamentoRow" />
+      <msdata:Relationship name="FK_ContasReceber_Venda" msdata:parent="Venda" msdata:child="ContasReceber" msdata:parentkey="id_venda" msdata:childkey="id_venda" msprop:Generator_UserChildTable="ContasReceber" msprop:Generator_ChildPropName="GetContasReceberRows" msprop:Generator_UserRelationName="FK_ContasReceber_Venda" msprop:Generator_RelationVarName="relationFK_ContasReceber_Venda" msprop:Generator_UserParentTable="Venda" msprop:Generator_ParentPropName="VendaRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
