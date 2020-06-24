@@ -53,9 +53,7 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 	- Figura 21 – Diagrama de Atividades – Módulo Administrativo
 
 
-- Novo item de menu chamado de "Outras opções", nele deve ter:
-
-	- Opção de "Sair" do programa
+- No item de menu "Opções", criar a tela:
 
 	- Opção de "Ajuda" 
 
@@ -69,7 +67,6 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 
 - Corrigir erro ao tentar inserir item na lista sem selecionar o produto (Uma forma pode ser só ativar o botão de adicionar item quando seleciona um produto, outro seria alguma excessão no código)
 
-Alterada interface da tela de Cad. de Fornecedores
-
+Alterada interface da tela de Cad. de Funcionarios
 
 

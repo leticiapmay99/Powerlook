@@ -185,5 +185,10 @@ namespace PowerLook_Aluguel
             MeusFormularios.FormBuscas.Show();
             MeusFormularios.FormBuscas.Focus();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
