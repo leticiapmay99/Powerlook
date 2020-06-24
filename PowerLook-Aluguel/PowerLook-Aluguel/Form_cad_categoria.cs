@@ -43,6 +43,7 @@ namespace PowerLook_Aluguel
         private void btnNovo_Click(object sender, EventArgs e)
         {
             this.categoriasBindingSource.AddNew();
+            nomeTextBox.Focus();
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
@@ -89,10 +90,11 @@ namespace PowerLook_Aluguel
                 return false;
         }
 
-        private void descriçãoTextBox_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.categoriasBindingSource.CancelEdit();
+            this.Dispose();
+            MeusFormularios.FormCategoria = null;
         }
-
     }
 }

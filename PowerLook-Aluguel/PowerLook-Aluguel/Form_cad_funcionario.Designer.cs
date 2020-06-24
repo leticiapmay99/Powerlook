@@ -40,6 +40,7 @@
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label complementoLabel;
             System.Windows.Forms.Label numero_casaLabel1;
+            System.Windows.Forms.Label cidadeLabel;
             this.label1 = new System.Windows.Forms.Label();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoUsuarioComboBox = new System.Windows.Forms.ComboBox();
@@ -63,7 +64,6 @@
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.rgTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
             this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -71,14 +71,14 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.complementoTextBox = new System.Windows.Forms.TextBox();
             this.numero_casaTextBox1 = new System.Windows.Forms.TextBox();
             this.telefoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.cepMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cidadeTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
             tipoUsuarioLabel = new System.Windows.Forms.Label();
             enderecosLabel = new System.Windows.Forms.Label();
             rgLabel = new System.Windows.Forms.Label();
@@ -90,6 +90,7 @@
             label5 = new System.Windows.Forms.Label();
             complementoLabel = new System.Windows.Forms.Label();
             numero_casaLabel1 = new System.Windows.Forms.Label();
+            cidadeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoUsuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enderecosBindingSource)).BeginInit();
@@ -110,11 +111,11 @@
             // enderecosLabel
             // 
             enderecosLabel.AutoSize = true;
-            enderecosLabel.Location = new System.Drawing.Point(470, 46);
+            enderecosLabel.Location = new System.Drawing.Point(500, 39);
             enderecosLabel.Name = "enderecosLabel";
-            enderecosLabel.Size = new System.Drawing.Size(61, 13);
+            enderecosLabel.Size = new System.Drawing.Size(31, 13);
             enderecosLabel.TabIndex = 33;
-            enderecosLabel.Text = "Enderecos:";
+            enderecosLabel.Text = "CEP:";
             // 
             // rgLabel
             // 
@@ -221,7 +222,7 @@
             this.tipoUsuarioComboBox.Location = new System.Drawing.Point(139, 41);
             this.tipoUsuarioComboBox.Name = "tipoUsuarioComboBox";
             this.tipoUsuarioComboBox.Size = new System.Drawing.Size(121, 21);
-            this.tipoUsuarioComboBox.TabIndex = 33;
+            this.tipoUsuarioComboBox.TabIndex = 1;
             this.tipoUsuarioComboBox.ValueMember = "id";
             // 
             // tipoUsuarioBindingSource
@@ -232,13 +233,13 @@
             // 
             this.enderecosComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usuariosBindingSource, "id_endereco", true));
             this.enderecosComboBox.DataSource = this.enderecosBindingSource;
-            this.enderecosComboBox.DisplayMember = "cidade";
+            this.enderecosComboBox.DisplayMember = "cep";
             this.enderecosComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.enderecosComboBox.FormattingEnabled = true;
-            this.enderecosComboBox.Location = new System.Drawing.Point(139, 145);
+            this.enderecosComboBox.Location = new System.Drawing.Point(537, 36);
             this.enderecosComboBox.Name = "enderecosComboBox";
             this.enderecosComboBox.Size = new System.Drawing.Size(212, 21);
-            this.enderecosComboBox.TabIndex = 34;
+            this.enderecosComboBox.TabIndex = 5;
             this.enderecosComboBox.ValueMember = "id";
             // 
             // enderecosBindingSource
@@ -354,7 +355,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(363, 36);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 33);
-            this.btnExcluir.TabIndex = 38;
+            this.btnExcluir.TabIndex = 13;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -364,7 +365,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(254, 36);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 33);
-            this.btnCancelar.TabIndex = 37;
+            this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -374,17 +375,17 @@
             this.btnGravar.Location = new System.Drawing.Point(145, 36);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 33);
-            this.btnGravar.TabIndex = 36;
+            this.btnGravar.TabIndex = 11;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(38, 36);
+            this.btnNovo.Location = new System.Drawing.Point(34, 36);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 33);
-            this.btnNovo.TabIndex = 35;
+            this.btnNovo.TabIndex = 14;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
@@ -395,15 +396,7 @@
             this.rgTextBox.Location = new System.Drawing.Point(263, 172);
             this.rgTextBox.Name = "rgTextBox";
             this.rgTextBox.Size = new System.Drawing.Size(88, 20);
-            this.rgTextBox.TabIndex = 44;
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(537, 41);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(212, 20);
-            this.emailTextBox.TabIndex = 42;
+            this.rgTextBox.TabIndex = 7;
             // 
             // data_nascimentoDateTimePicker
             // 
@@ -411,7 +404,7 @@
             this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(139, 119);
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(212, 20);
-            this.data_nascimentoDateTimePicker.TabIndex = 41;
+            this.data_nascimentoDateTimePicker.TabIndex = 4;
             // 
             // nomeTextBox
             // 
@@ -419,7 +412,7 @@
             this.nomeTextBox.Location = new System.Drawing.Point(139, 68);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(212, 20);
-            this.nomeTextBox.TabIndex = 39;
+            this.nomeTextBox.TabIndex = 2;
             // 
             // textBox4
             // 
@@ -469,22 +462,13 @@
             this.textBox2.Size = new System.Drawing.Size(212, 20);
             this.textBox2.TabIndex = 66;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(500, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 65;
-            this.label2.Text = "CEP:";
-            // 
             // complementoTextBox
             // 
             this.complementoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "complemento", true));
             this.complementoTextBox.Location = new System.Drawing.Point(537, 172);
             this.complementoTextBox.Name = "complementoTextBox";
             this.complementoTextBox.Size = new System.Drawing.Size(212, 20);
-            this.complementoTextBox.TabIndex = 61;
+            this.complementoTextBox.TabIndex = 10;
             // 
             // numero_casaTextBox1
             // 
@@ -492,7 +476,7 @@
             this.numero_casaTextBox1.Location = new System.Drawing.Point(537, 145);
             this.numero_casaTextBox1.Name = "numero_casaTextBox1";
             this.numero_casaTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.numero_casaTextBox1.TabIndex = 60;
+            this.numero_casaTextBox1.TabIndex = 9;
             // 
             // telefoneMaskedTextBox
             // 
@@ -501,7 +485,7 @@
             this.telefoneMaskedTextBox.Mask = "(99) 99999-9999";
             this.telefoneMaskedTextBox.Name = "telefoneMaskedTextBox";
             this.telefoneMaskedTextBox.Size = new System.Drawing.Size(84, 20);
-            this.telefoneMaskedTextBox.TabIndex = 72;
+            this.telefoneMaskedTextBox.TabIndex = 3;
             // 
             // cpfMaskedTextBox
             // 
@@ -510,22 +494,14 @@
             this.cpfMaskedTextBox.Mask = "999.999.999-99";
             this.cpfMaskedTextBox.Name = "cpfMaskedTextBox";
             this.cpfMaskedTextBox.Size = new System.Drawing.Size(88, 20);
-            this.cpfMaskedTextBox.TabIndex = 73;
-            // 
-            // cepMaskedTextBox
-            // 
-            this.cepMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Enderecos.cep", true));
-            this.cepMaskedTextBox.Enabled = false;
-            this.cepMaskedTextBox.Location = new System.Drawing.Point(537, 67);
-            this.cepMaskedTextBox.Mask = "999-999-99";
-            this.cepMaskedTextBox.Name = "cepMaskedTextBox";
-            this.cepMaskedTextBox.Size = new System.Drawing.Size(66, 20);
-            this.cepMaskedTextBox.TabIndex = 74;
+            this.cpfMaskedTextBox.TabIndex = 6;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.emailTextBox);
+            this.groupBox1.Controls.Add(cidadeLabel);
+            this.groupBox1.Controls.Add(this.cidadeTextBox);
             this.groupBox1.Controls.Add(this.data_nascimentoDateTimePicker);
-            this.groupBox1.Controls.Add(this.cepMaskedTextBox);
             this.groupBox1.Controls.Add(this.tipoUsuarioComboBox);
             this.groupBox1.Controls.Add(this.cpfMaskedTextBox);
             this.groupBox1.Controls.Add(tipoUsuarioLabel);
@@ -542,8 +518,6 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(data_nascimentoLabel);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.emailTextBox);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(emailLabel);
             this.groupBox1.Controls.Add(complementoLabel);
             this.groupBox1.Controls.Add(cpfLabel);
@@ -554,7 +528,7 @@
             this.groupBox1.Controls.Add(this.numero_casaTextBox1);
             this.groupBox1.Location = new System.Drawing.Point(28, 190);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(782, 218);
+            this.groupBox1.Size = new System.Drawing.Size(782, 237);
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Funcionário";
@@ -571,6 +545,31 @@
             this.groupBox2.TabIndex = 75;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opções";
+            // 
+            // cidadeLabel
+            // 
+            cidadeLabel.AutoSize = true;
+            cidadeLabel.Location = new System.Drawing.Point(489, 67);
+            cidadeLabel.Name = "cidadeLabel";
+            cidadeLabel.Size = new System.Drawing.Size(43, 13);
+            cidadeLabel.TabIndex = 74;
+            cidadeLabel.Text = "Cidade:";
+            // 
+            // cidadeTextBox
+            // 
+            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cidade", true));
+            this.cidadeTextBox.Location = new System.Drawing.Point(537, 64);
+            this.cidadeTextBox.Name = "cidadeTextBox";
+            this.cidadeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cidadeTextBox.TabIndex = 75;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(139, 145);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(212, 20);
+            this.emailTextBox.TabIndex = 76;
             // 
             // Form_cad_funcionario
             // 
@@ -613,7 +612,6 @@
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.TextBox rgTextBox;
-        private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox textBox4;
@@ -621,7 +619,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox complementoTextBox;
         private System.Windows.Forms.TextBox numero_casaTextBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -637,8 +634,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.MaskedTextBox telefoneMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox cpfMaskedTextBox;
-        private System.Windows.Forms.MaskedTextBox cepMaskedTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox cidadeTextBox;
     }
 }

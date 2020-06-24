@@ -49,6 +49,8 @@ namespace PowerLook_Aluguel
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.produtosBindingSource.CancelEdit();
+            this.Dispose();
+            MeusFormularios.FormProduto = null;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

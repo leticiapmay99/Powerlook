@@ -296,6 +296,7 @@
     <None Include="Imagem\icons8-grupo-de-usuário-homem-mulher-60.png" />
     <None Include="Imagem\icons8-vestido-de-casamento-60.png" />
     <None Include="Imagem\icon-logout.png" />
+    <None Include="Resources\icons8-medical-history-50.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

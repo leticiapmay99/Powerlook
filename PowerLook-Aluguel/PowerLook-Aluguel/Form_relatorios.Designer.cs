@@ -37,11 +37,11 @@
             // 
             // btnProduto
             // 
-            this.btnProduto.Location = new System.Drawing.Point(53, 111);
+            this.btnProduto.Location = new System.Drawing.Point(53, 90);
             this.btnProduto.Name = "btnProduto";
-            this.btnProduto.Size = new System.Drawing.Size(130, 23);
+            this.btnProduto.Size = new System.Drawing.Size(145, 58);
             this.btnProduto.TabIndex = 0;
-            this.btnProduto.Text = "Vestido Simples";
+            this.btnProduto.Text = "Produto";
             this.btnProduto.UseVisualStyleBackColor = true;
             this.btnProduto.Click += new System.EventHandler(this.btnProduto_Click);
             // 
@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 31);
+            this.label1.Location = new System.Drawing.Point(221, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 31);
             this.label1.TabIndex = 1;
@@ -57,9 +57,9 @@
             // 
             // btnCliente
             // 
-            this.btnCliente.Location = new System.Drawing.Point(54, 154);
+            this.btnCliente.Location = new System.Drawing.Point(53, 168);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(130, 23);
+            this.btnCliente.Size = new System.Drawing.Size(145, 58);
             this.btnCliente.TabIndex = 2;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // 
             // btnFornecedor
             // 
-            this.btnFornecedor.Location = new System.Drawing.Point(54, 194);
+            this.btnFornecedor.Location = new System.Drawing.Point(53, 255);
             this.btnFornecedor.Name = "btnFornecedor";
-            this.btnFornecedor.Size = new System.Drawing.Size(130, 23);
+            this.btnFornecedor.Size = new System.Drawing.Size(145, 58);
             this.btnFornecedor.TabIndex = 3;
             this.btnFornecedor.Text = "Fornecedor";
             this.btnFornecedor.UseVisualStyleBackColor = true;
@@ -77,11 +77,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(53, 237);
+            this.button1.Location = new System.Drawing.Point(262, 90);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 23);
+            this.button1.Size = new System.Drawing.Size(145, 58);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Vendas";
+            this.button1.Text = "Venda";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -89,7 +89,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(650, 428);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFornecedor);
             this.Controls.Add(this.btnCliente);
@@ -97,7 +98,7 @@
             this.Controls.Add(this.btnProduto);
             this.Name = "Form_relatorios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_relatorios";
+            this.Text = "Relatórios";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_relatorios_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

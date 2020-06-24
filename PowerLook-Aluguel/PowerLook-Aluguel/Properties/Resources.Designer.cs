@@ -203,6 +203,16 @@ namespace PowerLook_Aluguel.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_medical_history_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-medical-history-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_vestido_de_casamento_60 {
             get {
                 object obj = ResourceManager.GetObject("icons8-vestido-de-casamento-60", resourceCulture);

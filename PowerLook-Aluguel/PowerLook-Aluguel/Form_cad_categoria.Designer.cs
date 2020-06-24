@@ -122,7 +122,6 @@
             this.descriçãoTextBox.Name = "descriçãoTextBox";
             this.descriçãoTextBox.Size = new System.Drawing.Size(257, 125);
             this.descriçãoTextBox.TabIndex = 2;
-            this.descriçãoTextBox.TextChanged += new System.EventHandler(this.descriçãoTextBox_TextChanged);
             // 
             // nomeTextBox
             // 
@@ -130,14 +129,14 @@
             this.nomeTextBox.Location = new System.Drawing.Point(94, 42);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(228, 20);
-            this.nomeTextBox.TabIndex = 6;
+            this.nomeTextBox.TabIndex = 1;
             // 
             // btnExcluir
             // 
             this.btnExcluir.Location = new System.Drawing.Point(386, 37);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 33);
-            this.btnExcluir.TabIndex = 19;
+            this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -147,7 +146,7 @@
             this.btnGravar.Location = new System.Drawing.Point(153, 37);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 33);
-            this.btnGravar.TabIndex = 17;
+            this.btnGravar.TabIndex = 3;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
@@ -157,7 +156,7 @@
             this.btnNovo.Location = new System.Drawing.Point(38, 37);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 33);
-            this.btnNovo.TabIndex = 16;
+            this.btnNovo.TabIndex = 6;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
@@ -177,9 +176,10 @@
             this.button1.Location = new System.Drawing.Point(271, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 23;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 

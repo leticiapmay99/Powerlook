@@ -139,7 +139,9 @@ namespace PowerLook_Aluguel
                 ComboBoxProduto.Enabled = false;
                 quantidadeTextBox.Enabled = false;
                 id_vendaTextBox.Enabled = false;
-
+               
+                groupBoxCheckout.Enabled = true;
+                TextBoxDesconto.Enabled = true;
                 TextBoxDesconto.ReadOnly = false;
                 TextBoxDesconto.Focus();
                 BtnFinalizarPedido.Enabled = false;
@@ -155,8 +157,8 @@ namespace PowerLook_Aluguel
             DataContextFactory.DataContext.SubmitChanges();
             TextBoxDesconto.Enabled = false;
             btnFinalizarVenda.Enabled = false;
-
-
+            groupBoxFinalizarCompra.Enabled = true;
+                
             this.contasReceberBindingSource.AddNew();
             ComboBoxStatus.Enabled = true;
             this.ContaCorrente.id_venda = this.VendaCorrente.id_venda;
@@ -195,6 +197,7 @@ namespace PowerLook_Aluguel
             ComboBoxStatus.Enabled = false;
             DataContextFactory.DataContext.SubmitChanges();
             btnImprimir.Enabled = true;
+            btnSair.Enabled = false;
             BtnFinalizar.Enabled = false;
             MessageBox.Show("Venda finalizada com sucesso! \n Imprima o cupom da venda", "Venda finalizada");
         }
@@ -224,7 +227,13 @@ namespace PowerLook_Aluguel
             {
                 printDocument1.Print();
             }
+            btnSair.Enabled = true;
         }
 
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            MeusFormularios.FormVenda = null;
+        }
     }
 }

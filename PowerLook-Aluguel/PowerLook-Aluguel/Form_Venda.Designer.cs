@@ -48,11 +48,6 @@
             this.BtnFinalizarPedido = new System.Windows.Forms.Button();
             this.btnNovoItem = new System.Windows.Forms.Button();
             this.DataGridItem = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itensVendaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.valorTextBox = new System.Windows.Forms.TextBox();
             this.quantidadeTextBox = new System.Windows.Forms.TextBox();
@@ -72,9 +67,15 @@
             this.caixa = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxCheckout = new System.Windows.Forms.GroupBox();
+            this.groupBoxFinalizarCompra = new System.Windows.Forms.GroupBox();
+            this.btnSair = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             id_usuarioLabel = new System.Windows.Forms.Label();
             id_vendaLabel = new System.Windows.Forms.Label();
             id_produtoLabel = new System.Windows.Forms.Label();
@@ -93,8 +94,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusPagamentoBindingSource)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxCheckout.SuspendLayout();
+            this.groupBoxFinalizarCompra.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -280,42 +281,6 @@
             this.DataGridItem.TabIndex = 8;
             this.DataGridItem.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGridItem_CellFormatting);
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_produto";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Produtos";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Produtos";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "quantidade";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // ValorTotal
-            // 
-            this.ValorTotal.DataPropertyName = "valor";
-            this.ValorTotal.HeaderText = "ValorTotal";
-            this.ValorTotal.Name = "ValorTotal";
-            this.ValorTotal.ReadOnly = true;
-            // 
             // itensVendaBindingSource
             // 
             this.itensVendaBindingSource.DataSource = typeof(DBPowerLook.DAL.itensVenda);
@@ -481,36 +446,50 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // groupBox1
+            // groupBoxCheckout
             // 
-            this.groupBox1.Controls.Add(this.TextBoxValor);
-            this.groupBox1.Controls.Add(valorLabel1);
-            this.groupBox1.Controls.Add(this.TextBoxDesconto);
-            this.groupBox1.Controls.Add(descontoLabel);
-            this.groupBox1.Controls.Add(this.btnFinalizarVenda);
-            this.groupBox1.Controls.Add(valor_pagoLabel);
-            this.groupBox1.Controls.Add(this.TextBoxValorTotal);
-            this.groupBox1.Location = new System.Drawing.Point(632, 154);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(415, 171);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Checkout";
+            this.groupBoxCheckout.Controls.Add(this.TextBoxValor);
+            this.groupBoxCheckout.Controls.Add(valorLabel1);
+            this.groupBoxCheckout.Controls.Add(this.TextBoxDesconto);
+            this.groupBoxCheckout.Controls.Add(descontoLabel);
+            this.groupBoxCheckout.Controls.Add(this.btnFinalizarVenda);
+            this.groupBoxCheckout.Controls.Add(valor_pagoLabel);
+            this.groupBoxCheckout.Controls.Add(this.TextBoxValorTotal);
+            this.groupBoxCheckout.Enabled = false;
+            this.groupBoxCheckout.Location = new System.Drawing.Point(632, 154);
+            this.groupBoxCheckout.Name = "groupBoxCheckout";
+            this.groupBoxCheckout.Size = new System.Drawing.Size(415, 171);
+            this.groupBoxCheckout.TabIndex = 5;
+            this.groupBoxCheckout.TabStop = false;
+            this.groupBoxCheckout.Text = "Checkout";
             // 
-            // groupBox2
+            // groupBoxFinalizarCompra
             // 
-            this.groupBox2.Controls.Add(this.btnImprimir);
-            this.groupBox2.Controls.Add(this.BtnFinalizar);
-            this.groupBox2.Controls.Add(id_statusLabel);
-            this.groupBox2.Controls.Add(data_vencimentoLabel);
-            this.groupBox2.Controls.Add(this.DateTimeVencimento);
-            this.groupBox2.Controls.Add(this.ComboBoxStatus);
-            this.groupBox2.Location = new System.Drawing.Point(632, 419);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(415, 187);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Finalizar Compra";
+            this.groupBoxFinalizarCompra.Controls.Add(this.btnSair);
+            this.groupBoxFinalizarCompra.Controls.Add(this.btnImprimir);
+            this.groupBoxFinalizarCompra.Controls.Add(this.BtnFinalizar);
+            this.groupBoxFinalizarCompra.Controls.Add(id_statusLabel);
+            this.groupBoxFinalizarCompra.Controls.Add(data_vencimentoLabel);
+            this.groupBoxFinalizarCompra.Controls.Add(this.DateTimeVencimento);
+            this.groupBoxFinalizarCompra.Controls.Add(this.ComboBoxStatus);
+            this.groupBoxFinalizarCompra.Enabled = false;
+            this.groupBoxFinalizarCompra.Location = new System.Drawing.Point(632, 419);
+            this.groupBoxFinalizarCompra.Name = "groupBoxFinalizarCompra";
+            this.groupBoxFinalizarCompra.Size = new System.Drawing.Size(415, 187);
+            this.groupBoxFinalizarCompra.TabIndex = 6;
+            this.groupBoxFinalizarCompra.TabStop = false;
+            this.groupBoxFinalizarCompra.Text = "Finalizar Compra";
+            // 
+            // btnSair
+            // 
+            this.btnSair.Enabled = false;
+            this.btnSair.Location = new System.Drawing.Point(316, 129);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(77, 23);
+            this.btnSair.TabIndex = 24;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // groupBox3
             // 
@@ -524,6 +503,41 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Selecionar Cliente";
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_produto";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Produtos";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Produtos";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "quantidade";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // ValorTotal
+            // 
+            this.ValorTotal.HeaderText = "ValorTotal";
+            this.ValorTotal.Name = "ValorTotal";
+            this.ValorTotal.ReadOnly = true;
+            // 
             // Form_Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,8 +545,8 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1086, 626);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxFinalizarCompra);
+            this.Controls.Add(this.groupBoxCheckout);
             this.Controls.Add(this.groupBoxNovaVenda);
             this.Name = "Form_Venda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -548,10 +562,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusPagamentoBindingSource)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBoxCheckout.ResumeLayout(false);
+            this.groupBoxCheckout.PerformLayout();
+            this.groupBoxFinalizarCompra.ResumeLayout(false);
+            this.groupBoxFinalizarCompra.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -579,11 +593,6 @@
         private System.Windows.Forms.TextBox TextBoxValorTotal;
         private System.Windows.Forms.TextBox TextBoxDesconto;
         private System.Windows.Forms.TextBox TextBoxValor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
         private System.Windows.Forms.DateTimePicker DateTimeVencimento;
         private System.Windows.Forms.BindingSource contasReceberBindingSource;
         private System.Windows.Forms.ComboBox ComboBoxStatus;
@@ -592,8 +601,14 @@
         private System.Windows.Forms.PrintDialog caixa;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxCheckout;
+        private System.Windows.Forms.GroupBox groupBoxFinalizarCompra;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
     }
 }

@@ -16,7 +16,14 @@ namespace PowerLook_Aluguel
         {
             InitializeComponent();
         }
-        
+
+
+        private void Form_cad_Fornecedor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MeusFormularios.FormFornecedor = null;
+        }
+
+
         public Fornecedores PessoaCorrente
         {
             get
@@ -35,6 +42,8 @@ namespace PowerLook_Aluguel
 
         private void Form_cad_Fornecedor_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'powerLookDataSet.Enderecos'. Você pode movê-la ou removê-la conforme necessário.
+            this.enderecosTableAdapter.Fill(this.powerLookDataSet.Enderecos);
             this.fornecedoresBindingSource.DataSource = DataContextFactory.DataContext.Fornecedores;
             this.enderecosBindingSource.DataSource = DataContextFactory.DataContext.Enderecos;
 
@@ -70,12 +79,15 @@ namespace PowerLook_Aluguel
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.fornecedoresBindingSource.CancelEdit();
+            this.Dispose();
+            MeusFormularios.FormFornecedor = null;
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
             this.fornecedoresBindingSource.AddNew();
             this.PessoaCorrente.PessoaJurifica = new PessoaJurifica();
+            nome_fantasiaTextBox.Focus();
         }
 
         private void fornecedoresDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -101,14 +113,8 @@ namespace PowerLook_Aluguel
 
         }
 
-        private void Form_cad_Fornecedor_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            MeusFormularios.FormFornecedor = null;
-        }
-           
     
-  
-
+ 
         private bool FornecedorPossuiProduto(Fornecedores fornecedores)
         {
             var produtos = DataContextFactory.DataContext.Produtos.Where(x => x.id_fornecedor == fornecedores.id);
@@ -178,6 +184,16 @@ namespace PowerLook_Aluguel
             }
 
             return true;
+        }
+
+        private void id_enderecoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

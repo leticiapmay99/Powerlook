@@ -33,7 +33,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(95, 70);
+            this.button1.Location = new System.Drawing.Point(40, 68);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(182, 23);
             this.button1.TabIndex = 0;
@@ -45,11 +45,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Name = "Form_buscas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_buscas";
+            this.Text = "Buscas";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_buscas_FormClosed);
             this.ResumeLayout(false);
 

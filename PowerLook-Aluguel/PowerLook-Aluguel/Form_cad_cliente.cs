@@ -33,7 +33,9 @@ namespace PowerLook_Aluguel
 
         private void Form_cad_cliente_Load(object sender, EventArgs e)
         {
-            this.usuariosBindingSource.DataSource = DataContextFactory.DataContext.Usuarios.Where(x => x.id_tipo_pessoa == 2); 
+           
+            this.enderecosTableAdapter.Fill(this.powerLookDataSet.Enderecos);
+            this.usuariosBindingSource.DataSource = DataContextFactory.DataContext.Usuarios; 
             this.tipoUsuarioBindingSource.DataSource = DataContextFactory.DataContext.TipoUsuario.Where(x => x.id == 2);
             this.enderecosBindingSource.DataSource = DataContextFactory.DataContext.Enderecos;
 
@@ -43,6 +45,7 @@ namespace PowerLook_Aluguel
         {
             this.usuariosBindingSource.AddNew();
             this.PessoaCorrente.PessoaFisica = new PessoaFisica();
+            nomeTextBox.Focus();
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
@@ -61,6 +64,8 @@ namespace PowerLook_Aluguel
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.usuariosBindingSource.CancelEdit();
+            this.Dispose();
+            MeusFormularios.FormCliente = null;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -161,5 +166,9 @@ namespace PowerLook_Aluguel
             return true;
         }
 
+        private void enderecosLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

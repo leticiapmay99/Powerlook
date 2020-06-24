@@ -41,6 +41,7 @@ namespace PowerLook_Aluguel
         {
             this.usuariosBindingSource.AddNew();
             this.PessoaCorrente.PessoaFisica = new PessoaFisica();
+            tipoUsuarioComboBox.Focus();
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
@@ -57,7 +58,8 @@ namespace PowerLook_Aluguel
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.usuariosBindingSource.CancelEdit();
-
+            this.Dispose();
+            MeusFormularios.FormFuncionario = null;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

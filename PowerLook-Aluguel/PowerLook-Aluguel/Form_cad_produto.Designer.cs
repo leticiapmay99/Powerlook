@@ -184,7 +184,7 @@
             this.btnNovo.Location = new System.Drawing.Point(43, 39);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 33);
-            this.btnNovo.TabIndex = 0;
+            this.btnNovo.TabIndex = 13;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
@@ -194,7 +194,7 @@
             this.btnGravar.Location = new System.Drawing.Point(150, 39);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 33);
-            this.btnGravar.TabIndex = 4;
+            this.btnGravar.TabIndex = 10;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
@@ -204,7 +204,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(256, 39);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 33);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -214,7 +214,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(362, 39);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 33);
-            this.btnExcluir.TabIndex = 6;
+            this.btnExcluir.TabIndex = 12;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -334,7 +334,7 @@
             this.corTextBox.Location = new System.Drawing.Point(660, 42);
             this.corTextBox.Name = "corTextBox";
             this.corTextBox.Size = new System.Drawing.Size(132, 20);
-            this.corTextBox.TabIndex = 8;
+            this.corTextBox.TabIndex = 5;
             // 
             // descricaoTextBox
             // 
@@ -343,7 +343,7 @@
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(349, 78);
-            this.descricaoTextBox.TabIndex = 9;
+            this.descricaoTextBox.TabIndex = 2;
             // 
             // nomeTextBox
             // 
@@ -351,7 +351,7 @@
             this.nomeTextBox.Location = new System.Drawing.Point(144, 42);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(349, 20);
-            this.nomeTextBox.TabIndex = 12;
+            this.nomeTextBox.TabIndex = 1;
             // 
             // precoTextBox
             // 
@@ -359,7 +359,7 @@
             this.precoTextBox.Location = new System.Drawing.Point(660, 68);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.Size = new System.Drawing.Size(132, 20);
-            this.precoTextBox.TabIndex = 14;
+            this.precoTextBox.TabIndex = 6;
             // 
             // tamanhoTextBox
             // 
@@ -367,7 +367,7 @@
             this.tamanhoTextBox.Location = new System.Drawing.Point(144, 179);
             this.tamanhoTextBox.Name = "tamanhoTextBox";
             this.tamanhoTextBox.Size = new System.Drawing.Size(132, 20);
-            this.tamanhoTextBox.TabIndex = 16;
+            this.tamanhoTextBox.TabIndex = 4;
             // 
             // tipo_decoteTextBox
             // 
@@ -375,7 +375,7 @@
             this.tipo_decoteTextBox.Location = new System.Drawing.Point(660, 150);
             this.tipo_decoteTextBox.Name = "tipo_decoteTextBox";
             this.tipo_decoteTextBox.Size = new System.Drawing.Size(132, 20);
-            this.tipo_decoteTextBox.TabIndex = 18;
+            this.tipo_decoteTextBox.TabIndex = 9;
             // 
             // tipo_mangaTextBox
             // 
@@ -383,7 +383,7 @@
             this.tipo_mangaTextBox.Location = new System.Drawing.Point(660, 121);
             this.tipo_mangaTextBox.Name = "tipo_mangaTextBox";
             this.tipo_mangaTextBox.Size = new System.Drawing.Size(132, 20);
-            this.tipo_mangaTextBox.TabIndex = 20;
+            this.tipo_mangaTextBox.TabIndex = 8;
             // 
             // label1
             // 
@@ -409,7 +409,7 @@
             this.id_fornecedorComboBox.Location = new System.Drawing.Point(660, 94);
             this.id_fornecedorComboBox.Name = "id_fornecedorComboBox";
             this.id_fornecedorComboBox.Size = new System.Drawing.Size(132, 21);
-            this.id_fornecedorComboBox.TabIndex = 10;
+            this.id_fornecedorComboBox.TabIndex = 7;
             this.id_fornecedorComboBox.ValueMember = "id";
             // 
             // id_categoriaComboBox
@@ -422,7 +422,7 @@
             this.id_categoriaComboBox.Location = new System.Drawing.Point(144, 152);
             this.id_categoriaComboBox.Name = "id_categoriaComboBox";
             this.id_categoriaComboBox.Size = new System.Drawing.Size(132, 21);
-            this.id_categoriaComboBox.TabIndex = 25;
+            this.id_categoriaComboBox.TabIndex = 3;
             this.id_categoriaComboBox.ValueMember = "id";
             // 
             // categoriasBindingSource

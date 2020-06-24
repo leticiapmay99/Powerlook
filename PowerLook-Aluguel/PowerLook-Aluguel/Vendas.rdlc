@@ -457,20 +457,6 @@
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Image Name="Image1">
-          <Source>Embedded</Source>
-          <Value>RELATORIO</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0.43146cm</Top>
-          <Left>0.52cm</Left>
-          <Height>1.93215cm</Height>
-          <Width>2.77cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
         <Textbox Name="Textbox9">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -489,10 +475,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
           <Top>0.79802cm</Top>
-          <Left>4.0549cm</Left>
+          <Left>5.40427cm</Left>
           <Height>0.94396cm</Height>
           <Width>11.52229cm</Width>
-          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -503,6 +488,21 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Image Name="Image3">
+          <Source>Embedded</Source>
+          <Value>icons8medicalhistory50</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.38771cm</Top>
+          <Left>3.11516cm</Left>
+          <Height>1.76458cm</Height>
+          <Width>1.52422cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
       </ReportItems>
       <Style>
         <Border>
@@ -651,6 +651,11 @@ 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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="icons8medicalhistory50">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAFUklEQVRoge2abYhUZRTHf+e+zGy27mZJpIFWUKFhtopStlmWiF9CDZcK08SXFQwUfMEkEjGxIsmQSCzLxSwJIxRfKaxNWSXSNP0ibJqahQmxbouZO3Of04fZXWdn7t55Zubap/3DMHPvnPmf53/Py5z7zEAvetGLKIit4cB67VPhMkahX1zOHaFN0xw5+6G0lstlJWRIvQ4IHA4D95TrMAR/GmXKLxvlSDkkno2RA684hsEizAkM58tx2I1XWAsMB/YPm6cTT5UhxkqIF3A3QuvPm+TjUh2FYfgcbQH+AEDYXzNLJx7/pDQxjo2Rp+CZUugL8AbgKZclzVNeQJsD39TM1rGlcNkJMTdJiGbEnGiQZs8wzjNcSQTsHfVy8WKsI+JHCFl6WDcsbdIziw/ri8U494MbvD80SHMSxvmGK0ll79gixVgJ8U1GTDZWfqf9Vx3UF1aqOpUpHq0MuK9vwMNvHtJ+qw7qS6pasCO6YDy9UacHG6TZSTPOhVYx7Hpyhj5mK8Sq2F2T36er4QMNqKORBUB/AIFahZlJuGvd9/jA5ihe33ASWDB+mq4T5VLXG4Z9qswG9j/9vI749gs5E4uQZAC517cy4J+Ol9lXrbbj+TqQKsSrLqsTKR4CFpCdHUHXqyoc6oFlhbisUssN6Vpzx8vMyoC6vgH/9g0g63G6up0Rc8fL1kK8B7bIX/u2yYTKNJWOcHvuwzO0eoY7bdZoFRHfQE6JsHu33idp5iFU5Lz1gMDCnTt1yaRJ0tZ5clKdDhUYHcafAvwUOND+1Xb5vPP8lDqLQitXSF9lN8qQjkMlU0ZKJsr1OLQBSzrtKwImqLCugKtWoEuIH1KbPcGu2JU8JVUB76qwBsNihEXAI8D7KCmEWa7wUba9cfnMT9EY5Uc0qzroSGdLJSVHpGaybAI2ATR/
+qYsQQLh6/3OyHFicy5EISPpwW5Qf45DutjgFyXXcA+xmrZCIZKNSWYMyMi1s68kmmWKqFEgtN5NaXWL9uCPipaMJB9TJdmB7AY5deJyLdGS6t2zPEHkBu9laGYVEZOGzOuh6yq59A6AEpDgRZZL06dbki5nvrGskV4ikOFkB1fauLJDKSa2AeFPLDSk637BchaTtGm0gyvXsY0+tM8syIun8EeWdr2WDpY+S4ZqYu5YPeZfm9Wf0CnGnFrS+cUC6UithGw7KSC03YIM43GLvqjDUcC372DP5mdAT7CIS5J9b2SjL7VyUjti7Vtj9yNtP6Emgyt5VJxm1yxrloo2pFzJR9GhrY5QMIfQNp4BbLf10IQhot7X9X4bGRU0yzXZBpSL+oTGwD3Gc8OKOSNj0u3GkDhMHN9dWDb/OO1b+Xm6n33hTKyTECeEQGvo9MgXYYek/EoWm7m62Nka+guaOKMp8oyTyjIWfori21OhaHC7MOCbrt47UV9XQZ/pxWfHpSJ2DYcT04zK/a3FxRySsnydgj2/y/Vx2uRrFlVCmEnACWO8GTJTMkLjCC6gVmAx0CYnaFMxbo5VRSIidFOeDkBHljiA6tbIvSiLrmzts0bF3rbAbK095SzVvBwVPOB3F5Qa855DZjHOUBsdkOFxlh9D9s8XcWFlhz1DdvGeotsRIaeu3Zc9Qjdyt7EQxI4r1z3RxwTPWU3wRd4hC9YEHdbUIF0pfmj1UGYRSHXv77SB8rdSF3WwUk1qtjjIKKWHiLQXK30b4MdbU8uB3VapEGWuI78fQSCg1DlSh/GZjblXARwfrgLRLE3BvWYsrFspZR3l89Dm5VMjUuhMdHah9UhWMcTS+PwxEwQgt2k7TmItyrbB1L3rRi0L4D3yz3noiqQKbAAAAAElFTkSuQmCC</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
