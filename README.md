@@ -24,25 +24,14 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 
 ## ToDo
 
-- Desabilitar botão "Desconto" enquanto realiza a escolha dos produtos e só ativar quando finalizar o pedido
-
 - Corrigir erro ao tentar inserir item na lista sem selecionar o produto (Uma forma pode ser só ativar o botão de adicionar item quando seleciona um produto, outro seria alguma excessão no código)
 
 - Corrigir erro de foreign key que está acontecendo em alguns casos, como por exemplo, no cadastro de clientes
 
-- Relatório de:
 
-	- Vestidos mais vendidos;
 
-	- Vendas
-
-- Busca vestido
-
-- Corrigir layout de Relatórios
 
 - Correções:
-
-	- Problema de chave estrangeira (select)
 
 	- Figura 2 – Diagrama de Caso de Uso Módulo Administrativo
 	
@@ -56,14 +45,7 @@ http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-re
 	
 	- Figura 21 – Diagrama de Atividades – Módulo Administrativo
 
-
 - No item de menu "Opções", criar a tela:
-
-	- Opção de "Ajuda" 
-
-- Adicionar novos os relatórios no menu
-
-- Implementar o relatório de clientes (POR ULTIMO)
-
+	- Opção de "Sobre" 
 - Opção de dar enter para logar
 

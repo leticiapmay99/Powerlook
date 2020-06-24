@@ -35,7 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produtosDataGridView = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +43,7 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).BeginInit();
@@ -110,16 +110,6 @@
             this.produtosDataGridView.Size = new System.Drawing.Size(753, 220);
             this.produtosDataGridView.TabIndex = 5;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(219, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(331, 31);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Vestidos por fornecedores";
-            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "nome";
@@ -176,6 +166,16 @@
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(219, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(331, 31);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Vestidos por fornecedores";
+            // 
             // Form_busca_FornecedorVestido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +188,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form_busca_FornecedorVestido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fornecedor - Vestido";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_busca_FornecedorVestido_FormClosed);
             this.Load += new System.EventHandler(this.Form_busca_FornecedorVestido_Load);

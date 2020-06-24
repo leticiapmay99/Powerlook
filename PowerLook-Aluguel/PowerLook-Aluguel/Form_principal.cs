@@ -191,5 +191,13 @@ namespace PowerLook_Aluguel
             this.Dispose();
         }
 
+        private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormRelatoriosVenda == null)
+                MeusFormularios.FormRelatoriosVenda = new Form_relatorio_venda();
+
+            MeusFormularios.FormRelatoriosVenda.Show();
+            MeusFormularios.FormRelatoriosVenda.Focus();
+        }
     }
 }

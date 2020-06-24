@@ -235,5 +235,15 @@ namespace PowerLook_Aluguel
             this.Dispose();
             MeusFormularios.FormVenda = null;
         }
+
+        private void groupBoxNovaVenda_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
