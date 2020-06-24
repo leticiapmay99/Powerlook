@@ -77,6 +77,8 @@
             this.telefoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cepMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cpfMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             telefoneLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             data_nascimentoLabel = new System.Windows.Forms.Label();
@@ -93,12 +95,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.enderecosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoUsuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaFisicaBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // telefoneLabel
             // 
             telefoneLabel.AutoSize = true;
-            telefoneLabel.Location = new System.Drawing.Point(65, 207);
+            telefoneLabel.Location = new System.Drawing.Point(70, 86);
             telefoneLabel.Name = "telefoneLabel";
             telefoneLabel.Size = new System.Drawing.Size(52, 13);
             telefoneLabel.TabIndex = 26;
@@ -107,7 +111,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(77, 181);
+            nomeLabel.Location = new System.Drawing.Point(82, 60);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(38, 13);
             nomeLabel.TabIndex = 28;
@@ -116,7 +120,7 @@
             // data_nascimentoLabel
             // 
             data_nascimentoLabel.AutoSize = true;
-            data_nascimentoLabel.Location = new System.Drawing.Point(10, 234);
+            data_nascimentoLabel.Location = new System.Drawing.Point(15, 113);
             data_nascimentoLabel.Name = "data_nascimentoLabel";
             data_nascimentoLabel.Size = new System.Drawing.Size(107, 13);
             data_nascimentoLabel.TabIndex = 29;
@@ -125,7 +129,7 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(79, 259);
+            emailLabel.Location = new System.Drawing.Point(84, 138);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(35, 13);
             emailLabel.TabIndex = 30;
@@ -134,7 +138,7 @@
             // cpfLabel
             // 
             cpfLabel.AutoSize = true;
-            cpfLabel.Location = new System.Drawing.Point(88, 285);
+            cpfLabel.Location = new System.Drawing.Point(93, 164);
             cpfLabel.Name = "cpfLabel";
             cpfLabel.Size = new System.Drawing.Size(30, 13);
             cpfLabel.TabIndex = 31;
@@ -143,7 +147,7 @@
             // rgLabel
             // 
             rgLabel.AutoSize = true;
-            rgLabel.Location = new System.Drawing.Point(91, 311);
+            rgLabel.Location = new System.Drawing.Point(233, 164);
             rgLabel.Name = "rgLabel";
             rgLabel.Size = new System.Drawing.Size(26, 13);
             rgLabel.TabIndex = 32;
@@ -152,7 +156,7 @@
             // numero_casaLabel1
             // 
             numero_casaLabel1.AutoSize = true;
-            numero_casaLabel1.Location = new System.Drawing.Point(421, 252);
+            numero_casaLabel1.Location = new System.Drawing.Point(448, 133);
             numero_casaLabel1.Name = "numero_casaLabel1";
             numero_casaLabel1.Size = new System.Drawing.Size(50, 13);
             numero_casaLabel1.TabIndex = 33;
@@ -161,7 +165,7 @@
             // complementoLabel
             // 
             complementoLabel.AutoSize = true;
-            complementoLabel.Location = new System.Drawing.Point(398, 279);
+            complementoLabel.Location = new System.Drawing.Point(425, 160);
             complementoLabel.Name = "complementoLabel";
             complementoLabel.Size = new System.Drawing.Size(74, 13);
             complementoLabel.TabIndex = 34;
@@ -170,7 +174,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(580, 177);
+            label5.Location = new System.Drawing.Point(631, 58);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(24, 13);
             label5.TabIndex = 58;
@@ -179,7 +183,7 @@
             // enderecosLabel
             // 
             enderecosLabel.AutoSize = true;
-            enderecosLabel.Location = new System.Drawing.Point(410, 151);
+            enderecosLabel.Location = new System.Drawing.Point(437, 32);
             enderecosLabel.Name = "enderecosLabel";
             enderecosLabel.Size = new System.Drawing.Size(61, 13);
             enderecosLabel.TabIndex = 24;
@@ -188,7 +192,7 @@
             // tipoUsuarioLabel
             // 
             tipoUsuarioLabel.AutoSize = true;
-            tipoUsuarioLabel.Location = new System.Drawing.Point(43, 154);
+            tipoUsuarioLabel.Location = new System.Drawing.Point(48, 33);
             tipoUsuarioLabel.Name = "tipoUsuarioLabel";
             tipoUsuarioLabel.Size = new System.Drawing.Size(70, 13);
             tipoUsuarioLabel.TabIndex = 59;
@@ -226,10 +230,10 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn5});
             this.usuariosDataGridView.DataSource = this.usuariosBindingSource;
-            this.usuariosDataGridView.Location = new System.Drawing.Point(12, 350);
+            this.usuariosDataGridView.Location = new System.Drawing.Point(26, 407);
             this.usuariosDataGridView.Name = "usuariosDataGridView";
             this.usuariosDataGridView.ReadOnly = true;
-            this.usuariosDataGridView.Size = new System.Drawing.Size(778, 220);
+            this.usuariosDataGridView.Size = new System.Drawing.Size(773, 220);
             this.usuariosDataGridView.TabIndex = 23;
             this.usuariosDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.usuariosDataGridView_CellFormatting);
             // 
@@ -311,31 +315,31 @@
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(119, 181);
+            this.nomeTextBox.Location = new System.Drawing.Point(124, 58);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(210, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(237, 20);
             this.nomeTextBox.TabIndex = 2;
             // 
             // data_nascimentoDateTimePicker
             // 
             this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "data_nascimento", true));
-            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(119, 230);
+            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(124, 109);
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
-            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(210, 20);
+            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(237, 20);
             this.data_nascimentoDateTimePicker.TabIndex = 4;
             // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(119, 256);
+            this.emailTextBox.Location = new System.Drawing.Point(124, 135);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(210, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(237, 20);
             this.emailTextBox.TabIndex = 5;
             // 
             // rgTextBox
             // 
             this.rgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "PessoaFisica.rg", true));
-            this.rgTextBox.Location = new System.Drawing.Point(119, 308);
+            this.rgTextBox.Location = new System.Drawing.Point(261, 161);
             this.rgTextBox.Name = "rgTextBox";
             this.rgTextBox.Size = new System.Drawing.Size(100, 20);
             this.rgTextBox.TabIndex = 7;
@@ -343,22 +347,22 @@
             // numero_casaTextBox1
             // 
             this.numero_casaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "numero_casa", true));
-            this.numero_casaTextBox1.Location = new System.Drawing.Point(477, 249);
+            this.numero_casaTextBox1.Location = new System.Drawing.Point(504, 130);
             this.numero_casaTextBox1.Name = "numero_casaTextBox1";
-            this.numero_casaTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.numero_casaTextBox1.Size = new System.Drawing.Size(118, 20);
             this.numero_casaTextBox1.TabIndex = 9;
             // 
             // complementoTextBox
             // 
             this.complementoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "complemento", true));
-            this.complementoTextBox.Location = new System.Drawing.Point(477, 276);
+            this.complementoTextBox.Location = new System.Drawing.Point(504, 157);
             this.complementoTextBox.Name = "complementoTextBox";
-            this.complementoTextBox.Size = new System.Drawing.Size(212, 20);
+            this.complementoTextBox.Size = new System.Drawing.Size(237, 20);
             this.complementoTextBox.TabIndex = 11;
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(471, 65);
+            this.btnExcluir.Location = new System.Drawing.Point(400, 38);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 33);
             this.btnExcluir.TabIndex = 15;
@@ -368,7 +372,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(378, 65);
+            this.btnCancelar.Location = new System.Drawing.Point(286, 38);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 33);
             this.btnCancelar.TabIndex = 14;
@@ -378,7 +382,7 @@
             // 
             // btnGravar
             // 
-            this.btnGravar.Location = new System.Drawing.Point(284, 65);
+            this.btnGravar.Location = new System.Drawing.Point(167, 38);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 33);
             this.btnGravar.TabIndex = 13;
@@ -388,7 +392,7 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(190, 65);
+            this.btnNovo.Location = new System.Drawing.Point(44, 38);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 33);
             this.btnNovo.TabIndex = 12;
@@ -401,7 +405,7 @@
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "uf", true));
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "uf", true));
             this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(610, 174);
+            this.textBox4.Location = new System.Drawing.Point(662, 55);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(79, 20);
             this.textBox4.TabIndex = 59;
@@ -409,7 +413,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(434, 226);
+            this.label4.Location = new System.Drawing.Point(461, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 57;
@@ -420,15 +424,15 @@
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "bairro", true));
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "bairro", true));
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(477, 222);
+            this.textBox3.Location = new System.Drawing.Point(504, 103);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 20);
+            this.textBox3.Size = new System.Drawing.Size(237, 20);
             this.textBox3.TabIndex = 56;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(415, 200);
+            this.label3.Location = new System.Drawing.Point(442, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 55;
@@ -439,15 +443,15 @@
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cep", true));
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "endereco", true));
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(477, 197);
+            this.textBox2.Location = new System.Drawing.Point(504, 78);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 20);
+            this.textBox2.Size = new System.Drawing.Size(237, 20);
             this.textBox2.TabIndex = 54;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(440, 178);
+            this.label2.Location = new System.Drawing.Point(467, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 53;
@@ -460,9 +464,9 @@
             this.enderecosComboBox.DisplayMember = "cidade";
             this.enderecosComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.enderecosComboBox.FormattingEnabled = true;
-            this.enderecosComboBox.Location = new System.Drawing.Point(477, 148);
+            this.enderecosComboBox.Location = new System.Drawing.Point(504, 29);
             this.enderecosComboBox.Name = "enderecosComboBox";
-            this.enderecosComboBox.Size = new System.Drawing.Size(212, 21);
+            this.enderecosComboBox.Size = new System.Drawing.Size(237, 21);
             this.enderecosComboBox.TabIndex = 8;
             this.enderecosComboBox.ValueMember = "id";
             // 
@@ -473,7 +477,7 @@
             this.tipoUsuarioComboBox.DisplayMember = "name";
             this.tipoUsuarioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoUsuarioComboBox.FormattingEnabled = true;
-            this.tipoUsuarioComboBox.Location = new System.Drawing.Point(119, 151);
+            this.tipoUsuarioComboBox.Location = new System.Drawing.Point(124, 30);
             this.tipoUsuarioComboBox.Name = "tipoUsuarioComboBox";
             this.tipoUsuarioComboBox.Size = new System.Drawing.Size(121, 21);
             this.tipoUsuarioComboBox.TabIndex = 60;
@@ -490,17 +494,17 @@
             // telefoneMaskedTextBox
             // 
             this.telefoneMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "telefone", true));
-            this.telefoneMaskedTextBox.Location = new System.Drawing.Point(119, 204);
+            this.telefoneMaskedTextBox.Location = new System.Drawing.Point(124, 83);
             this.telefoneMaskedTextBox.Mask = "(99) 99999-9999";
             this.telefoneMaskedTextBox.Name = "telefoneMaskedTextBox";
-            this.telefoneMaskedTextBox.Size = new System.Drawing.Size(121, 20);
+            this.telefoneMaskedTextBox.Size = new System.Drawing.Size(100, 20);
             this.telefoneMaskedTextBox.TabIndex = 62;
             // 
             // cepMaskedTextBox
             // 
             this.cepMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cep", true));
             this.cepMaskedTextBox.Enabled = false;
-            this.cepMaskedTextBox.Location = new System.Drawing.Point(477, 174);
+            this.cepMaskedTextBox.Location = new System.Drawing.Point(504, 55);
             this.cepMaskedTextBox.Mask = "99999-9999";
             this.cepMaskedTextBox.Name = "cepMaskedTextBox";
             this.cepMaskedTextBox.Size = new System.Drawing.Size(100, 20);
@@ -509,50 +513,70 @@
             // cpfMaskedTextBox1
             // 
             this.cpfMaskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "PessoaFisica.cpf", true));
-            this.cpfMaskedTextBox1.Location = new System.Drawing.Point(119, 282);
+            this.cpfMaskedTextBox1.Location = new System.Drawing.Point(124, 161);
             this.cpfMaskedTextBox1.Mask = "999.999.999-99";
             this.cpfMaskedTextBox1.Name = "cpfMaskedTextBox1";
             this.cpfMaskedTextBox1.Size = new System.Drawing.Size(100, 20);
             this.cpfMaskedTextBox1.TabIndex = 64;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnNovo);
+            this.groupBox1.Controls.Add(this.btnGravar);
+            this.groupBox1.Controls.Add(this.btnExcluir);
+            this.groupBox1.Location = new System.Drawing.Point(163, 66);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(518, 100);
+            this.groupBox1.TabIndex = 65;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Opções";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tipoUsuarioComboBox);
+            this.groupBox2.Controls.Add(this.enderecosComboBox);
+            this.groupBox2.Controls.Add(this.cpfMaskedTextBox1);
+            this.groupBox2.Controls.Add(enderecosLabel);
+            this.groupBox2.Controls.Add(this.cepMaskedTextBox);
+            this.groupBox2.Controls.Add(telefoneLabel);
+            this.groupBox2.Controls.Add(this.telefoneMaskedTextBox);
+            this.groupBox2.Controls.Add(this.nomeTextBox);
+            this.groupBox2.Controls.Add(tipoUsuarioLabel);
+            this.groupBox2.Controls.Add(nomeLabel);
+            this.groupBox2.Controls.Add(this.data_nascimentoDateTimePicker);
+            this.groupBox2.Controls.Add(label5);
+            this.groupBox2.Controls.Add(data_nascimentoLabel);
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.emailTextBox);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(emailLabel);
+            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(cpfLabel);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.rgTextBox);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(rgLabel);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.numero_casaTextBox1);
+            this.groupBox2.Controls.Add(complementoLabel);
+            this.groupBox2.Controls.Add(numero_casaLabel1);
+            this.groupBox2.Controls.Add(this.complementoTextBox);
+            this.groupBox2.Location = new System.Drawing.Point(26, 184);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(773, 203);
+            this.groupBox2.TabIndex = 66;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dados do Cliente";
             // 
             // Form_cad_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(810, 590);
-            this.Controls.Add(this.cpfMaskedTextBox1);
-            this.Controls.Add(this.cepMaskedTextBox);
-            this.Controls.Add(this.telefoneMaskedTextBox);
-            this.Controls.Add(tipoUsuarioLabel);
-            this.Controls.Add(this.tipoUsuarioComboBox);
-            this.Controls.Add(label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.btnNovo);
-            this.Controls.Add(complementoLabel);
-            this.Controls.Add(this.complementoTextBox);
-            this.Controls.Add(numero_casaLabel1);
-            this.Controls.Add(this.numero_casaTextBox1);
-            this.Controls.Add(rgLabel);
-            this.Controls.Add(this.rgTextBox);
-            this.Controls.Add(cpfLabel);
-            this.Controls.Add(emailLabel);
-            this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(data_nascimentoLabel);
-            this.Controls.Add(this.data_nascimentoDateTimePicker);
-            this.Controls.Add(nomeLabel);
-            this.Controls.Add(this.nomeTextBox);
-            this.Controls.Add(telefoneLabel);
-            this.Controls.Add(enderecosLabel);
-            this.Controls.Add(this.enderecosComboBox);
+            this.ClientSize = new System.Drawing.Size(826, 648);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.usuariosDataGridView);
             this.Controls.Add(this.label1);
             this.Name = "Form_cad_cliente";
@@ -565,6 +589,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.enderecosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoUsuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaFisicaBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,5 +636,7 @@
         private System.Windows.Forms.MaskedTextBox telefoneMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox cepMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox cpfMaskedTextBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
