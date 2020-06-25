@@ -55,13 +55,39 @@ namespace PowerLook_Aluguel
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+
             if (MessageBox.Show("Tem certeza", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.produtosBindingSource.RemoveCurrent();
-                DataContextFactory.DataContext.SubmitChanges();
-                MessageBox.Show("Produto Excluido com sucesso");
+                if (this.ItemPossuiProduto(this.ProdutoCorrente))
+                    MessageBox.Show("VocÊ não pode excluir uma Produto que possui uma venda");
+                else
+                {
+                    this.produtosBindingSource.RemoveCurrent();
+                    DataContextFactory.DataContext.SubmitChanges();
+                    MessageBox.Show("Produto Excluido com sucesso");
+                }
             }
         }
+
+
+
+        public Produtos ProdutoCorrente
+        {
+            get
+            {
+                return (Produtos)this.produtosBindingSource.Current;
+            }
+        }
+
+        private bool ItemPossuiProduto(Produtos produt)
+        {
+            var produtos = DataContextFactory.DataContext.itensVenda.Where(x => x.id_produto == produt.id);
+            if (produtos.Count() > 0)
+                return true;
+            else
+                return false;
+        }
+
 
         private void produtosDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

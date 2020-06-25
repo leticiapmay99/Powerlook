@@ -35,7 +35,7 @@ namespace PowerLook_Aluguel
         {
            
             this.enderecosTableAdapter.Fill(this.powerLookDataSet.Enderecos);
-            this.usuariosBindingSource.DataSource = DataContextFactory.DataContext.Usuarios; 
+            this.usuariosBindingSource.DataSource = DataContextFactory.DataContext.Usuarios.Where(x=> x.id_tipo_pessoa==2); 
             this.tipoUsuarioBindingSource.DataSource = DataContextFactory.DataContext.TipoUsuario.Where(x => x.id == 2);
             this.enderecosBindingSource.DataSource = DataContextFactory.DataContext.Enderecos;
 
@@ -70,13 +70,30 @@ namespace PowerLook_Aluguel
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+
             if (MessageBox.Show("Tem certeza", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.usuariosBindingSource.RemoveCurrent();
-                DataContextFactory.DataContext.SubmitChanges();
-                MessageBox.Show("Cliente Excluido com sucesso");
+                if (this.UsuarioPossuiVenda(this.PessoaCorrente))
+                    MessageBox.Show("VocÊ não pode excluir um Cliente que possui uma venda");
+                else
+                {
+                    this.usuariosBindingSource.RemoveCurrent();
+                    DataContextFactory.DataContext.SubmitChanges();
+                    MessageBox.Show("Cliente Excluido com sucesso");
+                }
             }
         }
+
+
+        private bool UsuarioPossuiVenda(Usuarios usuario)
+        {
+            var produtos = DataContextFactory.DataContext.Venda.Where(x => x.id_usuario == usuario.id);
+            if (produtos.Count() > 0)
+                return true;
+            else
+                return false;
+        }
+
 
         private void usuariosDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

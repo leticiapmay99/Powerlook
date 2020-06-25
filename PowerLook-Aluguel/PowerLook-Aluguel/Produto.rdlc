@@ -264,7 +264,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>R$ </Value>
+                              <Value xml:space="preserve"> </Value>
                               <Style />
                             </TextRun>
                             <TextRun>
