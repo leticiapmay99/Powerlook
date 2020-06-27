@@ -1278,6 +1278,8 @@ namespace DBPowerLook.DAL
 		
 		private EntitySet<Venda> _Venda;
 		
+		private EntitySet<Login> _Login;
+		
 		private EntityRef<Enderecos> _Enderecos;
 		
 		private EntityRef<PessoaFisica> _PessoaFisica;
@@ -1313,6 +1315,7 @@ namespace DBPowerLook.DAL
 		public Usuarios()
 		{
 			this._Venda = new EntitySet<Venda>(new Action<Venda>(this.attach_Venda), new Action<Venda>(this.detach_Venda));
+			this._Login = new EntitySet<Login>(new Action<Login>(this.attach_Login), new Action<Login>(this.detach_Login));
 			this._Enderecos = default(EntityRef<Enderecos>);
 			this._PessoaFisica = default(EntityRef<PessoaFisica>);
 			this._TipoUsuario = default(EntityRef<TipoUsuario>);
@@ -1544,6 +1547,19 @@ namespace DBPowerLook.DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuarios_Login", Storage="_Login", ThisKey="id", OtherKey="id_funcionario")]
+		public EntitySet<Login> Login
+		{
+			get
+			{
+				return this._Login;
+			}
+			set
+			{
+				this._Login.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Enderecos_Usuarios", Storage="_Enderecos", ThisKey="id_endereco", OtherKey="id", IsForeignKey=true)]
 		public Enderecos Enderecos
 		{
@@ -1673,6 +1689,18 @@ namespace DBPowerLook.DAL
 		}
 		
 		private void detach_Venda(Venda entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuarios = null;
+		}
+		
+		private void attach_Login(Login entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuarios = this;
+		}
+		
+		private void detach_Login(Login entity)
 		{
 			this.SendPropertyChanging();
 			entity.Usuarios = null;
@@ -3116,7 +3144,11 @@ namespace DBPowerLook.DAL
 		
 		private System.Nullable<int> _id_tipoLogin;
 		
+		private System.Nullable<int> _id_funcionario;
+		
 		private EntityRef<TipoUsuario> _TipoUsuario;
+		
+		private EntityRef<Usuarios> _Usuarios;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3130,11 +3162,14 @@ namespace DBPowerLook.DAL
     partial void OnsenhaChanged();
     partial void Onid_tipoLoginChanging(System.Nullable<int> value);
     partial void Onid_tipoLoginChanged();
+    partial void Onid_funcionarioChanging(System.Nullable<int> value);
+    partial void Onid_funcionarioChanged();
     #endregion
 		
 		public Login()
 		{
 			this._TipoUsuario = default(EntityRef<TipoUsuario>);
+			this._Usuarios = default(EntityRef<Usuarios>);
 			OnCreated();
 		}
 		
@@ -3222,6 +3257,30 @@ namespace DBPowerLook.DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_funcionario", DbType="Int")]
+		public System.Nullable<int> id_funcionario
+		{
+			get
+			{
+				return this._id_funcionario;
+			}
+			set
+			{
+				if ((this._id_funcionario != value))
+				{
+					if (this._Usuarios.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onid_funcionarioChanging(value);
+					this.SendPropertyChanging();
+					this._id_funcionario = value;
+					this.SendPropertyChanged("id_funcionario");
+					this.Onid_funcionarioChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TipoUsuario_Login", Storage="_TipoUsuario", ThisKey="id_tipoLogin", OtherKey="id", IsForeignKey=true)]
 		public TipoUsuario TipoUsuario
 		{
@@ -3252,6 +3311,40 @@ namespace DBPowerLook.DAL
 						this._id_tipoLogin = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("TipoUsuario");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuarios_Login", Storage="_Usuarios", ThisKey="id_funcionario", OtherKey="id", IsForeignKey=true)]
+		public Usuarios Usuarios
+		{
+			get
+			{
+				return this._Usuarios.Entity;
+			}
+			set
+			{
+				Usuarios previousValue = this._Usuarios.Entity;
+				if (((previousValue != value) 
+							|| (this._Usuarios.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Usuarios.Entity = null;
+						previousValue.Login.Remove(this);
+					}
+					this._Usuarios.Entity = value;
+					if ((value != null))
+					{
+						value.Login.Add(this);
+						this._id_funcionario = value.id;
+					}
+					else
+					{
+						this._id_funcionario = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Usuarios");
 				}
 			}
 		}

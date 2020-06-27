@@ -12,8 +12,9 @@ namespace PowerLook_Aluguel
         public static Form_cad_Fornecedor FormFornecedor { get; set; }
         public static Form_cad_cliente FormCliente { get; set; }
         public static Form_cad_funcionario FormFuncionario { get; set; }
-
         public static Form_cad_categoria FormCategoria { get; set; }
+        public static Form_cad_usuario FormUsuario { get; set; }
+
 
 
         public static Form_Venda FormVenda { get; set; }
@@ -21,7 +22,6 @@ namespace PowerLook_Aluguel
 
         public static Form_buscas FormBuscas { get; set; }
         public static Form_busca_CategoriaVestido FormCategoriaVestidos { get; set; }
-
         public static Form_busca_FornecedorVestido FormFornecedorVestidos { get; set; }
 
         public static Form_relatorios FormRelatorios { get; set; }

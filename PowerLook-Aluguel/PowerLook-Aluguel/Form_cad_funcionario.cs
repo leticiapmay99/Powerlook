@@ -65,13 +65,33 @@ namespace PowerLook_Aluguel
         private void btnExcluir_Click(object sender, EventArgs e)
         {
 
+       
+
             if (MessageBox.Show("Tem certeza", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.usuariosBindingSource.RemoveCurrent();
-                DataContextFactory.DataContext.SubmitChanges();
-                MessageBox.Show("Funcionario Excluido com sucesso");
+                if (this.FuncionarioPossuiLogin(this.PessoaCorrente))
+                    MessageBox.Show("VocÊ deve excluir o usuário de login antes!");
+                else
+                {
+                    this.usuariosBindingSource.RemoveCurrent();
+                    DataContextFactory.DataContext.SubmitChanges();
+                    MessageBox.Show("Funcionário Excluido com sucesso");
+                }
             }
+
         }
+
+
+        private bool FuncionarioPossuiLogin(Usuarios usuarios)
+        {
+            var login = DataContextFactory.DataContext.Login.Where(x => x.id_funcionario == usuarios.id);
+            if (login.Count() > 0)
+                return true;
+            else
+                return false;
+        }
+
+
 
         private void usuariosDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -163,6 +183,11 @@ namespace PowerLook_Aluguel
             }
 
             return true;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

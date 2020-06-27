@@ -25,8 +25,8 @@ namespace PowerLook_Aluguel
                 funcionárioToolStripMenuItem.Enabled = true;
                 btnFornecedor.Enabled = true;
                 fornecedorToolStripMenuItem.Enabled = true;
-                btnRelatorio.Enabled = true;
-                relatóriosToolStripMenuItem .Enabled= true;
+                btnUsuario.Enabled = true;
+                usuáriosToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -198,6 +198,25 @@ namespace PowerLook_Aluguel
 
             MeusFormularios.FormRelatoriosVenda.Show();
             MeusFormularios.FormRelatoriosVenda.Focus();
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormUsuario == null)
+                MeusFormularios.FormUsuario = new Form_cad_usuario();
+
+            MeusFormularios.FormUsuario.Show();
+            MeusFormularios.FormUsuario.Focus();
+            
+        }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MeusFormularios.FormUsuario == null)
+                MeusFormularios.FormUsuario = new Form_cad_usuario();
+
+            MeusFormularios.FormUsuario.Show();
+            MeusFormularios.FormUsuario.Focus();
         }
     }
 }

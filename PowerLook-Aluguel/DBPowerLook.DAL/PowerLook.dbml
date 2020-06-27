@@ -66,6 +66,7 @@
       <Column Name="id_tipo_pessoa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_endereco" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Usuarios_Venda" Member="Venda" ThisKey="id" OtherKey="id_usuario" Type="Venda" />
+      <Association Name="Usuarios_Login" Member="Login" ThisKey="id" OtherKey="id_funcionario" Type="Login" />
       <Association Name="Enderecos_Usuarios" Member="Enderecos" ThisKey="id_endereco" OtherKey="id" Type="Enderecos" IsForeignKey="true" />
       <Association Name="PessoaFisica_Usuarios" Member="PessoaFisica" ThisKey="id_pessoa_fisica" OtherKey="id" Type="PessoaFisica" IsForeignKey="true" />
       <Association Name="TipoUsuario_Usuarios" Member="TipoUsuario" ThisKey="id_tipo_pessoa" OtherKey="id" Type="TipoUsuario" IsForeignKey="true" />
@@ -91,7 +92,7 @@
       <Column Name="preco" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="id_fornecedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_categoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Member="quantidade" Type="System.Int32" CanBeNull="false" />
+      <Column Name="quantidade" Type="System.Int32" CanBeNull="false" />
       <Association Name="Produtos_itensVenda" Member="itensVenda" ThisKey="id" OtherKey="id_produto" Type="itensVenda" />
       <Association Name="Fornecedores_Produtos" Member="Fornecedores" ThisKey="id_fornecedor" OtherKey="id" Type="Fornecedores" IsForeignKey="true" />
       <Association Name="Categorias_Produtos" Member="Categorias" ThisKey="id_categoria" OtherKey="id" Type="Categorias" IsForeignKey="true" />
@@ -145,7 +146,9 @@
       <Column Name="login" Member="login1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="senha" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="id_tipoLogin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_funcionario" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="TipoUsuario_Login" Member="TipoUsuario" ThisKey="id_tipoLogin" OtherKey="id" Type="TipoUsuario" IsForeignKey="true" />
+      <Association Name="Usuarios_Login" Member="Usuarios" ThisKey="id_funcionario" OtherKey="id" Type="Usuarios" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

@@ -76,9 +76,9 @@
             this.telefoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cidadeTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.cidadeTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             tipoUsuarioLabel = new System.Windows.Forms.Label();
             enderecosLabel = new System.Windows.Forms.Label();
             rgLabel = new System.Windows.Forms.Label();
@@ -197,6 +197,15 @@
             numero_casaLabel1.Size = new System.Drawing.Size(50, 13);
             numero_casaLabel1.TabIndex = 62;
             numero_casaLabel1.Text = "Número :";
+            // 
+            // cidadeLabel
+            // 
+            cidadeLabel.AutoSize = true;
+            cidadeLabel.Location = new System.Drawing.Point(489, 67);
+            cidadeLabel.Name = "cidadeLabel";
+            cidadeLabel.Size = new System.Drawing.Size(43, 13);
+            cidadeLabel.TabIndex = 74;
+            cidadeLabel.Text = "Cidade:";
             // 
             // label1
             // 
@@ -533,6 +542,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Funcionário";
             // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(139, 145);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(212, 20);
+            this.emailTextBox.TabIndex = 76;
+            // 
+            // cidadeTextBox
+            // 
+            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cidade", true));
+            this.cidadeTextBox.Enabled = false;
+            this.cidadeTextBox.Location = new System.Drawing.Point(537, 64);
+            this.cidadeTextBox.Name = "cidadeTextBox";
+            this.cidadeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cidadeTextBox.TabIndex = 75;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnCancelar);
@@ -545,31 +571,7 @@
             this.groupBox2.TabIndex = 75;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opções";
-            // 
-            // cidadeLabel
-            // 
-            cidadeLabel.AutoSize = true;
-            cidadeLabel.Location = new System.Drawing.Point(489, 67);
-            cidadeLabel.Name = "cidadeLabel";
-            cidadeLabel.Size = new System.Drawing.Size(43, 13);
-            cidadeLabel.TabIndex = 74;
-            cidadeLabel.Text = "Cidade:";
-            // 
-            // cidadeTextBox
-            // 
-            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cidade", true));
-            this.cidadeTextBox.Location = new System.Drawing.Point(537, 64);
-            this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cidadeTextBox.TabIndex = 75;
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(139, 145);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(212, 20);
-            this.emailTextBox.TabIndex = 76;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // Form_cad_funcionario
             // 
