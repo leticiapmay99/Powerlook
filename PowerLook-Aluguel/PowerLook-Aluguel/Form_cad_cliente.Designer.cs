@@ -78,10 +78,10 @@
             this.cpfMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cidadeTextBox = new System.Windows.Forms.TextBox();
             this.powerLookDataSet = new PowerLook_Aluguel.PowerLookDataSet();
             this.enderecosTableAdapter = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.EnderecosTableAdapter();
             this.tableAdapterManager = new PowerLook_Aluguel.PowerLookDataSetTableAdapters.TableAdapterManager();
-            this.cidadeTextBox = new System.Windows.Forms.TextBox();
             telefoneLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             data_nascimentoLabel = new System.Windows.Forms.Label();
@@ -203,6 +203,15 @@
             tipoUsuarioLabel.Size = new System.Drawing.Size(70, 13);
             tipoUsuarioLabel.TabIndex = 59;
             tipoUsuarioLabel.Text = "Tipo Usuario:";
+            // 
+            // cidadeLabel
+            // 
+            cidadeLabel.AutoSize = true;
+            cidadeLabel.Location = new System.Drawing.Point(456, 58);
+            cidadeLabel.Name = "cidadeLabel";
+            cidadeLabel.Size = new System.Drawing.Size(43, 13);
+            cidadeLabel.TabIndex = 63;
+            cidadeLabel.Text = "Cidade:";
             // 
             // label1
             // 
@@ -446,8 +455,8 @@
             // 
             // textBox2
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cep", true));
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.enderecosBindingSource, "endereco", true));
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "endereco", true));
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(504, 78);
             this.textBox2.Name = "textBox2";
@@ -556,6 +565,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do Cliente";
             // 
+            // cidadeTextBox
+            // 
+            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cidade", true));
+            this.cidadeTextBox.Enabled = false;
+            this.cidadeTextBox.Location = new System.Drawing.Point(504, 55);
+            this.cidadeTextBox.Name = "cidadeTextBox";
+            this.cidadeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cidadeTextBox.TabIndex = 64;
+            // 
             // powerLookDataSet
             // 
             this.powerLookDataSet.DataSetName = "PowerLookDataSet";
@@ -579,24 +597,6 @@
             this.tableAdapterManager.TipoUsuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PowerLook_Aluguel.PowerLookDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VendaTableAdapter = null;
-            // 
-            // cidadeLabel
-            // 
-            cidadeLabel.AutoSize = true;
-            cidadeLabel.Location = new System.Drawing.Point(456, 58);
-            cidadeLabel.Name = "cidadeLabel";
-            cidadeLabel.Size = new System.Drawing.Size(43, 13);
-            cidadeLabel.TabIndex = 63;
-            cidadeLabel.Text = "Cidade:";
-            // 
-            // cidadeTextBox
-            // 
-            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.enderecosBindingSource, "cidade", true));
-            this.cidadeTextBox.Enabled = false;
-            this.cidadeTextBox.Location = new System.Drawing.Point(504, 55);
-            this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cidadeTextBox.TabIndex = 64;
             // 
             // Form_cad_cliente
             // 
