@@ -345,3 +345,4 @@ C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Alug
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_busca_FornecedorVestido.resources
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_relatorio_venda.resources
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_cad_usuario.resources
+C:\Users\leticia.may\Documents\GitHub\Powerlook\PowerLook-Aluguel\PowerLook-Aluguel\obj\Debug\PowerLook_Aluguel.Form_cad_usuario.resources

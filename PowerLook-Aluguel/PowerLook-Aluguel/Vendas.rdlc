@@ -288,12 +288,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>R$ </Value>
+                              <Value xml:space="preserve"> </Value>
                               <Style />
                             </TextRun>
                             <TextRun>
                               <Value>=Fields!valor.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>'R$' 0.00;('R$' 0.00)</Format>
+                                <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -322,12 +325,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>R$ </Value>
+                              <Value xml:space="preserve"> </Value>
                               <Style />
                             </TextRun>
                             <TextRun>
                               <Value>=Fields!desconto.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>'R$' 0.00;('R$' 0.00)</Format>
+                                <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -356,12 +362,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>R$ </Value>
+                              <Value xml:space="preserve"> </Value>
                               <Style />
                             </TextRun>
                             <TextRun>
                               <Value>=Fields!valor_pago.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>'R$' 0.00;('R$' 0.00)</Format>
+                                <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
