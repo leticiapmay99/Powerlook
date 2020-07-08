@@ -18,7 +18,7 @@ Instale também o banco de dados SQL Server. Siga o [passo-o-passo](https://driv
 
 Feito isso, clone este respositório, faça o restore do DUMP que está em "Powerlook/dump/Powerlook.bak" e inicie o no Visual Studio através do "PowerLook.sln".
 
-## Alguns links úteis:
+## Alguns links úteis
 
   - [Como Realizar Backup e Restore no Microsoft SQL Server](http://www.bosontreinamentos.com.br/sql-com-sql-server/como-realizar-backup-e-restore-no-microsoft-sql-server)
 
