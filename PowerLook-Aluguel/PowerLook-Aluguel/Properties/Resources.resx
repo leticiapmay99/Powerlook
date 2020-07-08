@@ -121,20 +121,11 @@
   <data name="icon-relatorio-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagem\icon-relatorio-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Relatorio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagem\Relatorio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Devolução" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagem\Devolução.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon-clients-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagem\icon-clients-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagem\icon-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Vestido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagem\Vestido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-add-employees-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagem\icon-add-employees-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,29 +136,14 @@
   <data name="icons8-vestido-de-casamento-60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagem\icons8-vestido-de-casamento-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Aluguel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagem\Aluguel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon-search-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagem\icon-search-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fornecedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagem\Fornecedor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagem\Cliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-cart-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagem\icon-cart-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-add-category-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagem\icon-add-category-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Funcionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagem\Funcionario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Busca" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagem\Busca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-medical-history-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-medical-history-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

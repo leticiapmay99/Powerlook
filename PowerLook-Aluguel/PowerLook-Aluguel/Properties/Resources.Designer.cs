@@ -63,66 +63,6 @@ namespace PowerLook_Aluguel.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Aluguel {
-            get {
-                object obj = ResourceManager.GetObject("Aluguel", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Busca {
-            get {
-                object obj = ResourceManager.GetObject("Busca", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Cliente {
-            get {
-                object obj = ResourceManager.GetObject("Cliente", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Devolução {
-            get {
-                object obj = ResourceManager.GetObject("Devolução", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Fornecedor {
-            get {
-                object obj = ResourceManager.GetObject("Fornecedor", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Funcionario {
-            get {
-                object obj = ResourceManager.GetObject("Funcionario", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icon_add_category_40 {
             get {
                 object obj = ResourceManager.GetObject("icon-add-category-40", resourceCulture);
@@ -216,26 +156,6 @@ namespace PowerLook_Aluguel.Properties {
         internal static System.Drawing.Bitmap icons8_vestido_de_casamento_60 {
             get {
                 object obj = ResourceManager.GetObject("icons8-vestido-de-casamento-60", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Relatorio {
-            get {
-                object obj = ResourceManager.GetObject("Relatorio", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Vestido {
-            get {
-                object obj = ResourceManager.GetObject("Vestido", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

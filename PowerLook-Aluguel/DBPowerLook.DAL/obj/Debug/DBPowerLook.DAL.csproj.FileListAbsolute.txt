@@ -11,3 +11,9 @@ D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPow
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.dll
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.pdb
 D:\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.csprojAssemblyReference.cache
+C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\bin\Debug\DBPowerLook.DAL.dll.config
+C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\bin\Debug\DBPowerLook.DAL.dll
+C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\bin\Debug\DBPowerLook.DAL.pdb
+C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.csprojAssemblyReference.cache
+C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.dll
+C:\Users\cris_\OneDrive\Documentos\GitHub\Powerlook\PowerLook-Aluguel\DBPowerLook.DAL\obj\Debug\DBPowerLook.DAL.pdb
