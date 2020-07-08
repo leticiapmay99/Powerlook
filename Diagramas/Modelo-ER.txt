@@ -1,0 +1,111 @@
+// https://dbdiagram.io
+
+Table PessoaJurifica {
+  id int [primary key, increment, not null]
+  cnpj string [unique, not null]
+  inscricao_estadual string [not null]
+  razao_social string [not null]
+}
+
+Table Fornecedores {
+  id int [primary key, increment, not null]
+  nome_fantasia string [not null]
+  email string [unique, not null]
+  telefone string [not null]
+  complemento string [null]
+  numero_endereco int [null]
+  id_pessoa_juridica int [ref: > PessoaJurifica.id, null]
+  id_endereco int [ref: > Enderecos.id, not null]
+}
+
+Table Produtos {
+  id int [primary key, increment, not null]
+  nome string [not null]
+  descricao string
+  tamanho string [not null]
+  tipo_manga string
+  tipo_decote string
+  cor string
+  preco decimal(18, 2) [not null]
+  qtd_estoque int [not null]
+  imagem image
+  id_fornecedor int [ref: > Fornecedores.id, not null]
+  id_categoria int [ref: > Categorias.id, not null]
+}
+
+Table Categorias {
+  id int [primary key, increment, not null]
+  nome string [not null]
+  descricao string
+}
+
+Table ItemVenda {
+  id int [primary key, increment, not null]
+  id_produto int [ref: > Produtos.id, not null]
+  id_venda int [ref: > Vendas.id, not null]
+  quantidade int [not null]
+  valor decimal(18, 2) [not null]
+}
+
+Table Vendas {
+  id int [primary key, increment, not null]
+  valor decimal(18, 2) [not null]
+  desconto decimal(18, 2) [not null]
+  valor_pago int [not null]
+  id_usuario int [ref: > Usuarios.id, not null]
+}
+
+Table Pagamentos {
+  id int [primary key, increment, not null]
+  data_compra date [not null]
+  data_vencimento date [not null]
+  data_pagamento date [not null]
+  id_venda int [ref: > Vendas.id, not null]
+  id_tipo_pag int [ref: > TiposPagamento.id, not null]
+}
+
+Table TiposPagamento {
+  id int [primary key, increment, not null]
+  nome string [not null]
+}
+
+Table Usuarios {
+  id int [primary key, increment, not null]
+  nome string [not null]
+  email string [unique, not null]
+  data_nascimento date [not null]
+  complemento string [null]
+  numero_endereco int [null]
+  telefone string [not null]
+  id_pessoa_fisica int [ref: > PessoaFisica.id, null]
+  id_tipo_usuario int [ref: > TipoUsuario.id, not null]
+  id_endereco int [ref: > Enderecos.id, not null]
+}
+
+Table PessoaFisica {
+  id int [primary key, increment, not null]
+  cpf string [unique, not null]
+  rg string [unique, not null]
+}
+
+Table TipoUsuario {
+  id int [primary key, increment, not null]
+  name string [not null]
+}
+
+Table Enderecos {
+  id int [primary key, increment, not null]
+  cep string [not null]
+  endereco string [not null]
+  bairro string [not null]
+  cidade string [not null]
+  estado string [not null]
+  uf string [not null]
+}
+
+Table Login {
+  id int [primary key, increment, not null]
+  login string [not null]
+  senha string [not null]
+  id_usuario int [ref: > Usuarios.id, not null]
+}
